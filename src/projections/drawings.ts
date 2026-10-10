@@ -28,3 +28,18 @@ export const RENDERS: Render[] = [
   {file: '12-pilot-house-controls.jpg', title: 'Helm controls with touch screens'},
   {file: '13-sun-deck-events.jpg', title: 'Sun deck and events'},
 ];
+
+// Deck explorer: the current plan for each deck level, keyed by the decks.json name.
+const DECK_SHEET: Record<string, string> = {
+  'Bridge': 'deck-01-bridge.svg',
+  'Commander / Lido': 'deck-02-commander-lido.svg',
+  'Main / Master': 'deck-03-main-master.svg',
+  'Tween': 'deck-04-tween.svg',
+  'Tank / Technical': 'deck-05-tank-technical.svg',
+};
+
+// Returns the current layout plan for a deck, or the fallback concept image.
+export function deckPlanSrc(deckName: string, fallback: string): string {
+  const sheet = DECK_SHEET[deckName];
+  return sheet ? `/drawings/${sheet}` : fallback;
+}
