@@ -428,6 +428,7 @@ class CadDeck:
     rooms: list
     walls: list  # ((x0, y0), (x1, y1))
     roof: list
+    partitions: list = None  # indicative partitions, A-WALL-PRTN
 
 
 def read_deck(deck: p68.Deck) -> CadDeck:
@@ -449,7 +450,8 @@ def read_deck(deck: p68.Deck) -> CadDeck:
         pts = [(p[0], p[1]) for p in e.get_points()]
         xs, ys = [p[0] for p in pts], [p[1] for p in pts]
         roof.append((min(xs), min(ys), max(xs), max(ys)))
-    return CadDeck(deck.name, deck.index, deck.z, deck.top, outline, rooms, walls, roof)
+    parts = [((e.dxf.start.x, e.dxf.start.y), (e.dxf.end.x, e.dxf.end.y)) for e in msp.query('LINE[layer=="A-WALL-PRTN"]')]
+    return CadDeck(deck.name, deck.index, deck.z, deck.top, outline, rooms, walls, roof, parts)
 
 
 def build_walls(cd: CadDeck, z0, height, mat, cap=None, t=0.12):

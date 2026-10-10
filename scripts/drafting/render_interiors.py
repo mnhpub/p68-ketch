@@ -96,7 +96,7 @@ def build_interior(deck: p68.Deck, M):
             if portholes:
                 K.box(f'W{i}', *lo, z, *hi, z + CEILING, wall_m)
                 n = int((max(abs(x1 - x0), abs(y1 - y0))) / 1.6)
-                day = K.principled('Porthole daylight', (0.8, 0.9, 1.0), rough=0.1, emission=(0.75, 0.88, 1.0), estrength=4.0)
+                day = K.principled('Porthole daylight', (0.8, 0.9, 1.0), rough=0.1, emission=(0.75, 0.88, 1.0), estrength=2.0)
                 for k in range(n):
                     f = (k + 0.5) / n
                     px, py = x0 + (x1 - x0) * f, y0 + (y1 - y0) * f
@@ -120,7 +120,12 @@ def build_interior(deck: p68.Deck, M):
                     K.box(f'Mull{i}{k}', px - 0.04, py - 0.04, z + 0.7, px + 0.04, py + 0.04, z + 2.25, M['brass'])
         else:
             K.box(f'W{i}', *lo, z, *hi, z + CEILING, wall_m)
-            K.box(f'Base{i}', lo[0] - 0.01, lo[1] - 0.01, z, hi[0] + 0.01, hi[1] + 0.01, z + 0.12, panel)
+            K.box(f'Wainscot{i}', lo[0] - 0.012, lo[1] - 0.012, z, hi[0] + 0.012, hi[1] + 0.012, z + 1.0, panel)
+            K.box(f'Rail{i}', lo[0] - 0.02, lo[1] - 0.02, z + 1.0, hi[0] + 0.02, hi[1] + 0.02, z + 1.03, M['brass'])
+    # Indicative cabin partitions, with an ensuite door gap at the passage end.
+    for i, ((x0, y0), (x1, y1)) in enumerate(cd.partitions or []):
+        K.box(f'Prtn{i}', x0 - 0.05, min(y0, y1), z, x0 + 0.05, max(y0, y1), z + CEILING, wall_m)
+        K.box(f'PrtnPanel{i}', x0 - 0.062, min(y0, y1), z, x0 + 0.062, max(y0, y1), z + 1.0, panel)
     # Ceilings with a light cove and downlights.
     for r in cd.rooms:
         K.box(f'Ceil {r.name}', r.x0, r.y0, z + CEILING, r.x1, r.y1, z + CEILING + 0.06, M['wall'])
@@ -156,6 +161,11 @@ def room_shot(key):
     cd = build_interior(deck, M)
     V.water(M, wave_scale=0.2, wind=4, chop=0.5, color='#0f5f7a', shallow='#1d8aa0', resolution=10)
     r = next(r for r in cd.rooms if r.name == room_name)
+    if r.furniture == 'cabins':
+        # Frame one indicative cabin, not the whole block.
+        import dataclasses
+        n = max(1, round(r.w / 4.5))
+        r = dataclasses.replace(r, x1=r.x0 + r.w / n)
     ex = r.x0 + eye[0] * r.w
     ey = r.y0 + eye[1] * r.d
     tx = r.x0 + tgt[0] * r.w
