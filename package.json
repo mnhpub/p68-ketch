@@ -14,7 +14,8 @@
     "validate:access": "node scripts/validate-access.mjs",
     "build:elevations": "node scripts/build-elevations.mjs",
     "build:public": "node scripts/prepare-public.mjs && tsc -b && VITE_AUDIENCE=public vite build --outDir dist-public && cp dist-public/react.html dist-public/index.html",
-    "build:private": "tsc -b && vite build --outDir dist-private && cp dist-private/react.html dist-private/index.html"
+    "build:private": "tsc -b && vite build --outDir dist-private && cp dist-private/react.html dist-private/index.html",
+    "build:birdseye": "node scripts/build-birdseye.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

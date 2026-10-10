@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {RENDERS, SHEETS} from './projections/drawings';
+import {BIRDSEYE, RENDERS, SHEETS} from './projections/drawings';
 import './scope.css';
 
 // Presentation only. Sheet and render lists come from the drawings projection.
@@ -19,6 +19,18 @@ export default function DrawingsView() {
       <h2 className="sheet-group">Plans and elevations</h2>
       <div className="sheet-grid">
         {SHEETS.map((s) => (
+          <figure key={s.file} className="sheet">
+            <button type="button" onClick={() => setOpen(`/drawings/${s.file}`)} aria-label={`Open ${s.title}`}>
+              <img src={`/drawings/${s.file}`} alt={`${s.title}: ${s.note}`} loading="lazy" />
+            </button>
+            <figcaption><b>{s.title}</b><span>{s.note}</span></figcaption>
+          </figure>
+        ))}
+      </div>
+
+      <h2 className="sheet-group">Bird's-eye views and area maps</h2>
+      <div className="sheet-grid">
+        {BIRDSEYE.map((s) => (
           <figure key={s.file} className="sheet">
             <button type="button" onClick={() => setOpen(`/drawings/${s.file}`)} aria-label={`Open ${s.title}`}>
               <img src={`/drawings/${s.file}`} alt={`${s.title}: ${s.note}`} loading="lazy" />

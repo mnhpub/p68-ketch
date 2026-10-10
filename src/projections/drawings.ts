@@ -43,3 +43,26 @@ export function deckPlanSrc(deckName: string, fallback: string): string {
   const sheet = DECK_SHEET[deckName];
   return sheet ? `/drawings/${sheet}` : fallback;
 }
+
+// Bird's-eye block views of each deck, with numbered rooms and a feature key.
+export const BIRDSEYE: Sheet[] = [
+  {file: 'birdseye-bridge.svg', title: "Bridge bird's-eye", note: 'Oblique block view with area and feature map'},
+  {file: 'birdseye-commander-lido.svg', title: "Commander and Lido bird's-eye", note: 'Lifts, lobbies, Lido and lookout'},
+  {file: 'birdseye-main-master.svg', title: "Main and Master bird's-eye", note: 'Public lift lobby, owner suite, galley'},
+  {file: 'birdseye-tween.svg', title: "Tween bird's-eye", note: 'Accessible cabin and lift B lobby'},
+  {file: 'birdseye-tank-technical.svg', title: "Tank and Technical bird's-eye", note: 'Tanks, bilges, technical corridor, lift B'},
+];
+
+// Deck explorer: the bird's-eye view for each deck level, keyed by the decks.json name.
+const BIRDSEYE_BY_DECK: Record<string, string> = {
+  'Bridge': 'birdseye-bridge.svg',
+  'Commander / Lido': 'birdseye-commander-lido.svg',
+  'Main / Master': 'birdseye-main-master.svg',
+  'Tween': 'birdseye-tween.svg',
+  'Tank / Technical': 'birdseye-tank-technical.svg',
+};
+
+export function deckBirdseyeSrc(deckName: string, fallback: string): string {
+  const sheet = BIRDSEYE_BY_DECK[deckName];
+  return sheet ? `/drawings/${sheet}` : fallback;
+}
