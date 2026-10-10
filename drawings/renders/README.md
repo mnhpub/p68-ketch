@@ -1,4 +1,12 @@
-# Concept renders (AI-generated)
+# Renders
+
+## Blender renders (from the DXF sources)
+
+`finish/`, `exterior/` and `interior/` are rendered in Blender (Cycles) from the DXF drawings in `../cad/` and the
+vessel model in `scripts/drafting/bvessel.py`. See `docs/drafting-and-rendering.md` for what is data-driven and what
+is illustrative. Regenerate with `npm run build:renders`.
+
+## Concept renders (AI-generated)
 
 Generated with the Figma AI image tool (01 to 03 with gemini-3.1-flash-image), 10 Oct 2026, on the team plan. Illustrative only.
 They are not drawn from the layout and do not show dimensions, equipment or final geometry.

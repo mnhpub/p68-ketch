@@ -1,8 +1,26 @@
 import {useState} from 'react';
-import {BIRDSEYE, ENGINEERING, ENGINEERING_PDF, RENDERS, SHEETS} from './projections/drawings';
+import {BIRDSEYE, CUTAWAYS, ENGINEERING, ENGINEERING_PDF, EXTERIORS, FINISH_PLANS, INTERIORS, RENDERS, SHEETS, type Shot} from './projections/drawings';
 import './scope.css';
 
 // Presentation only. Sheet and render lists come from the drawings projection.
+function ShotGroup({title, shots, open}: {title: string; shots: Shot[]; open: (src: string) => void}) {
+  return (
+    <>
+      <h2 className="sheet-group">{title}</h2>
+      <div className="sheet-grid">
+        {shots.map((r) => (
+          <figure key={r.file} className="sheet">
+            <button type="button" onClick={() => open(`/renders/${r.file}`)} aria-label={`Open ${r.title}`}>
+              <img src={`/renders/${r.file}`} alt={`${r.title}. ${r.note}. Blender concept render.`} loading="lazy" />
+            </button>
+            <figcaption><b>{r.title}</b><span>{r.note}</span></figcaption>
+          </figure>
+        ))}
+      </div>
+    </>
+  );
+}
+
 export default function DrawingsView() {
   const [open, setOpen] = useState<string | null>(null);
   return (
@@ -11,8 +29,9 @@ export default function DrawingsView() {
         <span className="eyebrow">LAYOUT / PROVISIONAL / NOT FOR CONSTRUCTION</span>
         <h1>Drawings and renders.</h1>
         <p>
-          Deck plans and elevations are generated from the layout data and are schematic. Renders are AI concept illustrations
-          for mood and material only.
+          Engineering deck plans are AutoCAD DXF sources generated from the layout data; plans and elevations are schematic.
+          Finish-out, exterior and interior renders are built in Blender from the DXF geometry with proposed finishes and
+          indicative furniture. AI renders are concept illustrations for mood and material only.
         </p>
       </div>
 
@@ -59,7 +78,12 @@ export default function DrawingsView() {
         ))}
       </div>
 
-      <h2 className="sheet-group">Concept renders</h2>
+      <ShotGroup title="Finish-out plans" shots={FINISH_PLANS} open={setOpen} />
+      <ShotGroup title="Finish-out cutaways" shots={CUTAWAYS} open={setOpen} />
+      <ShotGroup title="Exterior renders: at port, at anchor, underway" shots={EXTERIORS} open={setOpen} />
+      <ShotGroup title="Interior renders: controls, features, accommodation" shots={INTERIORS} open={setOpen} />
+
+      <h2 className="sheet-group">Concept renders (AI)</h2>
       <div className="sheet-grid">
         {RENDERS.map((r) => (
           <figure key={r.file} className="sheet">
