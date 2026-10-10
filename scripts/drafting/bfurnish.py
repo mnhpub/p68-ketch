@@ -136,7 +136,7 @@ def helm_console(name, cx, cy, z, w, M, facing=0.0):
         x, y = sx_, -0.95
         hx, hy = cx + x * c - y * s, cy + x * s + y * c
         cylinder(f'{name} chairpost{sx_}', hx, hy, z, 0.06, 0.55, M['chrome'])
-        armchair(f'{name} chair{sx_}', hx, hy, z + 0.55 - 0.42 + 0.2, facing + math.pi, M, 'cognac')
+        armchair(f'{name} chair{sx_}', hx, hy, z + 0.33, facing, M, 'cognac')
     # Emergency stop on the console, always reachable.
     x, y = w / 2 - 0.25, -0.2
     cylinder(f'{name} estop', cx + x * c - y * s, cy + x * s + y * c, z + 0.89, 0.05, 0.05, M['red'])

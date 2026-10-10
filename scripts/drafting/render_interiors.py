@@ -35,7 +35,7 @@ SHOTS = {
     'vip-cabin': (3, 'VIP accommodation', 'VIP cabin', 'Accommodation', (0.08, 0.2, 1.5), (0.85, 0.7, 0.8), 20),
     'guest-cabin': (4, 'Guest cabins', 'Guest cabin, Tween', 'Accommodation', (0.06, 0.18, 1.5), (0.45, 0.8, 0.7), 18),
     'accessible-cabin': (4, 'Accessible guest cabin', 'Accessible guest cabin, Tween', 'Accommodation', (0.95, 0.1, 1.45), (0.25, 0.7, 0.6), 18),
-    'bridge-helm': (1, 'Command position', 'Bridge helm and command position', 'Controls', (0.02, 0.5, 1.65), (1.2, 0.5, 1.2), 20),
+    'bridge-helm': (1, 'Command position', 'Bridge helm and command position', 'Controls', (0.03, 0.12, 1.75), (1.05, 0.62, 1.0), 15),
     'chart-library': (1, 'Chart library', 'Chart library, Bridge', 'Feature', (0.04, 0.2, 1.55), (0.9, 0.85, 1.0), 20),
     'main-lift-lobby': (3, 'Main lift lobby', 'Main lift lobby', 'Feature', (0.08, 0.5, 1.55), (1.3, 0.5, 1.2), 22),
     'observation-lounge': (2, 'Observation lounge', 'Observation lounge, Commander', 'Feature', (0.05, 0.15, 1.5), (0.95, 0.7, 1.0), 20),
