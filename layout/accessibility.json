@@ -1,0 +1,107 @@
+{
+  "_note": "Accessibility design criteria for the layout. Values are the usual ADA building-standard figures and must be checked against the current passenger-vessel text (36 CFR Part 1191) before use.",
+  "applies_if": "Charter vessel. Confirmed by the owner: ADA applies to guest-facing areas.",
+  "criteria": {
+    "accessible_route_min_width_m": 0.915,
+    "door_clear_min_width_m": 0.815,
+    "turning_space_m": 1.525,
+    "threshold_max_height_m": 0.013,
+    "lift_car_min_m": [
+      1.372,
+      1.73
+    ],
+    "lift_car_internal_m": [
+      1.5,
+      2
+    ]
+  },
+  "public_levels": [
+    "Bridge",
+    "Commander / Lido",
+    "Main / Master",
+    "Tween"
+  ],
+  "lifts": [
+    {
+      "name": "Mag-rail lift A",
+      "stops": [
+        "Bridge",
+        "Commander / Lido",
+        "Main / Master"
+      ],
+      "position": "Forward, at 48 to 51 m from the stern on the centreline. Twin shafts side by side."
+    },
+    {
+      "name": "Mag-rail lift B",
+      "stops": [
+        "Bridge",
+        "Commander / Lido",
+        "Main / Master",
+        "Tween",
+        "Tank / Technical"
+      ],
+      "position": "Forward, at 48 to 51 m from the stern on the centreline. Twin shafts side by side."
+    }
+  ],
+  "lift_stops": [
+    "Bridge",
+    "Commander / Lido",
+    "Main / Master",
+    "Tween",
+    "Tank / Technical"
+  ],
+  "route_name_patterns": [
+    "corridor",
+    "circulation",
+    "passage",
+    "lobby"
+  ],
+  "open_questions": [],
+  "notes": [
+    "Lift car sizes must meet lift_car_min_m. The mag-rail lift car size is not yet set.",
+    "Roof pilot house and sun deck are reached from the Commander deck. The roof is a guest area on a charter vessel, so it needs an accessible route from Commander (lift stop or ramp). Not yet designed.",
+    "Accessible guest cabins and their count are not yet sized.",
+    "Tender or bay access for the dinner-for-two experience needs an accessible boarding route."
+  ],
+  "accessible_guest_cabins": {
+    "required": 1,
+    "level": "Tween",
+    "note": "Accessible cabin on Tween, opposite lift B, 6 m by 4.1 m. Interior layout to be specified: turning space and accessible bathroom."
+  },
+  "roof": {
+    "served_by": "Mag-rail lift A, Bridge stop",
+    "route": "Roof access passage on the Bridge, port side, to the roof door at the aft end",
+    "level_m": 9.3,
+    "pilot_house_cover_top_m": 11.7
+  },
+  "decisions": [
+    {
+      "item": "Owner suite size",
+      "decision": "Extended aft to about 7 m by 6.5 m, 58 m from the stern"
+    },
+    {
+      "item": "Roof access",
+      "decision": "Lift A Bridge stop plus a Bridge-level roof access passage. A ramp is not feasible for a 2.7 m rise."
+    },
+    {
+      "item": "Pilot house cover height",
+      "decision": "Roof at +9.30 m, cover to +11.70 m (2.4 m high)"
+    },
+    {
+      "item": "Observation lounge",
+      "decision": "Former lift lobby area, about 9 m by 6.5 m"
+    },
+    {
+      "item": "Accessible cabin size",
+      "decision": "6 m by 4.1 m schematic, interior to be specified"
+    },
+    {
+      "item": "Lift car size",
+      "decision": "1.5 m by 2.0 m internal, clears the ADA minimums"
+    },
+    {
+      "item": "Lift position",
+      "decision": "Forward at 48 to 51 m, per the owner brief. The General Arrangement sheet is superseded for this point."
+    }
+  ]
+}

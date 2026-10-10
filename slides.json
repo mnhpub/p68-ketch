@@ -1,0 +1,333 @@
+[
+  {
+    "id": "vision",
+    "label": "The Vision",
+    "section": "INTRODUCTION",
+    "tag": "01 / THE VESSEL",
+    "title": "A farther horizon.",
+    "subtitle": "68 meters / approximately 223 feet",
+    "body": "A 68-meter ocean-going expedition ketch: serious bluewater engineering with the warmth, restraint and confidence of a private maritime residence.",
+    "image": "hero-full-greece.webp",
+    "layout": "hero",
+    "notes": [
+      "68 m provisional design length",
+      "True ketch / mainmast forward / mizzen aft",
+      "Performance and stability subject to naval-engineering validation"
+    ]
+  },
+  {
+    "id": "profile",
+    "label": "Full Profile",
+    "section": "EXTERIOR",
+    "tag": "02 / EXTERIOR",
+    "title": "The long view.",
+    "subtitle": "68 meters. One continuous line.",
+    "body": "Deep midnight-blue steel hull, restrained ivory superstructure, clear teak working decks, and a disciplined two-mast profile.",
+    "image": "profile-full-greece.webp",
+    "layout": "wide",
+    "notes": [
+      "Full-height masts retained in reference imagery",
+      "Sheer, deckhouse and rig geometry are currently concept-only"
+    ]
+  },
+  {
+    "id": "architecture",
+    "label": "Design Language",
+    "section": "EXTERIOR",
+    "tag": "03 / ARCHITECTURE",
+    "title": "Heritage, refined.",
+    "subtitle": "Oyster discipline. Beneteau clarity.",
+    "body": "Warm joinery and weather-protected spaces meet practical circulation, visibility and robust long-range engineering.",
+    "image": "hero-alt-greece.webp",
+    "layout": "split",
+    "notes": [
+      "Oyster / Beneteau used as precedent, not identity",
+      "Structural and functional layouts remain provisional"
+    ]
+  },
+  {
+    "id": "rig",
+    "label": "Ketch Rig",
+    "section": "EXTERIOR",
+    "tag": "04 / SAIL PLAN",
+    "title": "A working sail plan.",
+    "subtitle": "Two masts, multiple configurations.",
+    "body": "A carbon mainmast and smaller aft mizzen provide distributed sail area. Sail loads, reefing geometry and aero-hydrodynamic performance are not yet approved.",
+    "image": "sails-luxury.webp",
+    "layout": "split",
+    "notes": [
+      "Keel-up draft target 4.8–5.0 m",
+      "Keel-down draft target 7.2–7.8 m"
+    ]
+  },
+  {
+    "id": "bridge",
+    "label": "Bridge Deck",
+    "section": "LIVING",
+    "tag": "05 / BRIDGE",
+    "title": "A captain’s library.",
+    "subtitle": "Walnut, leather, brass and instrument glass.",
+    "body": "The bridge is a working navigation platform with the warmth of a private library. Panoramic sightlines, chart-work, deep leather chairs and quiet spaces for the passage.",
+    "image": "bridge-luxury.webp",
+    "layout": "split",
+    "notes": [
+      "Navigation remains safety-critical",
+      "Material fire and restraint requirements apply"
+    ]
+  },
+  {
+    "id": "commander",
+    "label": "Commander Lookout",
+    "section": "LIVING",
+    "tag": "06 / COMMANDER",
+    "title": "Look forward.",
+    "subtitle": "The observation salon beneath the bridge.",
+    "body": "A protected panoramic forward room for reading, conversation and passage-watching. A central circulation spine leads aft toward the Lido.",
+    "image": "lookout-luxury.webp",
+    "layout": "split",
+    "notes": [
+      "Forward below bridge",
+      "Mag-rail concept only: Commander ↔ Main/Master"
+    ]
+  },
+  {
+    "id": "lido",
+    "label": "Aft Lido",
+    "section": "LIVING",
+    "tag": "07 / LIDO",
+    "title": "Open sea. Open air.",
+    "subtitle": "Aft dining, bar, terrace and pool.",
+    "body": "The Lido occupies the aft portion of the Commander level, balancing outdoor hospitality with safe deck circulation and weather protection.",
+    "image": "lido-luxury.webp",
+    "layout": "split",
+    "notes": [
+      "Pool mass / free-surface / drains to be engineered",
+      "Aft deck structure and mizzen interface unresolved"
+    ]
+  },
+  {
+    "id": "salon",
+    "label": "Main Salon",
+    "section": "LIVING",
+    "tag": "08 / MAIN / MASTER",
+    "title": "A place to gather.",
+    "subtitle": "An ocean-facing residential salon.",
+    "body": "Soft ivory upholstery, restrained bronze details and timber surfaces create a residential atmosphere with sea views and secure, integrated furniture.",
+    "image": "salon-luxury.webp",
+    "layout": "split",
+    "notes": [
+      "Main/Master at +3.35 m nominal deck datum",
+      "Main-to-Tween via protected stairs"
+    ]
+  },
+  {
+    "id": "master",
+    "label": "Master Suite",
+    "section": "LIVING",
+    "tag": "09 / OWNER ACCOMMODATION",
+    "title": "Private sanctuary.",
+    "subtitle": "A quiet space within the ship.",
+    "body": "A warm owner’s suite with generous stowage, privacy and marine-secured furnishings. Volume and glazing must reconcile with the final hull and bulkheads.",
+    "image": "master-luxury.webp",
+    "layout": "split",
+    "notes": [
+      "Cabin partitions not construction-approved",
+      "Materials and furnishings shown as visual design intent"
+    ]
+  },
+  {
+    "id": "guests",
+    "label": "Guest Suites",
+    "section": "LIVING",
+    "tag": "10 / GUESTS",
+    "title": "Hospitality at sea.",
+    "subtitle": "Guest comfort with offshore discipline.",
+    "body": "Flexible suites use natural finishes, controllable light and carefully positioned stowage, while respecting hull curvature and protected exits.",
+    "image": "guest-luxury.webp",
+    "layout": "split",
+    "notes": [
+      "Guest and crew circulation to be separated",
+      "Tween deck +0.85 m provisional"
+    ]
+  },
+  {
+    "id": "galley",
+    "label": "Galley & Bars",
+    "section": "OPERATIONS",
+    "tag": "11 / HOSPITALITY",
+    "title": "Behind every gathering.",
+    "subtitle": "A true professional galley.",
+    "body": "Chef-grade preparation space and cold storage support long voyages. Bars and food service are linked through efficient, secure routes.",
+    "image": "galley-luxury.webp",
+    "layout": "split",
+    "notes": [
+      "60-day provisioning requirement under study",
+      "Cold chain and fire boundaries not yet fixed"
+    ]
+  },
+  {
+    "id": "crew",
+    "label": "Crew & Laundry",
+    "section": "OPERATIONS",
+    "tag": "12 / SERVICE",
+    "title": "Quietly capable.",
+    "subtitle": "The systems behind the experience.",
+    "body": "Crew facilities, laundry, stores, a workshop and maintenance routes support practical independence and humane long-range operation.",
+    "image": "crew-luxury.webp",
+    "layout": "split",
+    "notes": [
+      "Tween deck is a real accommodation level",
+      "Tank level primarily technical access and tankage"
+    ]
+  },
+  {
+    "id": "engineering",
+    "label": "Mechanical Systems",
+    "section": "OPERATIONS",
+    "tag": "13 / ENGINEERING",
+    "title": "Independence by design.",
+    "subtitle": "Serviceability is luxury.",
+    "body": "Protected hybrid-ready propulsion, electrical distribution, water production, bilges, fuel treatment and maintenance clearance form the operational core.",
+    "image": "mechanical-luxury.webp",
+    "layout": "split",
+    "notes": [
+      "Power / fuel and water budgets require reconciliation",
+      "Battery enclosure certification pathway remains open"
+    ]
+  },
+  {
+    "id": "plans",
+    "label": "Deck Plans",
+    "section": "TECHNICAL",
+    "tag": "14 / ARRANGEMENT",
+    "title": "Five connected levels.",
+    "subtitle": "Architecture, properly arranged.",
+    "body": "Bridge above Commander/Lido, Main/Master, Tween and Tank. The vertical travel strategy separates guest hospitality from technical access.",
+    "image": "deck-plans.png",
+    "layout": "technical",
+    "notes": [
+      "Plans are early block arrangements, not dimensioned rooms",
+      "Commander ↔ Main elevator; lower decks by stairs"
+    ]
+  },
+  {
+    "id": "sections",
+    "label": "Longitudinal Section",
+    "section": "TECHNICAL",
+    "tag": "15 / SECTION",
+    "title": "Within the hull.",
+    "subtitle": "Five levels, one structural system.",
+    "body": "Deck elevations, mast foundations, the lifting keel envelope and watertight subdivision must be reconciled with the 68-meter immersed hull.",
+    "image": "long-section.png",
+    "layout": "technical",
+    "notes": [
+      "Bridge +9.30 / Commander +6.60 / Main +3.35 m",
+      "Tween +0.85 / Tank −1.50 m relative to DWL"
+    ]
+  },
+  {
+    "id": "hydro",
+    "label": "Hull & Buoyancy",
+    "section": "TECHNICAL",
+    "tag": "16 / NAVAL ARCHITECTURE",
+    "title": "The numbers beneath.",
+    "subtitle": "A model, not yet a verdict.",
+    "body": "The current canoe-body model estimates 786 m³ at the design waterline, equivalent to approximately 806 tonnes displaced in seawater before appendage contributions.",
+    "image": "hydrostatics.png",
+    "layout": "technical",
+    "notes": [
+      "68 m LOA · 62 m waterline · 12.1 m beam",
+      "No validated GZ curve or full mass balance yet"
+    ]
+  },
+  {
+    "id": "manufacturing",
+    "label": "Steel Fabrication",
+    "section": "FABRICATION",
+    "tag": "17 / HULL PRODUCTION",
+    "title": "From plate to vessel.",
+    "subtitle": "CNC fabrication, without shortcuts.",
+    "body": "The steel hull is developed from approved scantlings and faired plating into traceable cut parts. CNC plasma supports repeatable fabrication; plate forming, welding control and inspection remain essential skilled operations.",
+    "image": "transverse.png",
+    "layout": "technical",
+    "notes": [
+      "P68 is 68 meters, approximately 223 feet—not a 68-foot, 40-tonne kit boat",
+      "Plate developments, weld schedules and nesting require naval architect and class review"
+    ]
+  },
+  {
+    "id": "workflow",
+    "label": "Digital Cutting",
+    "section": "FABRICATION",
+    "tag": "18 / DIGITAL MANUFACTURING",
+    "title": "A verifiable fabrication chain.",
+    "subtitle": "From geometry to traceable steel.",
+    "body": "Approved hull model → developed plating and structural details → material and thickness allocation → CNC nesting → cut IDs / fit-up → verified welds → as-built laser scans. Tab-and-slot may aid selected internal framing but does not eliminate jigs or dimensional control.",
+    "image": "elevation.png",
+    "layout": "technical",
+    "notes": [
+      "Nested file ≠ permission or approval to construct",
+      "Thermal distortion, kerf, cut compensation and forming allowances must be proven in shop trials"
+    ]
+  },
+  {
+    "id": "source",
+    "label": "Open-Source Release",
+    "section": "OPEN SOURCE",
+    "tag": "19 / PUBLIC RELEASE",
+    "title": "Pay it forward.",
+    "subtitle": "A reproducible design, responsibly released.",
+    "body": "Publish original models, attributed sources, cutting geometries, BOM, revision history, corrections and test evidence in a versioned repository after rights clearance and engineering review. Distribute build files alongside conspicuous use limits and verification requirements.",
+    "image": "hydrostatics.png",
+    "layout": "technical",
+    "notes": [
+      "Open license governs reuse; it is not certification",
+      "Distinguish concept assets, reviewed production files and as-built validation"
+    ]
+  },
+  {
+    "id": "crowd",
+    "label": "Community Milestones",
+    "section": "OPEN SOURCE",
+    "tag": "20 / COMMUNITY FUNDING",
+    "title": "Fund the learning curve.",
+    "subtitle": "Milestones measured by evidence.",
+    "body": "Crowdfunding can support design verification, first-article cutting tests, steel framing, plating and inspections. The campaign must plainly disclose that the project builds a privately owned vessel as well as publicly released engineering knowledge.",
+    "image": "hero-alt-greece.webp",
+    "layout": "split",
+    "notes": [
+      "Backer benefits and release triggers stated up front",
+      "No guaranteed seaworthiness or independent build approval"
+    ]
+  },
+  {
+    "id": "verification",
+    "label": "Validation Plan",
+    "section": "OPEN SOURCE",
+    "tag": "21 / VERIFICATION",
+    "title": "Document everything.",
+    "subtitle": "From error log to seaworthy evidence.",
+    "body": "Log input geometry, plate yield, dimensional inspection, welding and nondestructive examination results, construction changes, inclining and sea trials. Archive signed review gates so future builders can separate verified data from assumptions.",
+    "image": "long-section.png",
+    "layout": "technical",
+    "notes": [
+      "External naval architect / class / flag scrutiny where required",
+      "A successful prototype does not certify derived vessels"
+    ]
+  },
+  {
+    "id": "outlook",
+    "label": "Roadmap",
+    "section": "OPEN SOURCE",
+    "tag": "22 / THE ROAD AHEAD",
+    "title": "Built once. Learned from forever.",
+    "subtitle": "Contribute to a community of builders.",
+    "body": "P68-KETCH-G focuses on coordinated general arrangement, weight and structure. Subsequent releases should progress through steel shop trials, approved manufacturing files, construction evidence and independent performance verification.",
+    "image": "profile-full-greece.webp",
+    "layout": "wide",
+    "notes": [
+      "Next gate: reconciled weight register + structure + deck volume",
+      "Only professionally approved production files should be represented as suitable for cutting"
+    ]
+  }
+]

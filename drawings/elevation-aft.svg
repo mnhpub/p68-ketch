@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="540" viewBox="0 0 620 540" font-family="Helvetica, Arial, sans-serif">
+<title>P68 Ketch aft elevation (schematic)</title>
+<rect width="620" height="540" fill="#ffffff"/>
+<text x="30" y="34" font-size="14" font-weight="600" fill="#102027">P68 KETCH · AFT ELEVATION (SCHEMATIC)</text>
+<text x="30" y="52" font-size="10" fill="#37474f">Envelope widths read approximately from the END ELEVATIONS sheet and the transverse section at X=21 m.</text>
+<polygon points="421,366.4 410,420 392.4,439.2 357.2,452 300,460 300,460 242.8,452 207.6,439.2 190,420 179,366.4" fill="#15324a" stroke="#0a1f2e"/>
+<line x1="168" y1="420" x2="432" y2="420" stroke="#2a9fd6" stroke-dasharray="6 4"/>
+<text x="436" y="424" font-size="9" fill="#2a9fd6">DWL</text>
+<rect x="190" y="366.4" width="220" height="40" fill="#e9eef1" stroke="#263238" stroke-width="0.8"/>
+<text x="418" y="390.4" font-size="10" fill="#102027">Tween +0.85 m</text>
+<rect x="203.2" y="314.4" width="193.60000000000002" height="51.99999999999999" fill="#e8d4b2" stroke="#263238" stroke-width="0.8"/>
+<text x="404.8" y="344.4" font-size="10" fill="#102027">Main / Master +3.35 m</text>
+<rect x="220.8" y="271.2" width="158.4" height="43.20000000000002" fill="#e8d4b2" stroke="#263238" stroke-width="0.8"/>
+<text x="387.2" y="296.8" font-size="10" fill="#102027">Commander / Lido +6.60 m</text>
+<rect x="242.8" y="232.8" width="114.4" height="38.39999999999998" fill="#e9eef1" stroke="#263238" stroke-width="0.8"/>
+<text x="365.2" y="256" font-size="10" fill="#102027">Bridge +9.30 m</text>
+<line x1="300" y1="232.8" x2="300" y2="116" stroke="#6b7c86" stroke-width="3"/>
+<text x="306" y="124" font-size="9" fill="#37474f">Mizzen and main (centreline, approx.)</text>
+<text x="30" y="496" font-size="9" fill="#37474f">Hull and superstructure widths are schematic.</text>
+<text x="30" y="510" font-size="9" fill="#37474f">Lifts A and B sit on the centreline, forward, and are not shown in this end view.</text>
+<text x="600" y="526" font-size="9" fill="#8e3b6a" text-anchor="end">PROVISIONAL SCHEMATIC · NOT FOR CONSTRUCTION</text>
+</svg>

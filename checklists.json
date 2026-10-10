@@ -1,0 +1,37 @@
+[
+  {
+    "id": "hv-lockout-draft",
+    "system": "propulsion-600v",
+    "title": "High-voltage lockout before entry (draft)",
+    "status": "draft",
+    "steps": [
+      { "text": "Confirm the work scope and the equipment to be isolated.", "critical": false },
+      { "text": "Open and lock every high-voltage isolator for the equipment, following the approved procedure.", "critical": true },
+      { "text": "Test for absence of voltage at the point of work with a rated tester.", "critical": true },
+      { "text": "Apply personal locks and tags, and record who holds each lock.", "critical": true },
+      { "text": "Earth and short the conductors where the approved procedure requires it.", "critical": true }
+    ]
+  },
+  {
+    "id": "battery-isolation-draft",
+    "system": "battery-storage",
+    "title": "Battery bank isolation check (draft)",
+    "status": "draft",
+    "steps": [
+      { "text": "Confirm the battery bank is isolated from charging and load sources.", "critical": true },
+      { "text": "Check the ventilation and fire-detection status of the battery space.", "critical": true },
+      { "text": "Record the state of charge and any alarms before entry.", "critical": false }
+    ]
+  },
+  {
+    "id": "potable-water-sample-draft",
+    "system": "water-makers",
+    "title": "Potable water sample check (draft)",
+    "status": "draft",
+    "steps": [
+      { "text": "Take a sample from the outlet selected for testing, following the approved sampling procedure.", "critical": false },
+      { "text": "Test for the parameters set by the applicable potable water standard.", "critical": true },
+      { "text": "Record results and the action taken if a limit is exceeded.", "critical": true }
+    ]
+  }
+]

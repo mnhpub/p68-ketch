@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Bridge",
+    "elevation": "+9.30 m",
+    "zone": "Navigation & chart lounge",
+    "rooms": [
+      "Command position",
+      "Chart library",
+      "Leather observation seating",
+      "Protected bridge access",
+      "Bridge passage",
+      "Mag-rail lift A",
+      "Mag-rail lift B",
+      "Bridge lift lobby",
+      "Roof access passage"
+    ],
+    "access": "Stair to Commander",
+    "img": "deck-0.webp"
+  },
+  {
+    "name": "Commander / Lido",
+    "elevation": "+6.60 m",
+    "zone": "Forward lookout · aft hospitality",
+    "rooms": [
+      "Panoramic forward lookout",
+      "Observation lounge",
+      "Bar and dining",
+      "Aft Lido / pool",
+      "Roof: outdoor pilot house and sun deck (events)",
+      "Mag-rail lift A",
+      "Mag-rail lift B",
+      "Commander lift lobby"
+    ],
+    "access": "Bridge stairs; mag-rail lifts A and B; roof reached from the Bridge level by lift A (roof access passage)",
+    "img": "deck-1.webp"
+  },
+  {
+    "name": "Main / Master",
+    "elevation": "+3.35 m",
+    "zone": "Owner and social spaces",
+    "rooms": [
+      "Owner suite",
+      "VIP accommodation",
+      "Main salon / dining",
+      "Professional galley",
+      "Main passage",
+      "Mag-rail lift A",
+      "Mag-rail lift B",
+      "Main lift lobby"
+    ],
+    "access": "Elevator to Commander; stairs to Tween",
+    "img": "deck-2.webp"
+  },
+  {
+    "name": "Tween",
+    "elevation": "+0.85 m",
+    "zone": "Accommodation & service",
+    "rooms": [
+      "Guest cabins",
+      "Crew quarters",
+      "Laundry / linen",
+      "Workshop / storage",
+      "Service circulation",
+      "Accessible guest cabin",
+      "Mag-rail lift B",
+      "Tween lift lobby"
+    ],
+    "access": "Stairs to Main and Tank",
+    "img": "deck-3.webp"
+  },
+  {
+    "name": "Tank / Technical",
+    "elevation": "−1.50 m",
+    "zone": "Low-level systems and storage",
+    "rooms": [
+      "Fuel / water tanks",
+      "Wastewater / bilges",
+      "Ballast and keel trunk",
+      "Technical access corridor",
+      "Pump / manifold spaces",
+      "Mag-rail lift B"
+    ],
+    "access": "Protected service stairs to Tween",
+    "img": "deck-4.webp"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "power-propulsion",
+    "label": "Power & propulsion",
+    "description": "Electric propulsion, energy storage, generation and backup power."
+  },
+  {
+    "id": "fluids-fuel",
+    "label": "Fluids & fuel",
+    "description": "Water production, potable water, plumbing, fuel handling and processing."
+  },
+  {
+    "id": "environmental",
+    "label": "Environmental",
+    "description": "Wastewater, waste processing and compaction, food waste and landfill management."
+  },
+  {
+    "id": "mechanical-structure",
+    "label": "Mechanical & structure",
+    "description": "HVAC, food storage, tween deck accommodation, anchor and sail systems."
+  },
+  {
+    "id": "interiors",
+    "label": "Interiors",
+    "description": "Kitchen and bathroom accommodation, lighting, curated art and glassware storage."
+  },
+  {
+    "id": "navigation-comms",
+    "label": "Navigation & comms",
+    "description": "Navigation, communications, ship communications, command and control, A/V media and wifi."
+  },
+  {
+    "id": "security-operations",
+    "label": "Security & operations",
+    "description": "Premise security, keycards, policies and procedures, checklists and onboard automation."
+  },
+  {
+    "id": "hospitality-guest",
+    "label": "Hospitality & guest",
+    "description": "Guest services, dining, booking and guest experience. Operational product scope, not yet designed."
+  }
+]

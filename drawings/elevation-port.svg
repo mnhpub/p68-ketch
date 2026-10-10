@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="470" viewBox="0 0 1000 470" font-family="Helvetica, Arial, sans-serif">
+<title>P68 Ketch port elevation (schematic)</title>
+<rect width="1000" height="470" fill="#ffffff"/>
+<text x="30" y="34" font-size="14" font-weight="600" fill="#102027">P68 KETCH · PORT ELEVATION (SCHEMATIC)</text>
+<text x="30" y="52" font-size="10" fill="#37474f">Deck heights from the vertical space schedule. Deck extents from the provisional layout. Mast positions approximate.</text>
+<polygon points="230,350 896.4000000000001,350 896.4000000000001,350 886.6,356.62050591842626 876.8000000000001,359.2926748693998 867,361.29460591775427 857.2,362.94117647058823 847.4000000000001,364.3551935913447 837.6,365.60002328984154 827.8000000000001,366.713511876286 818,367.7204356839907 808.2,368.63807424115174 798.4000000000001,369.4790500539287 788.6,370.2529153354468 778.8000000000001,370.96710225955485 769,371.62752375416625 759.2,372.23897028434453 749.4000000000001,372.8053814674395 739.6,373.33003766476696 729.8,373.81569860407205 720,374.2647058823529 710.2,374.6790601950465 700.4000000000001,375.06048047545977 690.6,375.4104498230081 680.8,375.7302516068317 671,376.02099814170583 661.2,376.28365366205753 651.4000000000001,376.5190528556331 641.6,376.72791589124137 631.8,376.91086064055224 622,377.0684126231613 612.2,377.2010130777651 602.4000000000001,377.3090254672758 592.6,377.3927406530349 582.8,377.4523809166542 573,377.48810296288684 563.2,377.5 553.4000000000001,377.48810296288684 543.6,377.4523809166542 533.8,377.3927406530349 524,377.3090254672758 514.2,377.2010130777651 504.40000000000003,377.0684126231613 494.6,376.91086064055224 484.8,376.72791589124137 475,376.5190528556331 465.20000000000005,376.28365366205753 455.4,376.02099814170583 445.6,375.7302516068317 435.8,375.4104498230081 426,375.06048047545977 416.20000000000005,374.6790601950465 406.4,374.2647058823529 396.6,373.81569860407205 386.8,373.33003766476696 377,372.8053814674395 367.20000000000005,372.23897028434453 357.4,371.62752375416625 347.6,370.96710225955485 337.8,370.2529153354468 328,369.4790500539287 318.2,368.63807424115174 308.4,367.7204356839907 298.6,366.713511876286 288.8,365.60002328984154 279,364.3551935913447 269.2,362.94117647058823 259.4,361.29460591775427 249.6,359.2926748693998 239.8,356.62050591842626 230,350" fill="#15324a" stroke="#0a1f2e" stroke-width="1"/>
+<line x1="230" y1="350" x2="896.4000000000001" y2="350" stroke="#2a9fd6" stroke-dasharray="6 4"/>
+<text x="902.4000000000001" y="354" font-size="9" fill="#2a9fd6">DWL</text>
+<rect x="426" y="221.3" width="303.8" height="26.399999999999984" fill="#e8d4b2" stroke="#263238" stroke-width="0.8" opacity="0.92"/>
+<line x1="426" y1="247.7" x2="729.8" y2="247.7" stroke="#102027" stroke-width="2"/>
+<text x="218" y="251.7" font-size="10" fill="#102027" text-anchor="end">Bridge +9.30 m</text>
+<rect x="299.384" y="247.7" width="450.0160000000001" height="29.70000000000001" fill="#e8d4b2" stroke="#263238" stroke-width="0.8" opacity="0.92"/>
+<line x1="299.384" y1="277.4" x2="749.4000000000001" y2="277.4" stroke="#102027" stroke-width="2"/>
+<text x="218" y="281.4" font-size="10" fill="#102027" text-anchor="end">Commander / Lido +6.60 m</text>
+<rect x="318.69" y="277.4" width="479.71000000000004" height="35.74999999999999" fill="#e8d4b2" stroke="#263238" stroke-width="0.8" opacity="0.92"/>
+<line x1="318.69" y1="313.15" x2="798.4000000000001" y2="313.15" stroke="#102027" stroke-width="2"/>
+<text x="218" y="317.15" font-size="10" fill="#102027" text-anchor="end">Main / Master +3.35 m</text>
+<rect x="328.98" y="313.15" width="440.02000000000004" height="27.5" fill="#e9eef1" stroke="#263238" stroke-width="0.8" opacity="0.92"/>
+<line x1="328.98" y1="340.65" x2="769" y2="340.65" stroke="#102027" stroke-width="2"/>
+<text x="218" y="344.65" font-size="10" fill="#102027" text-anchor="end">Tween +0.85 m</text>
+<rect x="308.988" y="340.65" width="499.212" height="25.85" fill="#e9eef1" stroke="#263238" stroke-width="0.8" opacity="0.92"/>
+<line x1="308.988" y1="366.5" x2="808.2" y2="366.5" stroke="#102027" stroke-width="2"/>
+<text x="218" y="370.5" font-size="10" fill="#102027" text-anchor="end">Tank / Technical +-1.50 m</text>
+<line x1="299.58" y1="247.7" x2="426.98" y2="247.7" stroke="#8e3b6a" stroke-width="2"/>
+<rect x="299.58" y="221.3" width="127.40000000000002" height="26.399999999999984" fill="none" stroke="#8e3b6a" stroke-dasharray="6 4"/>
+<text x="363.28000000000003" y="234.5" font-size="9" fill="#8e3b6a" text-anchor="middle">Pilot house cover (+11.70 m)</text>
+<rect x="700.4000000000001" y="247.7" width="29.400000000000002" height="118.80000000000001" fill="#8fd0e6" stroke="#263238" stroke-width="0.8"/>
+<line x1="700.4000000000001" y1="313.15" x2="729.8" y2="313.15" stroke="#263238" stroke-width="0.8"/>
+<text x="737.8" y="213.6" font-size="9" fill="#102027">Mag-rail lifts A and B, forward (48–51 m)</text>
+<text x="737.8" y="223.5" font-size="8" fill="#546e7a">Lift A serves Main to Bridge. Lift B serves Tank to Bridge.</text>
+<line x1="435.8" y1="278.5" x2="435.8" y2="141" stroke="#6b7c86" stroke-width="3"/>
+<text x="441.8" y="145" font-size="9" fill="#37474f">Mizzen (approx.)</text>
+<line x1="621.02" y1="264.2" x2="621.02" y2="141" stroke="#6b7c86" stroke-width="3"/>
+<text x="627.02" y="145" font-size="9" fill="#37474f">Main (approx.)</text>
+<text x="224" y="399.5" font-size="11" fill="#263238" text-anchor="end">STERN</text>
+<text x="902.4000000000001" y="399.5" font-size="11" fill="#263238">BOW</text>
+<line x1="230" y1="417.5" x2="328" y2="417.5" stroke="#263238" stroke-width="2"/>
+<text x="328" y="431.5" font-size="9" fill="#37474f" text-anchor="middle">10 m</text>
+<text x="980" y="454" font-size="9" fill="#8e3b6a" text-anchor="end">PROVISIONAL SCHEMATIC · NOT FOR CONSTRUCTION · Source: decks-layout.json, P68-KETCH-E</text>
+</svg>

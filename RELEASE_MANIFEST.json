@@ -1,0 +1,20 @@
+{
+  "project": "P68-KETCH",
+  "revision": "Interactive Studio R02",
+  "length_overall_m": 68,
+  "length_approx_ft": 223,
+  "design_status": "preliminary conceptual feasibility",
+  "hydrostatics_source": "P68-KETCH-C: parametric canoe-body approximation; not class-approved",
+  "features": [
+    "22 slide presentation",
+    "five deck explorer",
+    "fabrication workflow",
+    "design register",
+    "offline browser mode",
+    "React TSX source"
+  ],
+  "source_images": "Prior P68 exterior compositions edited with Greek flags; ten regenerated high-resolution luxury concept images; original P68 C-E blocking geometry",
+  "image_limitations": "AI-generated visual design intent; not derived from a coordinated architectural BIM model",
+  "construction_approval": false,
+  "cnc_nesting_files_included": false
+}
