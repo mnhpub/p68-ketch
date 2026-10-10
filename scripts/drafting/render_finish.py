@@ -54,6 +54,11 @@ def build_level(deck: p68.Deck, wall_h: float, cap: bool, depth: float = 0.25):
     deck_shell(cd, M, z, depth=depth)
     K.build_floors(cd, z)
     K.build_walls(cd, z, wall_h, M['wall'], cap=M['wall_cap'] if cap else None)
+    # Indicative cabin partitions from the DXF, thinner than the walls.
+    for i, ((x0, y0), (x1, y1)) in enumerate(cd.partitions or []):
+        K.box(f'Prtn{i}', x0 - 0.04, min(y0, y1), z, x0 + 0.04, max(y0, y1), z + wall_h, M['wall'])
+        if cap:
+            K.box(f'PrtnCap{i}', x0 - 0.04, min(y0, y1), z + wall_h, x0 + 0.04, max(y0, y1), z + wall_h + 0.01, M['wall_cap'])
     for r in cd.rooms:
         bfurnish.furnish(r, z, M)
     # Masts through the level, approximate.
