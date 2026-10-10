@@ -41,8 +41,9 @@ These are my decisions on the open items. Change any of them in `layout/decks-la
 
 ## Open: renders
 
-1. **Renders 06, 07, 12 and 13** were regenerated on 10 Oct 2026 to match the resolved layout. The superseded versions are in `drawings/renders/superseded/`. Render 12 shows a wheel as well as touch screens, which the brief does not specify.
-2. **All renders** are AI concept illustrations for mood and material direction only.
+1. **Renders 01, 02, 03, 06, 07, 12 and 13** were regenerated on 10 Oct 2026 to match the resolved layout. The superseded versions are in `drawings/renders/superseded/`. Renders 01 and 12 show a wheel, which the brief does not specify.
+2. **Renders 04, 05, 08, 09, 10 and 11** still predate the resolved layout (single lift doors, a corridor instead of the Bridge lobbies). Regenerate them when the Figma AI usage limit resets.
+3. **All renders** are AI concept illustrations for mood and material direction only.
 
 ## Open: scope
 
@@ -52,4 +53,4 @@ These are my decisions on the open items. Change any of them in `layout/decks-la
 ## Next checks
 
 - Re-run `npm run validate:layout`, `npm run validate:access`, `npm run build:drawings`, `npm run build:elevations` after any layout change.
-- Regenerate the renders after any further layout change. Renders 06, 07, 12 and 13 match the layout as of 10 Oct 2026.
+- Regenerate the renders after any further layout change. Renders 01, 02, 03, 06, 07 and 13 match the layout as of 10 Oct 2026.

@@ -14,9 +14,9 @@ export const SHEETS: Sheet[] = [
 ];
 
 export const RENDERS: Render[] = [
-  {file: '01-bridge-helm.jpg', title: 'Bridge helm and lounge'},
-  {file: '02-commander-lookout-lift-lobby.jpg', title: 'Commander lookout and lift doors'},
-  {file: '03-main-salon-passage.jpg', title: 'Main salon and passage'},
+  {file: '01-bridge-helm.jpg', title: 'Bridge passage and command position'},
+  {file: '02-commander-lookout-lift-lobby.jpg', title: 'Commander lookout and lift lobby'},
+  {file: '03-main-salon-passage.jpg', title: 'Main salon, passage and owner suite doors'},
   {file: '04-tween-accessible-cabin.jpg', title: 'Tween corridor and accessible cabin'},
   {file: '05-tank-technical-corridor.jpg', title: 'Tank technical corridor'},
   {file: '06-aft-lido-exterior.jpg', title: 'Aft Lido with roof and pilot house cover'},
