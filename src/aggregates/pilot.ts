@@ -3,6 +3,8 @@
 // control at a time, handover is requested and accepted, and manual reversion
 // is requested at one station and confirmed at the other.
 
+import type {PilotAction} from '../commands/pilot';
+
 export type Station = 'bridge' | 'pilothouse';
 
 export const STATION_NAME: Record<Station, string> = {
@@ -34,21 +36,6 @@ export type PilotState = {
   log: LogEntry[];
 };
 
-export type PilotAction =
-  | { type: 'demand'; shaft: Shaft; value: number; by: Station }
-  | { type: 'rudder'; value: number; by: Station }
-  | { type: 'autopilot'; on: boolean; by: Station }
-  | { type: 'thrust'; side: Side; value: number; by: Station }
-  | { type: 'request'; by: Station }
-  | { type: 'cancelRequest' }
-  | { type: 'accept'; by: Station }
-  | { type: 'estop'; by: Station }
-  | { type: 'clearEstop'; by: Station }
-  | { type: 'reversionRequest'; by: Station }
-  | { type: 'reversionConfirm'; by: Station }
-  | { type: 'reversionCancel' }
-  | { type: 'networkFault'; on: boolean }
-  | { type: 'reset' };
 
 export const otherStation = (s: Station): Station => (s === 'bridge' ? 'pilothouse' : 'bridge');
 

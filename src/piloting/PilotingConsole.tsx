@@ -1,5 +1,6 @@
 import type {Dispatch, ReactNode} from 'react';
-import {canCommand, otherStation, RUDDER_LIMIT, stationName, type PilotAction, type PilotState, type Shaft, type Side, type Station} from './pilotState';
+import {canCommand, otherStation, RUDDER_LIMIT, stationName, type PilotState, type Shaft, type Side, type Station} from '../aggregates/pilot';
+import type {PilotAction} from '../commands/pilot';
 import {HoldButton, Slider} from './controls';
 
 type Props = {

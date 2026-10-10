@@ -1,6 +1,6 @@
 import {useMemo, useState} from 'react';
 import {AlertTriangle, Lock} from 'lucide-react';
-import {basisLabel, statusLabel, type Checklist, type Domain, type System} from './systems';
+import {basisLabel, statusLabel, type Checklist, type Domain, type System} from './aggregates/system';
 import './systems.css';
 
 type Props = {

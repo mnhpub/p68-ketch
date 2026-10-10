@@ -1,0 +1,10 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "p68-ketch",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist-public",
+    "not_found_handling": "single-page-application"
+  },
+  "workers_dev": true
+}

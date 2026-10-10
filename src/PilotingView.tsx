@@ -1,6 +1,6 @@
 import {useReducer, useState} from 'react';
 import PilotingConsole from './piloting/PilotingConsole';
-import {initialPilotState, pilotReducer, stationName, type Station} from './piloting/pilotState';
+import {initialPilotState, pilotReducer, stationName, type Station} from './aggregates/pilot';
 import './piloting/piloting.css';
 
 // Concept screen for the two-crew helm. The demo bar is for review only. In a
