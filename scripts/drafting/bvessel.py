@@ -447,16 +447,22 @@ def island(M, cx, cy, rx, ry, h, seed=3, z0=-3.0, village_at=None, n=140):
     if village_at:
         vx, vy, spread, count = village_at
         rnd = random.Random(seed)
+
+        def zat(px, py):
+            ii = int(np.clip((px - cx) / rx * 0.5 + 0.5, 0, 1) * (n - 1))
+            jj = int(np.clip((py - cy) / ry * 0.5 + 0.5, 0, 1) * (n - 1))
+            return float(z[jj, ii])
+
         for k in range(count):
             u = vx + rnd.gauss(0, spread)
             v = vy + rnd.gauss(0, spread * 0.6)
-            i = int(np.clip((u - cx) / rx * 0.5 + 0.5, 0, 1) * (n - 1))
-            j = int(np.clip((v - cy) / ry * 0.5 + 0.5, 0, 1) * (n - 1))
-            zz = float(z[j, i])
-            if zz < 1.5:
-                continue
             w, d, hh = rnd.uniform(5, 9), rnd.uniform(5, 8), rnd.uniform(3.5, 6)
-            K.box('Village house', u - w / 2, v - d / 2, zz - 3, u + w / 2, v + d / 2, zz + hh, M['white_render'], bevel=0.2)
+            corners = [zat(u + sx * w / 2, v + sy * d / 2) for sx in (-1, 1) for sy in (-1, 1)]
+            zz = max(corners)
+            if min(corners) < 1.5:
+                continue
+            # Sit on the terrain: foundations run down to the lowest corner.
+            K.box('Village house', u - w / 2, v - d / 2, min(corners) - 1.0, u + w / 2, v + d / 2, zz + hh, M['white_render'], bevel=0.2)
             if rnd.random() < 0.08:
                 K.cylinder('Village dome', u, v, zz + hh, w * 0.35, w * 0.3, M['blue_door'], 24, r_top=0.4)
     return o
