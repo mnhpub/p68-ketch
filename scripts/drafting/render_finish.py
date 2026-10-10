@@ -140,8 +140,12 @@ def render_cutaway(deck: p68.Deck):
     cd = build_level(deck, wall_h=1.2, cap=True, depth=1.6)
     # Studio floor below the level, mid grey so the model reads against it.
     K.plane('Studio', -300, -300, 360, 300, cd.z - 1.65, K.principled('Studio floor', K.srgb('#9aa6ac'), rough=0.9))
-    # Same viewpoint for every level: whole hull from the aft starboard quarter.
-    K.camera((-10, -33, cd.z + 33), (32.5, 0.5, cd.z - 3), lens=33)
+    # Same viewing direction for every level, scaled to the extent of its rooms.
+    x0 = min(r.x0 for r in cd.rooms) - 1.5
+    x1 = max(r.x1 for r in cd.rooms) + 1.5
+    k = (x1 - x0) / 52.0
+    mid = (x0 + x1) / 2
+    K.camera((mid - 42.5 * k, 0.5 - 33.5 * k, cd.z + 36 * k), (mid, 0.5, cd.z - 3 * k), lens=33)
     K.bpy.context.scene.view_settings.look = 'AgX - High Contrast'
     tmp = OUT / f'_cut-{deck.file_stem}.png'
     K.render(tmp)
