@@ -11,13 +11,17 @@ const out = join(root, 'build/public');
 mkdirSync(out, {recursive: true});
 const load = (p) => JSON.parse(readFileSync(join(root, p), 'utf8'));
 
+// Restricted filtering is off during development: the public site shows every section.
+// Set to true for the testing-phase public site.
+const FILTER_RESTRICTED = false;
+
 const allSystems = load('systems.json');
-const systems = allSystems.filter((s) => s.public_release === true);
+const systems = FILTER_RESTRICTED ? allSystems.filter((s) => s.public_release === true) : allSystems;
 const ids = new Set(systems.map((s) => s.id));
 const checklists = load('checklists.json').filter((c) => ids.has(c.system));
 
 // A domain with any restricted system gets a neutral description, so restricted topics are not named.
-const restrictedDomains = new Set(allSystems.filter((s) => !s.public_release).map((s) => s.domain));
+const restrictedDomains = new Set(FILTER_RESTRICTED ? allSystems.filter((s) => !s.public_release).map((s) => s.domain) : []);
 const domains = load('domains.json').map((d) => (restrictedDomains.has(d.id)
   ? {...d, description: 'Some systems in this domain are restricted. Details are available to authorised users.'}
   : d));

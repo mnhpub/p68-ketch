@@ -5,8 +5,12 @@ import type {Checklist, System} from '../aggregates/system';
 // build includes everything and must sit behind Cloudflare Access.
 export const isPublicBuild = import.meta.env.VITE_AUDIENCE === 'public';
 
+// Off during development: every section is visible on the public site.
+// Set to true for the testing-phase public site.
+export const FILTER_RESTRICTED = false;
+
 export function visibleSystems(systems: System[]): System[] {
-  return isPublicBuild ? systems.filter((s) => s.public_release) : systems;
+  return isPublicBuild && FILTER_RESTRICTED ? systems.filter((s) => s.public_release) : systems;
 }
 
 export function visibleChecklists(checklists: Checklist[], systems: System[]): Checklist[] {
