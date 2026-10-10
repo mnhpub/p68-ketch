@@ -92,6 +92,7 @@
 .nudge { min-height: 56px; background: #132c3b; color: #d7e2e7; border: 1px solid #365565; font-size: 12px; }
 .nudge.centre { background: #1d3a4a; }
 .nudge:disabled { opacity: 0.35; }
+.helm-ratio { font-size: 11px; color: #8da5b0; letter-spacing: 1px; }
 .steer-modes { display: flex; flex-direction: column; gap: 8px; }
 .note { margin: 0; font-size: 12px; line-height: 1.5; color: #b8cbd5; }
 
@@ -134,3 +135,16 @@
   .estop-bar { grid-template-columns: 1fr; }
   .slider.v { height: 200px; }
 }
+
+/* Environment and sails */
+.env-grid { display: flex; flex-direction: column; gap: 10px; }
+.env-row { display: flex; flex-direction: column; gap: 6px; }
+.env-disturbance { margin-top: 10px; font-size: 12px; color: #8da5b0; }
+
+/* Navigation and checklists */
+.checklist { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+.check-row { display: flex; gap: 10px; align-items: flex-start; text-align: left; min-height: 56px; background: #132c3b; color: #d7e2e7; border: 1px solid #365565; font-size: 12px; padding: 8px; }
+.check-row.done { background: #1d3a4a; }
+.check-row:disabled { opacity: 0.45; }
+.check-box { flex: 0 0 22px; height: 22px; border: 1px solid #5d7887; display: inline-flex; align-items: center; justify-content: center; }
+.check-row small { color: #c6a67d; }
