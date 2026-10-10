@@ -54,12 +54,12 @@
     "status": "concept",
     "safety_critical": true,
     "public_release": false,
-    "summary": "Battery energy storage for propulsion, hotel loads and the 60-day endurance target. Chemistry, capacity and location are not yet selected.",
+    "summary": "Battery energy storage for propulsion, hotel loads and the 90-day endurance target. Chemistry, capacity and location are not yet selected.",
     "approval_status": "Not reviewed. Requires electrical engineering, stability and fire-safety review before any design decision.",
     "key_parameters": [
       {
         "label": "Endurance target",
-        "value": "60 days",
+        "value": "90 days",
         "basis": "target"
       },
       {
@@ -79,7 +79,7 @@
       }
     ],
     "risks": [
-      "The 60-day endurance target has no energy budget yet, so it is unverified.",
+      "The 90-day endurance target has no energy budget yet, so it is unverified.",
       "Thermal runaway protection, fire detection and suppression, and ventilation are not designed.",
       "Battery mass and location will affect the stability model."
     ],
@@ -424,7 +424,7 @@
       }
     ],
     "risks": [
-      "Storage capacity for a 60-day voyage is not calculated.",
+      "Storage capacity for a 90-day voyage is not calculated.",
       "Discharge permissions differ by waters and are not yet mapped."
     ],
     "related_decks": [
@@ -550,7 +550,7 @@
     "status": "concept",
     "safety_critical": false,
     "public_release": true,
-    "summary": "Dry, chilled and frozen storage sized for long passages and the 60-day provisioning requirement under study.",
+    "summary": "Dry, chilled and frozen storage sized for long passages and the 90-day provisioning requirement under study.",
     "approval_status": "Not reviewed. Requires food-safety and refrigeration review before any design decision.",
     "key_parameters": [
       {
@@ -565,12 +565,12 @@
       },
       {
         "label": "Provisioning period",
-        "value": "60 days (under study)",
+        "value": "90 days (under study, aligned to endurance)",
         "basis": "target"
       }
     ],
     "risks": [
-      "Provisioning volume depends on the 60-day target, which is not yet verified.",
+      "Provisioning volume depends on the 90-day target, which is not yet verified.",
       "Cold-chain boundaries and fire separation are not fixed."
     ],
     "related_decks": [
