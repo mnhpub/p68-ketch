@@ -88,24 +88,9 @@ export const FINISH_PLANS: Shot[] = DECK_FILES.map((f, i) => ({
 export const CUTAWAYS: Shot[] = DECK_FILES.map((f, i) => ({
   file: `finish/cutaway-${f}.jpg`, title: `${DECK_TITLES[i]} cutaway`, note: 'Finish-out cutaway from the aft starboard quarter',
 }));
+// Rendered so far at full quality. Anchor, underway, dusk and the interiors are scripted in
+// scripts/drafting/render_exteriors.py and render_interiors.py and are added here once rendered.
 export const EXTERIORS: Shot[] = [
   {file: 'exterior/port.jpg', title: 'At port', note: 'Stern-to on the quay, golden hour'},
-  {file: 'exterior/anchor.jpg', title: 'At anchor', note: 'Cycladic bay, tender at the swim platform'},
-  {file: 'exterior/underway.jpg', title: 'Underway', note: 'Under sail, close reach'},
-  {file: 'exterior/dusk.jpg', title: 'At anchor, dusk', note: 'Interior and Lido lighting'},
 ];
-export const INTERIORS: Shot[] = [
-  {file: 'interior/bridge-helm.jpg', title: 'Bridge helm', note: 'Controls · command position'},
-  {file: 'interior/pilot-house.jpg', title: 'Outdoor pilot house', note: 'Controls · roof helm under the cover'},
-  {file: 'interior/technical-corridor.jpg', title: 'Technical corridor', note: 'Controls · Tank deck, lift B'},
-  {file: 'interior/salon.jpg', title: 'Main salon', note: 'Feature · lounge and dining'},
-  {file: 'interior/lido-pool.jpg', title: 'Aft Lido and pool', note: 'Feature · Commander deck'},
-  {file: 'interior/observation-lounge.jpg', title: 'Observation lounge', note: 'Feature · Commander deck'},
-  {file: 'interior/chart-library.jpg', title: 'Chart library', note: 'Feature · Bridge'},
-  {file: 'interior/main-lift-lobby.jpg', title: 'Main lift lobby', note: 'Feature · lifts A and B'},
-  {file: 'interior/galley.jpg', title: 'Professional galley', note: 'Feature · Main deck'},
-  {file: 'interior/owner-suite.jpg', title: 'Owner suite', note: 'Accommodation · Main deck'},
-  {file: 'interior/vip-cabin.jpg', title: 'VIP cabin', note: 'Accommodation · Main deck'},
-  {file: 'interior/guest-cabin.jpg', title: 'Guest cabin', note: 'Accommodation · Tween'},
-  {file: 'interior/accessible-cabin.jpg', title: 'Accessible guest cabin', note: 'Accommodation · Tween'},
-];
+export const INTERIORS: Shot[] = [];

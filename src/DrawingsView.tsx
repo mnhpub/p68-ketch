@@ -4,6 +4,7 @@ import './scope.css';
 
 // Presentation only. Sheet and render lists come from the drawings projection.
 function ShotGroup({title, shots, open}: {title: string; shots: Shot[]; open: (src: string) => void}) {
+  if (shots.length === 0) return null;
   return (
     <>
       <h2 className="sheet-group">{title}</h2>
@@ -80,7 +81,7 @@ export default function DrawingsView() {
 
       <ShotGroup title="Finish-out plans" shots={FINISH_PLANS} open={setOpen} />
       <ShotGroup title="Finish-out cutaways" shots={CUTAWAYS} open={setOpen} />
-      <ShotGroup title="Exterior renders: at port, at anchor, underway" shots={EXTERIORS} open={setOpen} />
+      <ShotGroup title="Exterior renders" shots={EXTERIORS} open={setOpen} />
       <ShotGroup title="Interior renders: controls, features, accommodation" shots={INTERIORS} open={setOpen} />
 
       <h2 className="sheet-group">Concept renders (AI)</h2>

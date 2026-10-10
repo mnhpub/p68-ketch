@@ -43,7 +43,9 @@ These are my decisions on the open items. Change any of them in `layout/decks-la
 
 1. **Renders 01, 02, 03, 06, 07, 12 and 13** were regenerated on 10 Oct 2026 to match the resolved layout. The superseded versions are in `drawings/renders/superseded/`. Renders 01 and 12 show a wheel, which the brief does not specify.
 2. **Renders 04, 05, 08, 09, 10 and 11** still predate the resolved layout (single lift doors, a corridor instead of the Bridge lobbies). Regenerate them when the Figma AI usage limit resets.
-3. **All renders** are AI concept illustrations for mood and material direction only.
+3. **All AI renders** are concept illustrations for mood and material direction only.
+4. **Blender renders, done (10 Oct 2026):** finish-out plans and cutaways for all five levels, and the at-port exterior. See `docs/drafting-and-rendering.md`.
+5. **Blender renders, to run:** at anchor, underway and dusk exteriors, and the 13 interiors (`python3 scripts/drafting/render_exteriors.py anchor underway dusk`, `python3 scripts/drafting/render_interiors.py`). Then re-render the Bridge plan (helm chairs) and the Tween cutaway (cabin partitions), and the port scene (village houses on the terrain), which predate those fixes. Add the new files to `src/projections/drawings.ts`.
 
 ## Open: scope
 
