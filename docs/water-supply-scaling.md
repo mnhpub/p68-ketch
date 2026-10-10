@@ -123,3 +123,23 @@ Units are derated to 11.4 L a day, from the rated 18.9 L, and each draws 0.4 kWh
 - Potable-water testing under the checklists in `docs/preservation-and-maintenance.md`.
 - Foam-free units, since foam is banned under the materials policy.
 - Air intake and exhaust routed as set in `layout/ventilation-register.json`, with the atmospheric units' exhaust clear of every intake.
+
+## Embarked water: buffer only
+
+Owner direction: water is produced onboard. No potable water is embarked as provisions. The water on board is a storage buffer that covers a production outage, not a supply for the passage.
+
+- **Production:** reverse osmosis is the main supply, and atmospheric units are the drinking backup (see above).
+- **Buffer:** sized to cover a stated outage period at the chosen demand. The outage period is a policy decision. This note uses **72 hours** as a placeholder.
+
+| Scenario | Drinking buffer (4 L/person/day) | Full-demand buffer (150 L/person/day) |
+|---|---|---|
+| Owner private (14 people) | 168 L | 6.3 m³ |
+| Charter standard (22 people) | 264 L | 9.9 m³ |
+| Layout maximum (34 people) | 408 L | 15.3 m³ |
+| Event day drinking (400 L/day) | 1,200 L | not applicable |
+
+- The drinking buffer is small, and it can be held in the Tank / Technical water storage. The full-demand buffer is large and needs a deliberate choice of how much water to hold against a production failure.
+- Event days need their own drinking reserve, since the 400 L/day drinking load is the peak.
+- The buffer is not a provisioning figure. Potable water quality, treatment and storage hygiene still apply (see the potable-water checks in `docs/preservation-and-maintenance.md`).
+
+**Decision needed:** the outage period the buffer must cover, and whether the buffer covers drinking only or full demand.

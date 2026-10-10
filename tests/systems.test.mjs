@@ -18,16 +18,16 @@ const energyKwh = (kw) => kw * 24 * days;
 const batteryT = (kwh) => kwh / (spec * dod) / 1000;
 const fuelT = (kwh, e = eta) => kwh / (e * lhv) / 1000;
 
-test('60-day energy at 20 kW is 28.8 MWh', () => {
-  assert.ok(Math.abs(energyKwh(20) - 28800) < 1e-6);
+test('90-day energy at 20 kW is 43.2 MWh', () => {
+  assert.ok(Math.abs(energyKwh(20) - 43200) < 1e-6);
 });
 
 test('battery-only mass scales linearly with load (same energy twice needs twice the mass)', () => {
   assert.ok(Math.abs(batteryT(2 * energyKwh(20)) / batteryT(energyKwh(20)) - 2) < 1e-9);
 });
 
-test('battery-only mass at 20 kW is about 300 t at 0.12 kWh/kg and 80% DoD', () => {
-  assert.ok(Math.abs(batteryT(energyKwh(20)) - 300) < 0.5);
+test('battery-only mass at 20 kW is about 450 t over 90 days at 0.12 kWh/kg and 80% DoD', () => {
+  assert.ok(Math.abs(batteryT(energyKwh(20)) - 450) < 0.5);
 });
 
 test('fuel mass falls as genset efficiency rises', () => {
@@ -35,8 +35,8 @@ test('fuel mass falls as genset efficiency rises', () => {
   assert.ok(fuelT(energyKwh(20), 0.35) < fuelT(energyKwh(20), 0.30));
 });
 
-test('fuel at 35% efficiency for 20 kW is about 6.9 t', () => {
-  assert.ok(Math.abs(fuelT(energyKwh(20)) - 6.9) < 0.05);
+test('fuel at 35% efficiency for 20 kW over 90 days is about 10.4 t', () => {
+  assert.ok(Math.abs(fuelT(energyKwh(20)) - 10.4) < 0.05);
 });
 
 test('battery-to-fuel mass ratio at 20 kW is about 43 at 0.12 kWh/kg', () => {

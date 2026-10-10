@@ -381,6 +381,12 @@
       "system": "electrical-distribution",
       "layout": "Not placed (Tank / Technical generation space to set)",
       "status": "open"
+    },
+    {
+      "item": "Provisioning: commercial frozen store (with refrigeration) and dry food store",
+      "system": "food-storage",
+      "layout": "Main / Master, next to professional galley (6 m² frozen, 8 m² dry, placeholders)",
+      "status": "open"
     }
   ],
   "open": [
@@ -435,6 +441,11 @@
     "Toyota EV powerplant is energy production only, feeding the 600 V output bus. Rating, converter efficiency, AC or DC bus choice and marine rating open (docs/hybrid-energy-production.md).",
     "Multiple powerplants on one exhaust: separate outlet per engine preferred; shared manifold only with isolation and non-return valves, back-pressure checks for every combination, and branch drains (docs/genset-exhaust-and-systems.md).",
     "Bus voltage: Toyota EV platform native pack is about 355 V nominal (secondary sources, to verify). Aligning the 600 V bus needs a choice between a full 355 V bus, a DC-DC step-up to a 600 V propulsion bus, or a two-voltage design. Propulsion power decides (docs/bus-voltage-alignment.md).",
-    "800 V bus basis: nominal 800 V, window 720 to 880 V, headroom H 1.25 on continuous current at minimum voltage, insulation at least 1,100 V. Propulsion power still needed to size cable (docs/bus-800v-design.md)."
+    "800 V bus basis: nominal 800 V, window 720 to 880 V, headroom H 1.25 on continuous current at minimum voltage, insulation at least 1,100 V. Propulsion power still needed to size cable (docs/bus-800v-design.md).",
+    "Embarked water: buffer only, since water is produced onboard. Outage period for the buffer and drinking-only versus full-demand coverage to decide (docs/water-supply-scaling.md; 72 h placeholder).",
+    "Provisioning: frozen store refrigeration (envelope about 0.20 kW average at placeholder U and COP, pull-down unknown) and non-foam walk-in insulation. Food rate and period to confirm (docs/provisioning-food-storage.md).",
+    "Provisioning revised: protein fresh from the sea (chill room for daily catch), produce from port held for a placeholder 14-day passage, chilled produce store 4 m². Passage lengths between ports and catch assumption to confirm (docs/provisioning-food-storage.md).",
+    "Specialty provisions: wine cellar (4 m², 12 to 14 °C, low vibration), chilled cheese zone (2 m², 2 to 6 °C), frozen butter in the frozen store. Per-person rates are placeholders; wine hold period to confirm (docs/provisioning-food-storage.md).",
+    "Dry stores: rice, grains, flour and baking sized at about 0.54 m² floor at placeholder rates (0.15 and 0.05 kg per person per day, 90 days), within the 8 m² dry store. Rates and flour shelf life to confirm (docs/provisioning-food-storage.md)."
   ]
 }

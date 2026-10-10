@@ -74,6 +74,36 @@
       "deck": "Tank / Technical",
       "area_m2": 6,
       "basis": "Placeholder. Ventilated, fire-protected, sealed containers on a lipped shelf, with hazardous-waste collection. See docs/preservation-and-maintenance.md."
+    },
+    {
+      "item": "Commercial frozen food store (walk-in), next to the professional galley",
+      "deck": "Main / Master",
+      "area_m2": 6,
+      "basis": "Placeholder. Layout maximum 34 people, 90 days, 50% frozen gives about 4 m² floor; 6 m² includes equipment and access. See docs/provisioning-food-storage.md."
+    },
+    {
+      "item": "Dry food store, next to the professional galley",
+      "deck": "Main / Master",
+      "area_m2": 8,
+      "basis": "Placeholder. Layout maximum 34 people, 90 days, 50% dry gives about 2.2 m² floor; 8 m² is the practical minimum with shelving and access. See docs/provisioning-food-storage.md."
+    },
+    {
+      "item": "Chilled produce store (fresh fruit and vegetables from port, held for the passage)",
+      "deck": "Main / Master",
+      "area_m2": 4,
+      "basis": "Placeholder. Passage 14 days at 34 people gives about 0.19 m² of floor; 4 m² is the practical minimum with cooling and access. See docs/provisioning-food-storage.md."
+    },
+    {
+      "item": "Wine cellar, 12 to 14 °C, low vibration",
+      "deck": "Main / Master",
+      "area_m2": 4,
+      "basis": "Placeholder. 34 people at 0.5 bottle per day for 90 days is 1530 bottles, about 1.15 m² of floor; 4 m² is the practical minimum. See docs/provisioning-food-storage.md."
+    },
+    {
+      "item": "Chilled cheese zone, 2 to 6 °C, separate from produce",
+      "deck": "Main / Master",
+      "area_m2": 2,
+      "basis": "Placeholder. 14-day passage at 34 people is about 0.01 m² of floor; 2 m² is the practical minimum. See docs/provisioning-food-storage.md."
     }
   ],
   "decisions_pending": [

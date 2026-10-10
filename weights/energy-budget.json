@@ -1,6 +1,6 @@
 {
   "_note": "Energy budget for the 60-day endurance target, battery-only. Hotel loads are placeholder scenarios for sensitivity, not measured or designed loads. The battery figures are assumptions to be replaced with supplier data. The battery-only figures are an upper bound for a battery-only design. fuel_option gives the fuel mass for the same energy from a diesel genset. The validator reports both.",
-  "endurance_target_days": 60,
+  "endurance_target_days": 90,
   "hotel_load_scenarios_kw": [
     {
       "label": "Low",
