@@ -375,6 +375,12 @@
       "system": null,
       "layout": "Ventilation register: layout/ventilation-register.json; strategy: docs/ventilation-strategy.md",
       "status": "open"
+    },
+    {
+      "item": "Toyota EV powerplant: energy production only, converted to the 600 V output bus",
+      "system": "electrical-distribution",
+      "layout": "Not placed (Tank / Technical generation space to set)",
+      "status": "open"
     }
   ],
   "open": [
@@ -425,6 +431,10 @@
     "Hull envelope rework (true ketch, 68 m LOA, 62 m LWL): reference displacement of 786 m³ implies a draft of 2.3 to 3.5 m, below the 4.8 m keel-up target. Lines plan, weight register and mast positions needed (docs/hull-envelope-true-ketch.md).",
     "Proposed size: 64.0 m LOA (minimum for all rooms), 58.4 m LWL, 12.1 m beam. Outlines not yet regenerated. Keel-up draft needs about 1,304 t displacement vs 806 t reference (docs/hull-size-selection.md).",
     "Hull dynamics first pass (docs/hull-dynamics-first-pass.md): draft 4.82 m matches keel-up; KG must stay at or below 5.39 m for GM 1.0 m; roll period 9.7 s at GM 1.0; hull speed 18.8 kn gives 6.2 s wave. Sail area and mass register are placeholders.",
-    "Roll control: gyro stabiliser sized at 1.15e6 kg·m²/s for 231 kN·m peak (ζ 0.10). Genset mounts 27 mm deflection at 90% isolation. Technology choice (gyro or fins) depends on use profile (docs/roll-control-gyro.md)."
+    "Roll control: gyro stabiliser sized at 1.15e6 kg·m²/s for 231 kN·m peak (ζ 0.10). Genset mounts 27 mm deflection at 90% isolation. Technology choice (gyro or fins) depends on use profile (docs/roll-control-gyro.md).",
+    "Toyota EV powerplant is energy production only, feeding the 600 V output bus. Rating, converter efficiency, AC or DC bus choice and marine rating open (docs/hybrid-energy-production.md).",
+    "Multiple powerplants on one exhaust: separate outlet per engine preferred; shared manifold only with isolation and non-return valves, back-pressure checks for every combination, and branch drains (docs/genset-exhaust-and-systems.md).",
+    "Bus voltage: Toyota EV platform native pack is about 355 V nominal (secondary sources, to verify). Aligning the 600 V bus needs a choice between a full 355 V bus, a DC-DC step-up to a 600 V propulsion bus, or a two-voltage design. Propulsion power decides (docs/bus-voltage-alignment.md).",
+    "800 V bus basis: nominal 800 V, window 720 to 880 V, headroom H 1.25 on continuous current at minimum voltage, insulation at least 1,100 V. Propulsion power still needed to size cable (docs/bus-800v-design.md)."
   ]
 }

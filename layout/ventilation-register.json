@@ -176,6 +176,16 @@
       "outlet": "AWG air exhaust to outside, clear of every intake and outdoor space",
       "outlet_deck": "Outside (to set)",
       "notes": "Moves large volumes of outside air and discharges warm, humid air. Intake from a clean outside point. Units must be foam-free. See docs/water-supply-scaling.md."
+    },
+    {
+      "id": "toyota-powerplant-exhaust",
+      "space": "Toyota EV powerplant engine (energy production only)",
+      "deck": "Tank / Technical",
+      "hazard": "C",
+      "separation_group": "combustion-powerplant",
+      "outlet": "Separate exhaust outlet to outside, clear of passenger and escape routes, intakes and outdoor spaces. Route and stack position to set.",
+      "outlet_deck": "Outside (to set)",
+      "notes": "Preferred: its own outlet, not a shared stack. A shared manifold needs isolation and non-return valves, back-pressure checks for every running combination, and separate condensate drains (docs/genset-exhaust-and-systems.md)."
     }
   ]
 }

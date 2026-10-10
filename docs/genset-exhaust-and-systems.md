@@ -136,3 +136,21 @@ Quantities are placeholders until the suppliers give service intervals and spare
 4. **Fire and passenger-vessel rules,** from the fire-safety review and the classification society.
 5. **Control and monitoring system,** as separate work (`docs/control-software-architecture.md`).
 6. **Spares quantities,** once the suppliers' intervals are known.
+
+## Multiple powerplants on one exhaust system
+
+The gensets and the Toyota EV powerplant (`docs/hybrid-energy-production.md`) are all combustion sources. Routing several of them into one exhaust system needs rules, because one engine's exhaust can flow back into a stopped engine, and each engine's back-pressure depends on what else is running.
+
+### Rules
+
+1. **Preferred: a separate outlet for each engine.** No shared stack, so no engine can receive another's exhaust. The register records each powerplant with its own outlet.
+2. **If a common manifold is chosen,** each engine has an isolation valve and a non-return valve on its branch. A stopped engine must not receive exhaust.
+3. **Back-pressure is checked for every running combination,** against each engine maker's limit. The check is part of the engine maker's approval.
+4. **Start permissive.** The branch isolation valve's position is proved before an engine starts. This adds to the start permissives listed above.
+5. **Fault containment.** A hot-gas or fire event in one branch must not reach the other engines. Flame screens and the isolation valves are the containment.
+6. **Condensate.** Each branch has its own drain, so condensate from one engine does not run back into another.
+7. **Sizing.** The shared duct is sized for the worst combination of running engines.
+
+### Register
+
+`layout/ventilation-register.json` carries the Toyota EV powerplant exhaust as its own source, class C. The preferred outlet is separate from the gensets. A shared outlet is only a decision to make once rules 2 to 7 are met.
