@@ -74,8 +74,9 @@ export const dockThrust = (rudder: number, env: Environment): Record<Side, numbe
   const yaw = (rudder / HELM_DEGREES_PER_ROTATION) * BOOSTER_PERCENT_PER_ROTATION;
   const sideways = clamp(-lateralDisturbance(env), -100, 100);
   return {
-    bow: clamp(Math.round(sideways - yaw), -100, 100),
-    stern: clamp(Math.round(sideways + yaw), -100, 100),
+    // + 0 turns a negative zero into zero, so a settled booster reads as off.
+    bow: clamp(Math.round(sideways - yaw), -100, 100) + 0,
+    stern: clamp(Math.round(sideways + yaw), -100, 100) + 0,
   };
 };
 

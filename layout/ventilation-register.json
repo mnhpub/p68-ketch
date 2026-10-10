@@ -1,0 +1,181 @@
+{
+  "_note": "Vent register for the whole craft. Every source of air, gas, fumes or odour that leaves a space is listed here with its hazard class, its outlet and its separation group. Outlet locations are placeholders until the general arrangement is dimensioned. Hazard classes: H (flammable or toxic gas and vapour), O (odour and contamination), C (combustion exhaust), A (occupied-space air supply and extract). The validator enforces that H, O and C sources never share an outlet with A or with each other.",
+  "hazard_classes": {
+    "H": "Flammable or toxic gas and vapour (battery off-gas, paint solvent, fuel vapour). Explosion-proof equipment, dedicated ducts, outlet clear of intakes and people.",
+    "C": "Combustion exhaust (diesel gensets, engine rooms). Hot, corrosive, must be routed away from intakes and people.",
+    "O": "Odour and contamination (waste, pet areas, bilges, galley extract, laundry). Dedicated extract, no recirculation into occupied spaces.",
+    "A": "Occupied-space supply and extract (cabins, lounges, bridge, medical bay). Fresh-air intake, filtered, positive pressure to hazardous spaces."
+  },
+  "sources": [
+    {
+      "id": "battery-room",
+      "space": "Battery room (rackmount LFP bank)",
+      "deck": "Tank / Technical",
+      "hazard": "H",
+      "separation_group": "battery",
+      "outlet": "Gas-tight exhaust to a safe outside point; separate from all other ducts",
+      "outlet_deck": "Tank / Technical",
+      "notes": "Sealed room (IP67). Closed-loop cooling. Pressure relief for thermal events. Breather must not be PTFE."
+    },
+    {
+      "id": "paint-store",
+      "space": "Paint and finishing store",
+      "deck": "Tank / Technical",
+      "hazard": "H",
+      "separation_group": "paint",
+      "outlet": "Dedicated low-level extraction to a safe outside point",
+      "outlet_deck": "Tank / Technical",
+      "notes": "Explosion-proof equipment. Vapour detection with door interlock."
+    },
+    {
+      "id": "fuel-tank-vents",
+      "space": "Fuel tanks and fuel storage",
+      "deck": "Tank / Technical",
+      "hazard": "H",
+      "separation_group": "fuel",
+      "outlet": "Tank vents to a safe outside point, fitted with flame screens",
+      "outlet_deck": "Tank / Technical",
+      "notes": "Vents must not discharge near intakes, people or the tender stowage."
+    },
+    {
+      "id": "genset-exhaust",
+      "space": "Diesel generators (low-speed, PM generator)",
+      "deck": "Tank / Technical",
+      "hazard": "C",
+      "separation_group": "combustion",
+      "outlet": "Stack at the top of the outdoor pilot house roof, clear of sail operations (owner request, not accepted: occupied outdoor helm and guest roof)",
+      "outlet_deck": "Roof: outdoor pilot house (+9.30 m)",
+      "notes": "Hot, corrosive exhaust with soot and oxides of nitrogen. OWNER REQUEST NOT ACCEPTED: the pilot house roof is the outdoor helm (Station B), the sun deck and events area, and a guest area. Combustion exhaust at occupied roof level is blocked pending review. See docs/genset-exhaust-and-systems.md."
+    },
+    {
+      "id": "engine-room-air",
+      "space": "Engine and generator room air (combustion air and cooling)",
+      "deck": "Tank / Technical",
+      "hazard": "C",
+      "separation_group": "combustion",
+      "outlet": "Engine room extract to outside, separate from genset exhaust",
+      "outlet_deck": "Outside (to set)",
+      "notes": "Combustion air intake must be drawn from a clean, outside point."
+    },
+    {
+      "id": "pet-suites",
+      "space": "Pet resort suites",
+      "deck": "Tween",
+      "hazard": "O",
+      "separation_group": "pet",
+      "outlet": "Dedicated extract to outside; no recirculation",
+      "outlet_deck": "Outside (to set)",
+      "notes": "Odour and ammonia. Must not share a duct with guest cabins or galley."
+    },
+    {
+      "id": "pet-wash",
+      "space": "Pet wash station",
+      "deck": "Tank / Technical",
+      "hazard": "O",
+      "separation_group": "pet",
+      "outlet": "Dedicated extract, drained to a separate waste route",
+      "outlet_deck": "Outside (to set)",
+      "notes": "Humidity and odour. Keep separate from the battery room."
+    },
+    {
+      "id": "galley-extract",
+      "space": "Professional galley and kitchen extract",
+      "deck": "Main / Master",
+      "hazard": "O",
+      "separation_group": "galley",
+      "outlet": "Galley hood extract to outside, grease-filtered",
+      "outlet_deck": "Outside, above Main / Master (to set)",
+      "notes": "Grease and cooking odour. Must not share a duct with cabins or the medical bay."
+    },
+    {
+      "id": "laundry-exhaust",
+      "space": "Laundry and linen (dryers)",
+      "deck": "Tween",
+      "hazard": "O",
+      "separation_group": "laundry",
+      "outlet": "Dryer exhaust to outside, lint-filtered",
+      "outlet_deck": "Outside (to set)",
+      "notes": "Heat and lint. Dedicated duct."
+    },
+    {
+      "id": "bilge-vent",
+      "space": "Bilges and wastewater spaces",
+      "deck": "Tank / Technical",
+      "hazard": "O",
+      "separation_group": "bilge",
+      "outlet": "Bilge and wastewater vent to outside, fitted with an odour filter",
+      "outlet_deck": "Outside (to set)",
+      "notes": "Odour and possible fumes from wastewater. Keep clear of intakes."
+    },
+    {
+      "id": "waste-processing",
+      "space": "Waste processing and compaction",
+      "deck": "Tank / Technical",
+      "hazard": "O",
+      "separation_group": "waste",
+      "outlet": "Waste-space extract to outside, odour-filtered",
+      "outlet_deck": "Outside (to set)",
+      "notes": "Odour. Dedicated extract."
+    },
+    {
+      "id": "workshop",
+      "space": "Mechanical maintenance workshop",
+      "deck": "Tank / Technical",
+      "hazard": "O",
+      "separation_group": "workshop",
+      "outlet": "Workshop extract to outside, with fume extraction at the bench",
+      "outlet_deck": "Outside (to set)",
+      "notes": "Solvents, welding and grinding fumes. Separate from the paint store extract."
+    },
+    {
+      "id": "medical-bay",
+      "space": "Medical bay",
+      "deck": "Tween",
+      "hazard": "A",
+      "separation_group": "medical",
+      "outlet": "Extract to outside through filtered path, pressure-controlled",
+      "outlet_deck": "Outside (to set)",
+      "notes": "Isolation capability and filtration. Positive pressure to the treatment room, negative to isolation."
+    },
+    {
+      "id": "guest-accommodation",
+      "space": "Guest and crew accommodation",
+      "deck": "Tween / Main / Master",
+      "hazard": "A",
+      "separation_group": "accommodation",
+      "outlet": "Extract to outside, fresh-air intake from a clean outside point",
+      "outlet_deck": "Outside (to set)",
+      "notes": "Occupied spaces. Positive pressure relative to hazardous spaces."
+    },
+    {
+      "id": "bridge-and-lounges",
+      "space": "Bridge, lounges and salon",
+      "deck": "Bridge / Commander / Lido / Main",
+      "hazard": "A",
+      "separation_group": "accommodation",
+      "outlet": "Extract to outside, fresh-air intake from a clean outside point",
+      "outlet_deck": "Outside (to set)",
+      "notes": "Occupied spaces."
+    },
+    {
+      "id": "tender-stowage",
+      "space": "Tender storage",
+      "deck": "Tank / Technical",
+      "hazard": "H",
+      "separation_group": "tender",
+      "outlet": "Dedicated extract to a safe outside point (outboard fuel and battery fumes)",
+      "outlet_deck": "Outside (to set)",
+      "notes": "Fuel and battery fumes. Must not share a duct with the battery room or paint store."
+    },
+    {
+      "id": "awg-units",
+      "space": "Atmospheric water generation units (drinking backup)",
+      "deck": "Tank / Technical",
+      "hazard": "O",
+      "separation_group": "awg",
+      "outlet": "AWG air exhaust to outside, clear of every intake and outdoor space",
+      "outlet_deck": "Outside (to set)",
+      "notes": "Moves large volumes of outside air and discharges warm, humid air. Intake from a clean outside point. Units must be foam-free. See docs/water-supply-scaling.md."
+    }
+  ]
+}

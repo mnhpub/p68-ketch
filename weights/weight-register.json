@@ -1,0 +1,160 @@
+{
+  "_note": "Weight register. Each item has a mass in tonnes only when there is a source for it. mass_t null means unknown, and an unknown item is never counted as zero. mass_status is one of: unknown, placeholder (a stated assumption for review), sourced (taken from a named document). The validator reports coverage, so a short total cannot pass as a complete one.",
+  "reference_displacement_t": 806,
+  "reference_source": "README.md: canoe-body approximation, 786.3 m³ × 1.025 t/m³ ≈ 806 t. Not a verified lightship or full-load mass.",
+  "items": [
+    {
+      "id": "hull-structure",
+      "item": "Primary structure in steel: hull, Tank / Technical, Tween and deck plating and beams",
+      "deck": null,
+      "system": null,
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "Owner direction: steel for hull, Tank / Technical, Tween and deck (docs/materials-policy.md). No scantlings or plate schedule exists yet. Coating system, a synthetic polymer, still to decide."
+    },
+    {
+      "id": "lifting-keel",
+      "item": "Lifting keel and ballast",
+      "deck": "Tank / Technical",
+      "system": null,
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "Keel envelope not reconciled with the hull (slides.json)."
+    },
+    {
+      "id": "propulsion",
+      "item": "Twin electric propulsion (600 V)",
+      "deck": "Tank / Technical",
+      "system": "propulsion-600v",
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "Architecture not selected (systems.json)."
+    },
+    {
+      "id": "battery",
+      "item": "Rackmount LFP battery bank (about 10 racks) with marine battery management",
+      "deck": "Tank / Technical",
+      "system": "battery-storage",
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "Rackmount LFP, sized as a buffer charged by all generation (weights/energy-budget.json buffer_architecture). About 10 racks at an assumed module size; capacity and mass not yet set. See docs/energy-management-architecture.md."
+    },
+    {
+      "id": "diesel",
+      "item": "Low-speed diesel engines and brushless permanent-magnet generators",
+      "deck": "Tank / Technical",
+      "system": "diesel-generation",
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "Concept: high-efficiency, low-RPM, low-maintenance engines driving brushless generators. See docs/electrical-generation-concept.md. Engine and generator models, masses and part-load curves are not chosen."
+    },
+    {
+      "id": "fuel",
+      "item": "Fuel stored on board",
+      "deck": "Tank / Technical",
+      "system": "fuel-processing",
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "Fuel capacity not sized against the endurance target (systems.json)."
+    },
+    {
+      "id": "fresh-water",
+      "item": "Fresh water stored on board",
+      "deck": "Tank / Technical",
+      "system": "water-makers",
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "Water tank capacity not sized."
+    },
+    {
+      "id": "solar",
+      "item": "Solar array",
+      "deck": null,
+      "system": "solar-generation",
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "Roof surfaces are a candidate only."
+    },
+    {
+      "id": "hvac",
+      "item": "HVAC plant",
+      "deck": null,
+      "system": "hvac",
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "Not placed (scope.json)."
+    },
+    {
+      "id": "tender-general",
+      "item": "Tenders one and two (general, with EMS fit-out: AED and CPR kit)",
+      "deck": "Tank / Technical",
+      "system": null,
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "Two tenders; EMS fit-out decided (layout/envelope-budget.json decisions_recorded). Masses not set."
+    },
+    {
+      "id": "tender-medical",
+      "item": "Third tender, dedicated medical",
+      "deck": "Tank / Technical",
+      "system": null,
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "Dedicated medical tender decided (layout/envelope-budget.json decisions_recorded). Mass not set."
+    },
+    {
+      "id": "tender-carriage",
+      "item": "Mag-rail tender carriage and track",
+      "deck": "Tank / Technical",
+      "system": null,
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "Route not placed (docs/tender-mag-rail-reload.md)."
+    },
+    {
+      "id": "medical-bay",
+      "item": "Medical bay fit-out",
+      "deck": "Tween",
+      "system": null,
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "No equipment list (docs/accommodation-considerations.md)."
+    },
+    {
+      "id": "pet-suites",
+      "item": "Pet resort suites fit-out",
+      "deck": "Tween",
+      "system": null,
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "Placeholder area only (layout/envelope-budget.json)."
+    },
+    {
+      "id": "pet-wash",
+      "item": "Pet wash station fit-out",
+      "deck": "Tank / Technical",
+      "system": null,
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "Placeholder area only."
+    },
+    {
+      "id": "accommodation-fitout",
+      "item": "Cabin, lounge and galley fit-out",
+      "deck": null,
+      "system": "tween-deck-accommodation",
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "No fit-out schedule."
+    },
+    {
+      "id": "outfit-and-systems",
+      "item": "Piping, cabling, HVAC ducting and other outfit",
+      "deck": null,
+      "system": "plumbing",
+      "mass_t": null,
+      "mass_status": "unknown",
+      "source": "No outfit schedule."
+    }
+  ]
+}

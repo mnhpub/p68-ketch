@@ -12,10 +12,15 @@
     "validate:layout": "node scripts/validate-layout.mjs",
     "build:drawings": "node scripts/build-deck-drawings.mjs",
     "validate:access": "node scripts/validate-access.mjs",
+    "validate:envelope": "node scripts/validate-envelope.mjs",
+    "validate:budgets": "node scripts/validate-design-budgets.mjs",
+    "validate:ventilation": "node scripts/validate-ventilation.mjs",
+    "validate:hull-envelope": "node scripts/validate-hull-envelope.mjs",
     "build:elevations": "node scripts/build-elevations.mjs",
     "build:public": "node scripts/prepare-public.mjs && tsc -b && VITE_AUDIENCE=public vite build --outDir dist-public && cp dist-public/react.html dist-public/index.html",
     "build:private": "tsc -b && vite build --outDir dist-private && cp dist-private/react.html dist-private/index.html",
-    "build:birdseye": "node scripts/build-birdseye.mjs"
+    "build:birdseye": "node scripts/build-birdseye.mjs",
+    "test": "tsc -p tsconfig.test.json && node --test tests/*.test.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

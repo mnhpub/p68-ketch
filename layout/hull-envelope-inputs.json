@@ -1,0 +1,36 @@
+{
+  "_note": "Inputs for the hull envelope rework. Recorded values are sourced from the repo. Placeholders are marked and must be replaced from the lines plan and the rig design. Run with: npm run validate:hull-envelope",
+  "loa_m": 68,
+  "lwl_m": 62,
+  "beam_m": 13.0,
+  "loa_source": "Owner direction: P68 held at 68 m LOA, 62 m waterline, 13.0 m beam",
+  "reference_displacement_t": 806,
+  "reference_volume_m3": 786.3,
+  "seawater_t_m3": 1.025,
+  "keel_up_draft_m": [
+    4.8,
+    5.0
+  ],
+  "keel_down_draft_m": [
+    7.2,
+    7.8
+  ],
+  "block_coefficient_range": [
+    0.3,
+    0.45
+  ],
+  "block_coefficient_status": "Placeholder range for a loaded sailing yacht. Replace from the lines plan.",
+  "waterplane_coefficient": 0.7,
+  "waterplane_coefficient_status": "Placeholder. Replace from the lines plan.",
+  "upper_deck_taper_pct_per_level": [
+    0,
+    10,
+    20
+  ],
+  "taper_status": "Placeholder sensitivity. A real hull narrows toward the top. Shown at 0% (current model), 10% and 20% narrower per level above the Tank level.",
+  "ketch_rig": {
+    "mainmast_foundation_m2": 2.0,
+    "mizzen_foundation_m2": 1.5,
+    "status": "Placeholder footprints. Mast positions are approximate (docs/layout-gaps.md). Stays and their fittings are not included."
+  }
+}
