@@ -17,3 +17,5 @@
   .scope-row { grid-template-columns: 1fr; gap: 3px; }
   .scope-head { display: none; }
 }
+.sheet figcaption a, .sheet-links a { color: #d8b46a; font-size: 11px; text-decoration: underline; }
+.sheet-links { margin: -4px 0 12px; color: #8da5b0; font-size: 12px; }

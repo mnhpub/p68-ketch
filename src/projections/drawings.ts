@@ -2,6 +2,16 @@
 export type Sheet = {file: string; title: string; note: string};
 export type Render = {file: string; title: string};
 
+// Engineering deck plans, plotted from the DXF sources in drawings/cad/ (scripts/drafting/cad_plans.py).
+export const ENGINEERING: (Sheet & {dxf: string})[] = [
+  {file: 'eng-deck-01-bridge.svg', dxf: 'P68-ENG-01-bridge.dxf', title: 'P68-ENG-01 Bridge', note: 'Deck status, room schedule, lift lobbies, roof access'},
+  {file: 'eng-deck-02-commander-lido.svg', dxf: 'P68-ENG-02-commander-lido.dxf', title: 'P68-ENG-02 Commander and Lido', note: 'Deck status, lift lobby, roof overlay'},
+  {file: 'eng-deck-03-main-master.svg', dxf: 'P68-ENG-03-main-master.dxf', title: 'P68-ENG-03 Main and Master', note: 'Deck status, public lift lobby, owner suite'},
+  {file: 'eng-deck-04-tween.svg', dxf: 'P68-ENG-04-tween.dxf', title: 'P68-ENG-04 Tween', note: 'Deck status, accessible cabin, cabin route gap'},
+  {file: 'eng-deck-05-tank-technical.svg', dxf: 'P68-ENG-05-tank-technical.dxf', title: 'P68-ENG-05 Tank and Technical', note: 'Deck status, tank envelopes, lift B'},
+];
+export const ENGINEERING_PDF = 'P68-engineering-deck-plans.pdf';
+
 export const SHEETS: Sheet[] = [
   {file: 'general-arrangement-overview.svg', title: 'General arrangement overview', note: 'All five levels stacked'},
   {file: 'deck-01-bridge.svg', title: 'Bridge', note: 'Command position, lift A and B lobbies, roof access passage'},

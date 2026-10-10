@@ -1,0 +1,6 @@
+# Drafting and rendering toolchain (Python 3.11+). Install with: pip install -r scripts/drafting/requirements.txt
+ezdxf==1.4.4
+pymupdf==1.28.2
+numpy>=1.26
+pillow>=10
+bpy==5.2.2
