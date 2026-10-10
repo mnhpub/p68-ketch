@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" font-family="Helvetica, Arial, sans-serif">
+<title>P68 Ketch Tween layout</title>
+<rect width="960" height="470" fill="#ffffff"/>
+<g transform="translate(0 0)"><line x1="70" y1="104.5" x2="70" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="70" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">0 m</text>
+<line x1="180" y1="104.5" x2="180" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="180" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">10 m</text>
+<line x1="290" y1="104.5" x2="290" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="290" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">20 m</text>
+<line x1="400" y1="104.5" x2="400" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="400" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">30 m</text>
+<line x1="510" y1="104.5" x2="510" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="510" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">40 m</text>
+<line x1="620" y1="104.5" x2="620" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="620" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">50 m</text>
+<line x1="730" y1="104.5" x2="730" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="730" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">60 m</text>
+<line x1="70" y1="181.5" x2="818" y2="181.5" stroke="#90a4ae" stroke-dasharray="8 4 2 4"/>
+<polygon points="818,181.5 813.38,191.95 799.74,202.07 777.19,211.75 746.61,220.66000000000003 708.4399999999999,228.58 663.78,235.29000000000002 613.8399999999999,240.79000000000002 559.6099999999999,244.75 502.52,247.28 444,248.05 385.48,247.28 328.39,244.75 274.15999999999997,240.79000000000002 224.22,235.29000000000002 179.56,228.58 141.39,220.66000000000003 110.81,211.75 88.25999999999999,202.07 74.62,191.95 70,181.5 74.62,171.05 88.25999999999999,160.93 110.81,151.25 141.39,142.34 179.56,134.42 224.22,127.71000000000001 274.15999999999997,122.21000000000001 328.39,118.25 385.48,115.72 444,114.95 502.52,115.72 559.6099999999999,118.25 613.8399999999999,122.21000000000001 663.78,127.71000000000001 708.4399999999999,134.42 746.61,142.34 777.19,151.25 799.74,160.93 813.38,171.05" fill="#f7f3ea" stroke="#263238" stroke-width="1.6"/>
+<rect x="268" y="136.4" width="99" height="35.199999999999996" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="317.5" y="152" font-size="9" fill="#102027" text-anchor="middle">Guest cabins</text>
+<text x="317.5" y="163" font-size="8" fill="#546e7a" text-anchor="middle">29 m²</text>
+<rect x="181.1" y="171.6" width="185.89999999999998" height="57.2" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="274.05" y="198.2" font-size="9" fill="#102027" text-anchor="middle">Guest cabins</text>
+<text x="274.05" y="209.2" font-size="8" fill="#546e7a" text-anchor="middle">88 m²</text>
+<rect x="377.78000000000003" y="135.96" width="186.67000000000002" height="35.529999999999994" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="471.115" y="151.72500000000002" font-size="9" fill="#102027" text-anchor="middle">Crew quarters</text>
+<text x="471.115" y="162.72500000000002" font-size="8" fill="#546e7a" text-anchor="middle">55 m²</text>
+<rect x="377.78000000000003" y="193.82" width="65.55999999999997" height="34.760000000000005" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="410.56" y="203.7" font-size="9" fill="#102027" text-anchor="middle">Laundry /</text>
+<text x="410.56" y="214.7" font-size="9" fill="#102027" text-anchor="middle">linen</text>
+<text x="410.56" y="225.7" font-size="8" fill="#546e7a" text-anchor="middle">19 m²</text>
+<rect x="443.34" y="193.82" width="121.11000000000006" height="34.760000000000005" fill="#dfe9f5" stroke="#455a64" stroke-width="0.9"/>
+<text x="503.895" y="209.2" font-size="9" fill="#102027" text-anchor="middle">Service circulation</text>
+<text x="503.895" y="220.2" font-size="8" fill="#546e7a" text-anchor="middle">35 m²</text>
+<rect x="631" y="149.6" width="44" height="66" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="653" y="169.6" font-size="9" fill="#102027" text-anchor="middle">Workshop</text>
+<text x="653" y="180.6" font-size="9" fill="#102027" text-anchor="middle">/</text>
+<text x="653" y="191.6" font-size="9" fill="#102027" text-anchor="middle">storage</text>
+<text x="653" y="202.6" font-size="8" fill="#546e7a" text-anchor="middle">24 m²</text>
+<rect x="598" y="181.5" width="33" height="20.9" fill="#8fd0e6" stroke="#455a64" stroke-width="0.9"/>
+<text x="614.5" y="184.45" font-size="9" fill="#102027" text-anchor="middle">Mag-rail</text>
+<text x="614.5" y="195.45" font-size="9" fill="#102027" text-anchor="middle">lift B</text>
+<text x="614.5" y="206.45" font-size="8" fill="#546e7a" text-anchor="middle">6 m²</text>
+<rect x="565" y="136.4" width="66" height="45.099999999999994" fill="#c5e8c0" stroke="#455a64" stroke-width="0.9"/>
+<text x="598" y="151.45" font-size="9" fill="#102027" text-anchor="middle">Accessible</text>
+<text x="598" y="162.45" font-size="9" fill="#102027" text-anchor="middle">guest cabin</text>
+<text x="598" y="173.45" font-size="8" fill="#546e7a" text-anchor="middle">25 m²</text>
+<rect x="565" y="181.5" width="33" height="20.9" fill="#dfe9f5" stroke="#455a64" stroke-width="0.9"/>
+<text x="581.5" y="178.95" font-size="9" fill="#102027" text-anchor="middle">Tween</text>
+<text x="581.5" y="189.95" font-size="9" fill="#102027" text-anchor="middle">lift</text>
+<text x="581.5" y="200.95" font-size="9" fill="#102027" text-anchor="middle">lobby</text>
+<text x="581.5" y="211.95" font-size="8" fill="#546e7a" text-anchor="middle">6 m²</text>
+<rect x="181.1" y="136.4" width="86.9" height="35.199999999999996" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="224.55" y="152" font-size="9" fill="#102027" text-anchor="middle">Guest cabins</text>
+<text x="224.55" y="163" font-size="8" fill="#546e7a" text-anchor="middle">25 m²</text>
+<text x="64" y="118.5" font-size="11" fill="#263238" text-anchor="end">STERN</text>
+<text x="824" y="118.5" font-size="11" fill="#263238">BOW</text>
+<text x="70" y="292.5" font-size="13" font-weight="600" fill="#102027">P68 KETCH · TWEEN</text>
+<text x="70" y="310.5" font-size="10" fill="#37474f">Datum +0.85 m · Zone: Accommodation &amp; service</text>
+<text x="70" y="326.5" font-size="10" fill="#37474f">Assigned 310 m² of 644 m² deck outline (48%). Unassigned area is open for layout.</text>
+<text x="70" y="342.5" font-size="10" font-weight="600" fill="#8e3b6a">PROVISIONAL SCHEMATIC · NOT FOR CONSTRUCTION · NOT FOR FABRICATION · NOT SCALED</text>
+<rect x="70" y="378.5" width="12" height="10" fill="#8fd0e6" stroke="#455a64"/><text x="87" y="387.5" font-size="9" fill="#37474f">Mag-rail lift</text>
+<rect x="260" y="378.5" width="12" height="10" fill="#dfe9f5" stroke="#455a64"/><text x="277" y="387.5" font-size="9" fill="#37474f">Lobby / passage / circulation</text>
+<rect x="450" y="378.5" width="12" height="10" fill="#c5e8c0" stroke="#455a64"/><text x="467" y="387.5" font-size="9" fill="#37474f">Accessible guest cabin</text>
+<rect x="640" y="378.5" width="12" height="10" fill="#e3ebee" stroke="#455a64"/><text x="657" y="387.5" font-size="9" fill="#37474f">Other room</text>
+<line x1="70" y1="354.5" x2="180" y2="354.5" stroke="#263238" stroke-width="2"/>
+<text x="70" y="368.5" font-size="9" fill="#37474f">0</text>
+<text x="180" y="368.5" font-size="9" fill="#37474f" text-anchor="middle">10 m</text>
+<text x="940" y="368.5" font-size="9" fill="#78909c" text-anchor="end">Source: layout/decks-layout.json · draft 00</text></g>
+</svg>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" font-family="Helvetica, Arial, sans-serif">
+<title>P68 Ketch Commander / Lido layout</title>
+<rect width="960" height="470" fill="#ffffff"/>
+<g transform="translate(0 0)"><line x1="70" y1="104.5" x2="70" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="70" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">0 m</text>
+<line x1="180" y1="104.5" x2="180" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="180" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">10 m</text>
+<line x1="290" y1="104.5" x2="290" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="290" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">20 m</text>
+<line x1="400" y1="104.5" x2="400" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="400" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">30 m</text>
+<line x1="510" y1="104.5" x2="510" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="510" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">40 m</text>
+<line x1="620" y1="104.5" x2="620" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="620" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">50 m</text>
+<line x1="730" y1="104.5" x2="730" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="730" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">60 m</text>
+<line x1="70" y1="181.5" x2="818" y2="181.5" stroke="#90a4ae" stroke-dasharray="8 4 2 4"/>
+<polygon points="818,181.5 813.38,191.95 799.74,202.07 777.19,211.75 746.61,220.66000000000003 708.4399999999999,228.58 663.78,235.29000000000002 613.8399999999999,240.79000000000002 559.6099999999999,244.75 502.52,247.28 444,248.05 385.48,247.28 328.39,244.75 274.15999999999997,240.79000000000002 224.22,235.29000000000002 179.56,228.58 141.39,220.66000000000003 110.81,211.75 88.25999999999999,202.07 74.62,191.95 70,181.5 74.62,171.05 88.25999999999999,160.93 110.81,151.25 141.39,142.34 179.56,134.42 224.22,127.71000000000001 274.15999999999997,122.21000000000001 328.39,118.25 385.48,115.72 444,114.95 502.52,115.72 559.6099999999999,118.25 613.8399999999999,122.21000000000001 663.78,127.71000000000001 708.4399999999999,134.42 746.61,142.34 777.19,151.25 799.74,160.93 813.38,171.05" fill="#f7f3ea" stroke="#263238" stroke-width="1.6"/>
+<rect x="147.88" y="144.43" width="142.77999999999997" height="74.14" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="219.26999999999998" y="179.5" font-size="9" fill="#102027" text-anchor="middle">Aft Lido / pool</text>
+<text x="219.26999999999998" y="190.5" font-size="8" fill="#546e7a" text-anchor="middle">87 m²</text>
+<rect x="312.22" y="145.97" width="87.12000000000002" height="71.06" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="355.78000000000003" y="179.5" font-size="9" fill="#102027" text-anchor="middle">Bar and dining</text>
+<text x="355.78000000000003" y="190.5" font-size="8" fill="#546e7a" text-anchor="middle">51 m²</text>
+<rect x="499" y="146.3" width="66" height="70.4" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="532" y="168.5" font-size="9" fill="#102027" text-anchor="middle">Panoramic</text>
+<text x="532" y="179.5" font-size="9" fill="#102027" text-anchor="middle">forward</text>
+<text x="532" y="190.5" font-size="9" fill="#102027" text-anchor="middle">lookout</text>
+<text x="532" y="201.5" font-size="8" fill="#546e7a" text-anchor="middle">38 m²</text>
+<rect x="565" y="146.3" width="33" height="70.4" fill="#dfe9f5" stroke="#455a64" stroke-width="0.9"/>
+<text x="581.5" y="168.5" font-size="9" fill="#102027" text-anchor="middle">Commander</text>
+<text x="581.5" y="179.5" font-size="9" fill="#102027" text-anchor="middle">lift</text>
+<text x="581.5" y="190.5" font-size="9" fill="#102027" text-anchor="middle">lobby</text>
+<text x="581.5" y="201.5" font-size="8" fill="#546e7a" text-anchor="middle">19 m²</text>
+<rect x="631" y="146.3" width="22" height="70.4" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="642" y="168.5" font-size="9" fill="#102027" text-anchor="middle">Panoramic</text>
+<text x="642" y="179.5" font-size="9" fill="#102027" text-anchor="middle">forward</text>
+<text x="642" y="190.5" font-size="9" fill="#102027" text-anchor="middle">lookout</text>
+<text x="642" y="201.5" font-size="8" fill="#546e7a" text-anchor="middle">13 m²</text>
+<rect x="598" y="160.6" width="33" height="20.9" fill="#8fd0e6" stroke="#455a64" stroke-width="0.9"/>
+<text x="614.5" y="163.55" font-size="9" fill="#102027" text-anchor="middle">Mag-rail</text>
+<text x="614.5" y="174.55" font-size="9" fill="#102027" text-anchor="middle">lift A</text>
+<text x="614.5" y="185.55" font-size="8" fill="#546e7a" text-anchor="middle">6 m²</text>
+<rect x="598" y="181.5" width="33" height="20.9" fill="#8fd0e6" stroke="#455a64" stroke-width="0.9"/>
+<text x="614.5" y="184.45" font-size="9" fill="#102027" text-anchor="middle">Mag-rail</text>
+<text x="614.5" y="195.45" font-size="9" fill="#102027" text-anchor="middle">lift B</text>
+<text x="614.5" y="206.45" font-size="8" fill="#546e7a" text-anchor="middle">6 m²</text>
+<rect x="399.34000000000003" y="145.97" width="99.65999999999998" height="71.06" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="449.17" y="174" font-size="9" fill="#102027" text-anchor="middle">Observation</text>
+<text x="449.17" y="185" font-size="9" fill="#102027" text-anchor="middle">lounge</text>
+<text x="449.17" y="196" font-size="8" fill="#546e7a" text-anchor="middle">59 m²</text>
+<rect x="147.88" y="144.43" width="142.77999999999997" height="74.14" fill="none" stroke="#8e3b6a" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="219.26999999999998" y="212.57" font-size="9" fill="#8e3b6a" text-anchor="middle">ROOF OVER AFT LIDO (overlay, not a level)</text>
+<text x="64" y="118.5" font-size="11" fill="#263238" text-anchor="end">STERN</text>
+<text x="824" y="118.5" font-size="11" fill="#263238">BOW</text>
+<text x="70" y="292.5" font-size="13" font-weight="600" fill="#102027">P68 KETCH · COMMANDER / LIDO</text>
+<text x="70" y="310.5" font-size="10" fill="#37474f">Datum +6.60 m · Zone: Forward lookout · aft hospitality</text>
+<text x="70" y="326.5" font-size="10" fill="#37474f">Assigned 279 m² of 644 m² deck outline (43%). Unassigned area is open for layout.</text>
+<text x="70" y="342.5" font-size="10" font-weight="600" fill="#8e3b6a">PROVISIONAL SCHEMATIC · NOT FOR CONSTRUCTION · NOT FOR FABRICATION · NOT SCALED</text>
+<rect x="70" y="378.5" width="12" height="10" fill="#8fd0e6" stroke="#455a64"/><text x="87" y="387.5" font-size="9" fill="#37474f">Mag-rail lift</text>
+<rect x="260" y="378.5" width="12" height="10" fill="#dfe9f5" stroke="#455a64"/><text x="277" y="387.5" font-size="9" fill="#37474f">Lobby / passage / circulation</text>
+<rect x="450" y="378.5" width="12" height="10" fill="#c5e8c0" stroke="#455a64"/><text x="467" y="387.5" font-size="9" fill="#37474f">Accessible guest cabin</text>
+<rect x="640" y="378.5" width="12" height="10" fill="#e3ebee" stroke="#455a64"/><text x="657" y="387.5" font-size="9" fill="#37474f">Other room</text>
+<line x1="70" y1="354.5" x2="180" y2="354.5" stroke="#263238" stroke-width="2"/>
+<text x="70" y="368.5" font-size="9" fill="#37474f">0</text>
+<text x="180" y="368.5" font-size="9" fill="#37474f" text-anchor="middle">10 m</text>
+<text x="940" y="368.5" font-size="9" fill="#78909c" text-anchor="end">Source: layout/decks-layout.json · draft 00</text></g>
+</svg>

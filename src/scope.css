@@ -1,0 +1,19 @@
+.scope, .drawings { padding: 20px 0 10px; max-width: 1200px; color: #d7e2e7; }
+.scope-table { margin-top: 18px; border: 1px solid #2a4656; background: #0c2231; }
+.scope-row { display: grid; grid-template-columns: minmax(180px, 1.3fr) minmax(160px, 1.2fr) minmax(160px, 1.3fr) minmax(140px, 1fr); gap: 12px; padding: 9px 12px; border-bottom: 1px solid #1f3a48; font-size: 12px; align-items: baseline; }
+.scope-head { color: #c6a67d; font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; background: #0a1d29; }
+.scope-row b { font-weight: 600; color: #eef3f5; }
+.status-register { color: #9fd0a0; }
+.status-layout { color: #e0c58f; }
+.status-open { color: #e89a9a; }
+.sheet-group { font-family: Georgia, serif; font-weight: 400; font-size: 22px; margin: 26px 0 10px; color: #eef3f5; }
+.sheet-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.sheet { margin: 0; background: #0c2231; border: 1px solid #2a4656; display: flex; flex-direction: column; }
+.sheet button { padding: 0; border: 0; background: #ffffff; cursor: zoom-in; }
+.sheet img { display: block; width: 100%; height: 160px; object-fit: contain; background: #ffffff; }
+.sheet figcaption { display: flex; flex-direction: column; gap: 3px; padding: 9px 10px; font-size: 12px; }
+.sheet figcaption span { color: #8da5b0; font-size: 11px; line-height: 1.4; }
+@media (max-width: 760px) {
+  .scope-row { grid-template-columns: 1fr; gap: 3px; }
+  .scope-head { display: none; }
+}

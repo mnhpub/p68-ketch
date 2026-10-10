@@ -9,12 +9,36 @@
     "summary": "Twin electric propulsion concept on a 600 V distribution bus, with one drive per shaft. The AC or DC architecture has not been selected, and the bus voltage is a design target rather than a validated architecture.",
     "approval_status": "Not reviewed. Requires electrical engineering, classification and high-voltage safety review before any design decision.",
     "key_parameters": [
-      { "label": "Configuration", "value": "Twin propulsion (candidate)", "basis": "tbd" },
-      { "label": "Distribution voltage", "value": "600 V", "basis": "target" },
-      { "label": "Bus architecture (AC or DC)", "value": "To be determined", "basis": "tbd" },
-      { "label": "Propulsion motor rating", "value": "To be determined", "basis": "tbd" },
-      { "label": "Drive and converter topology", "value": "To be determined", "basis": "tbd" },
-      { "label": "Alternative bus voltage raised", "value": "Above 800 V (under consideration, not decided)", "basis": "tbd" }
+      {
+        "label": "Configuration",
+        "value": "Twin propulsion (candidate)",
+        "basis": "tbd"
+      },
+      {
+        "label": "Distribution voltage",
+        "value": "600 V",
+        "basis": "target"
+      },
+      {
+        "label": "Bus architecture (AC or DC)",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Propulsion motor rating",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Drive and converter topology",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Alternative bus voltage raised",
+        "value": "Above 800 V (under consideration, not decided)",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "High-voltage isolation, arc-flash and lockout procedures are not yet written.",
@@ -33,10 +57,26 @@
     "summary": "Battery energy storage for propulsion, hotel loads and the 60-day endurance target. Chemistry, capacity and location are not yet selected.",
     "approval_status": "Not reviewed. Requires electrical engineering, stability and fire-safety review before any design decision.",
     "key_parameters": [
-      { "label": "Endurance target", "value": "60 days", "basis": "target" },
-      { "label": "Cell chemistry", "value": "To be determined", "basis": "tbd" },
-      { "label": "Usable energy", "value": "To be determined", "basis": "tbd" },
-      { "label": "Energy budget for endurance target", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Endurance target",
+        "value": "60 days",
+        "basis": "target"
+      },
+      {
+        "label": "Cell chemistry",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Usable energy",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Energy budget for endurance target",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "The 60-day endurance target has no energy budget yet, so it is unverified.",
@@ -55,10 +95,26 @@
     "summary": "Bow and stern side thrusters for low-speed manoeuvring in harbour. Number, power, drive type and electrical supply are not yet selected.",
     "approval_status": "Not reviewed. Requires manoeuvring analysis, electrical engineering and classification review before any selection.",
     "key_parameters": [
-      { "label": "Position", "value": "Bow and stern (candidate)", "basis": "tbd" },
-      { "label": "Thruster rating", "value": "To be determined", "basis": "tbd" },
-      { "label": "Drive type (electric or hydraulic)", "value": "To be determined", "basis": "tbd" },
-      { "label": "Electrical supply", "value": "Must match the selected bus, not decided", "basis": "tbd" }
+      {
+        "label": "Position",
+        "value": "Bow and stern (candidate)",
+        "basis": "tbd"
+      },
+      {
+        "label": "Thruster rating",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Drive type (electric or hydraulic)",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Electrical supply",
+        "value": "Must match the selected bus, not decided",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Thruster power and drive type affect the electrical load and generator sizing.",
@@ -77,10 +133,26 @@
     "summary": "Diesel generator sets for ship's power and backup. Kohler is a candidate manufacturer. Model, rating and bus connection are not selected.",
     "approval_status": "Not reviewed. Requires electrical engineering, fuel-system and classification review before any selection.",
     "key_parameters": [
-      { "label": "Manufacturer", "value": "Kohler (candidate)", "basis": "tbd" },
-      { "label": "Generator rating", "value": "To be determined", "basis": "tbd" },
-      { "label": "Bus voltage match", "value": "Must match the selected bus (600 V or above 800 V, not decided)", "basis": "tbd" },
-      { "label": "Backup role", "value": "Ship's power and emergency backup, to be defined", "basis": "tbd" }
+      {
+        "label": "Manufacturer",
+        "value": "Kohler (candidate)",
+        "basis": "tbd"
+      },
+      {
+        "label": "Generator rating",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Bus voltage match",
+        "value": "Must match the selected bus (600 V or above 800 V, not decided)",
+        "basis": "tbd"
+      },
+      {
+        "label": "Backup role",
+        "value": "Ship's power and emergency backup, to be defined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Generator voltage must match the bus architecture, which is not yet chosen.",
@@ -99,9 +171,21 @@
     "summary": "Photovoltaic generation on available exposed surfaces to offset hotel loads. Array area, output and mounting are not yet set.",
     "approval_status": "Not reviewed. Requires electrical engineering and structural review of mounting loads before any design decision.",
     "key_parameters": [
-      { "label": "Array area", "value": "To be determined", "basis": "tbd" },
-      { "label": "Peak output", "value": "To be determined", "basis": "tbd" },
-      { "label": "Mounting surfaces", "value": "Candidate surfaces to be identified on the general arrangement", "basis": "tbd" }
+      {
+        "label": "Array area",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Peak output",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Mounting surfaces",
+        "value": "Candidate surfaces to be identified on the general arrangement",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Usable exposed area is limited by rig, tenders and deck arrangement.",
@@ -119,9 +203,21 @@
     "summary": "Emergency distribution for navigation, fire, communications and life-safety loads if the main bus fails. The load list and supply arrangement are not yet defined.",
     "approval_status": "Not reviewed. Requires classification and emergency-power review before any design decision.",
     "key_parameters": [
-      { "label": "Emergency load list", "value": "To be determined", "basis": "tbd" },
-      { "label": "Emergency supply", "value": "To be determined (battery and/or generator)", "basis": "tbd" },
-      { "label": "Changeover time", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Emergency load list",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Emergency supply",
+        "value": "To be determined (battery and/or generator)",
+        "basis": "tbd"
+      },
+      {
+        "label": "Changeover time",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Emergency load list is not defined, so backup capacity cannot be sized.",
@@ -139,9 +235,21 @@
     "summary": "Main switchboards, transformers, protection and distribution to hotel and technical loads. Bus voltage and layout depend on the propulsion decision.",
     "approval_status": "Not reviewed. Requires electrical engineering and classification review before any design decision.",
     "key_parameters": [
-      { "label": "Main bus voltage", "value": "Not selected (600 V target)", "basis": "target" },
-      { "label": "Switchboard arrangement", "value": "To be determined", "basis": "tbd" },
-      { "label": "Protection and earthing scheme", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Main bus voltage",
+        "value": "Not selected (600 V target)",
+        "basis": "target"
+      },
+      {
+        "label": "Switchboard arrangement",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Protection and earthing scheme",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Bus voltage is unresolved, which blocks the switchboard and protection design.",
@@ -159,9 +267,21 @@
     "summary": "Interior and exterior LED lighting for living spaces, circulation, navigation lights and deck work. Control zones and fixtures are not yet specified.",
     "approval_status": "Not reviewed. Requires electrical and navigation-light compliance review before any selection.",
     "key_parameters": [
-      { "label": "Lighting zones", "value": "To be determined", "basis": "tbd" },
-      { "label": "Control system", "value": "To be determined", "basis": "tbd" },
-      { "label": "Navigation lights", "value": "Must meet applicable rules, not yet specified", "basis": "tbd" }
+      {
+        "label": "Lighting zones",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Control system",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Navigation lights",
+        "value": "Must meet applicable rules, not yet specified",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Navigation light arrangement must meet applicable rules and is not designed.",
@@ -179,16 +299,34 @@
     "summary": "Seawater desalination to supply potable water. Production rate, energy demand and intake and brine outlet positions are not yet set.",
     "approval_status": "Not reviewed. Requires marine engineering and potable-water compliance review.",
     "key_parameters": [
-      { "label": "Production rate", "value": "To be determined", "basis": "tbd" },
-      { "label": "Energy demand", "value": "To be determined", "basis": "tbd" },
-      { "label": "Potable water storage", "value": "Tank / Technical deck (candidate)", "basis": "target" },
-      { "label": "Intake and brine outlet", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Production rate",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Energy demand",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Potable water storage",
+        "value": "Tank / Technical deck (candidate)",
+        "basis": "target"
+      },
+      {
+        "label": "Intake and brine outlet",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Potable water treatment and testing are not specified.",
       "Intake and brine discharge locations need environmental review."
     ],
-    "related_decks": ["Tank / Technical"]
+    "related_decks": [
+      "Tank / Technical"
+    ]
   },
   {
     "id": "fuel-processing",
@@ -200,15 +338,29 @@
     "summary": "Fuel tankage, transfer, settling, filtration and polishing for the diesel generators and propulsion. Tank capacity and layout are not yet set.",
     "approval_status": "Not reviewed. Requires fuel-system, fire-safety and classification review before any design decision.",
     "key_parameters": [
-      { "label": "Fuel capacity", "value": "To be determined", "basis": "tbd" },
-      { "label": "Tank location", "value": "Tank / Technical deck (candidate)", "basis": "target" },
-      { "label": "Settling and polishing", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Fuel capacity",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Tank location",
+        "value": "Tank / Technical deck (candidate)",
+        "basis": "target"
+      },
+      {
+        "label": "Settling and polishing",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Fuel capacity is not sized against the endurance target.",
       "Fuel tank protection, spill containment and fire boundaries are not designed."
     ],
-    "related_decks": ["Tank / Technical"]
+    "related_decks": [
+      "Tank / Technical"
+    ]
   },
   {
     "id": "plumbing",
@@ -220,15 +372,30 @@
     "summary": "Freshwater, hot water and sanitary plumbing serving guest, crew and technical spaces. Routing and pressure system are not yet designed.",
     "approval_status": "Not reviewed. Requires marine plumbing and sanitation review before any design decision.",
     "key_parameters": [
-      { "label": "Freshwater pressure system", "value": "To be determined", "basis": "tbd" },
-      { "label": "Hot water supply", "value": "To be determined", "basis": "tbd" },
-      { "label": "Routing", "value": "Not yet placed on the general arrangement", "basis": "tbd" }
+      {
+        "label": "Freshwater pressure system",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Hot water supply",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Routing",
+        "value": "Not yet placed on the general arrangement",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Routing through tween and main-deck structure is not checked.",
       "Pipe runs must keep clear of electrical and fuel routes."
     ],
-    "related_decks": ["Tween", "Tank / Technical"]
+    "related_decks": [
+      "Tween",
+      "Tank / Technical"
+    ]
   },
   {
     "id": "waste-processing",
@@ -240,15 +407,29 @@
     "summary": "Onboard collection, separation and treatment of general waste, with blackwater and greywater handling addressed separately. Treatment method is not selected.",
     "approval_status": "Not reviewed. Requires environmental compliance review for each discharge and storage route.",
     "key_parameters": [
-      { "label": "Treatment method", "value": "To be determined", "basis": "tbd" },
-      { "label": "Storage between port calls", "value": "To be determined", "basis": "tbd" },
-      { "label": "Discharge rules", "value": "Depends on sea area; not yet mapped", "basis": "tbd" }
+      {
+        "label": "Treatment method",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Storage between port calls",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Discharge rules",
+        "value": "Depends on sea area; not yet mapped",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Storage capacity for a 60-day voyage is not calculated.",
       "Discharge permissions differ by waters and are not yet mapped."
     ],
-    "related_decks": ["Tank / Technical"]
+    "related_decks": [
+      "Tank / Technical"
+    ]
   },
   {
     "id": "waste-compaction",
@@ -260,8 +441,16 @@
     "summary": "Compaction of dry waste and packaging to reduce storage volume between port calls. Equipment and location are not yet selected.",
     "approval_status": "Not reviewed. Requires hygiene and electrical review before any selection.",
     "key_parameters": [
-      { "label": "Compaction ratio", "value": "To be determined", "basis": "tbd" },
-      { "label": "Equipment location", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Compaction ratio",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Equipment location",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Compactor power and location are not placed on the general arrangement."
@@ -278,13 +467,23 @@
     "summary": "Processing of food waste from galley and dining, to reduce storage and support compliant disposal. Method is not selected.",
     "approval_status": "Not reviewed. Requires food-safety and environmental review before any selection.",
     "key_parameters": [
-      { "label": "Processing method", "value": "To be determined", "basis": "tbd" },
-      { "label": "Throughput", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Processing method",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Throughput",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Odour and hygiene control in the galley route is not designed."
     ],
-    "related_decks": ["Main / Master"]
+    "related_decks": [
+      "Main / Master"
+    ]
   },
   {
     "id": "landfill-management",
@@ -296,8 +495,16 @@
     "summary": "Policy for minimising waste sent to landfill over long voyages, covering provisioning, packaging, storage and shore disposal. Not yet written.",
     "approval_status": "Not written. Requires operational review once the programme is drafted.",
     "key_parameters": [
-      { "label": "Waste reduction target", "value": "To be determined", "basis": "tbd" },
-      { "label": "Shore disposal plan", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Waste reduction target",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Shore disposal plan",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Provisioning and packaging policy has not been drafted."
@@ -314,9 +521,21 @@
     "summary": "Heating, ventilation and air conditioning for accommodation, bridge and machinery spaces. Plant, ducting and capacity are not yet sized.",
     "approval_status": "Not reviewed. Requires mechanical engineering review and an energy-budget check before any selection.",
     "key_parameters": [
-      { "label": "Cooling and heating capacity", "value": "To be determined", "basis": "tbd" },
-      { "label": "Air changes by space", "value": "To be determined", "basis": "tbd" },
-      { "label": "Plant location", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Cooling and heating capacity",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Air changes by space",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Plant location",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "HVAC load is not in the energy budget, so the battery sizing is incomplete.",
@@ -334,15 +553,30 @@
     "summary": "Dry, chilled and frozen storage sized for long passages and the 60-day provisioning requirement under study.",
     "approval_status": "Not reviewed. Requires food-safety and refrigeration review before any design decision.",
     "key_parameters": [
-      { "label": "Dry store volume", "value": "To be determined", "basis": "tbd" },
-      { "label": "Chilled and frozen volume", "value": "To be determined", "basis": "tbd" },
-      { "label": "Provisioning period", "value": "60 days (under study)", "basis": "target" }
+      {
+        "label": "Dry store volume",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Chilled and frozen volume",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Provisioning period",
+        "value": "60 days (under study)",
+        "basis": "target"
+      }
     ],
     "risks": [
       "Provisioning volume depends on the 60-day target, which is not yet verified.",
       "Cold-chain boundaries and fire separation are not fixed."
     ],
-    "related_decks": ["Main / Master", "Tween"]
+    "related_decks": [
+      "Main / Master",
+      "Tween"
+    ]
   },
   {
     "id": "tween-deck-accommodation",
@@ -354,15 +588,29 @@
     "summary": "Guest cabins, crew quarters, laundry and workshop on the tween deck, at a provisional +0.85 m datum.",
     "approval_status": "Not reviewed. Requires structural, fire and escape review before any design decision.",
     "key_parameters": [
-      { "label": "Deck datum", "value": "+0.85 m (provisional)", "basis": "model" },
-      { "label": "Cabin count", "value": "To be determined", "basis": "tbd" },
-      { "label": "Escape routes", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Deck datum",
+        "value": "+0.85 m (provisional)",
+        "basis": "model"
+      },
+      {
+        "label": "Cabin count",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Escape routes",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Guest and crew circulation is not yet separated.",
       "Escape routes and fire zoning are not designed."
     ],
-    "related_decks": ["Tween"]
+    "related_decks": [
+      "Tween"
+    ]
   },
   {
     "id": "anchor-system",
@@ -374,9 +622,21 @@
     "summary": "Bow anchoring with windlass, chain and anchor storage. Anchor mass, chain size and windlass power are not yet set.",
     "approval_status": "Not reviewed. Requires classification and mooring-load review before any selection.",
     "key_parameters": [
-      { "label": "Anchor and chain", "value": "To be determined", "basis": "tbd" },
-      { "label": "Windlass power", "value": "To be determined", "basis": "tbd" },
-      { "label": "Chain locker location", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Anchor and chain",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Windlass power",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Chain locker location",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Anchor and chain sizing depends on the hull model, which is not validated.",
@@ -394,9 +654,21 @@
     "summary": "Ketch rig with mainmast and mizzen, sail handling and reefing. Sail loads, reefing geometry and rig performance are not approved.",
     "approval_status": "Not reviewed. Requires rig, structural and class review before any design decision.",
     "key_parameters": [
-      { "label": "Rig configuration", "value": "Ketch (mainmast forward, mizzen aft)", "basis": "target" },
-      { "label": "Sail area", "value": "To be determined", "basis": "tbd" },
-      { "label": "Reefing system", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Rig configuration",
+        "value": "Ketch (mainmast forward, mizzen aft)",
+        "basis": "target"
+      },
+      {
+        "label": "Sail area",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Reefing system",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Sail loads and reefing geometry are not approved.",
@@ -414,15 +686,29 @@
     "summary": "Professional galley and bar fit-out, including preparation, cooking, washing and service routes.",
     "approval_status": "Not reviewed. Requires food-safety and fire review before any fit-out decision.",
     "key_parameters": [
-      { "label": "Galley location", "value": "Main / Master (concept)", "basis": "model" },
-      { "label": "Equipment list", "value": "To be determined", "basis": "tbd" },
-      { "label": "Fire boundaries", "value": "Not yet fixed", "basis": "tbd" }
+      {
+        "label": "Galley location",
+        "value": "Main / Master (concept)",
+        "basis": "model"
+      },
+      {
+        "label": "Equipment list",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Fire boundaries",
+        "value": "Not yet fixed",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Cold-chain and fire boundaries are not fixed.",
       "Service routes to guest areas are not checked."
     ],
-    "related_decks": ["Main / Master"]
+    "related_decks": [
+      "Main / Master"
+    ]
   },
   {
     "id": "bathroom-accommodation",
@@ -434,14 +720,29 @@
     "summary": "En-suite bathrooms for owner, guest and crew cabins, with sanitary and ventilation routes.",
     "approval_status": "Not reviewed. Requires marine sanitation and ventilation review before any design decision.",
     "key_parameters": [
-      { "label": "Bathroom count", "value": "To be determined", "basis": "tbd" },
-      { "label": "Sanitary system", "value": "To be determined", "basis": "tbd" },
-      { "label": "Ventilation", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Bathroom count",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Sanitary system",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Ventilation",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Sanitary and waste routes must keep clear of electrical spaces."
     ],
-    "related_decks": ["Main / Master", "Tween"]
+    "related_decks": [
+      "Main / Master",
+      "Tween"
+    ]
   },
   {
     "id": "curated-art",
@@ -453,8 +754,16 @@
     "summary": "Curated art programme for shared spaces and cabins, with mounting and environmental control. Works and locations are not yet selected.",
     "approval_status": "Not reviewed. Requires conservation and mounting review before any installation.",
     "key_parameters": [
-      { "label": "Display locations", "value": "To be determined", "basis": "tbd" },
-      { "label": "Environmental control", "value": "Humidity and light levels to be set", "basis": "tbd" }
+      {
+        "label": "Display locations",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Environmental control",
+        "value": "Humidity and light levels to be set",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Motion loads and humidity affect works and mounting; not yet specified."
@@ -471,13 +780,23 @@
     "summary": "Secured racks and cabinets for glassware and fine tableware, designed to resist motion at sea.",
     "approval_status": "Not reviewed. Requires motion-securing review before any installation.",
     "key_parameters": [
-      { "label": "Storage location", "value": "Galley and bar (concept)", "basis": "model" },
-      { "label": "Securing method", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Storage location",
+        "value": "Galley and bar (concept)",
+        "basis": "model"
+      },
+      {
+        "label": "Securing method",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Racks must hold under the design motions, which have not been specified."
     ],
-    "related_decks": ["Commander / Lido"]
+    "related_decks": [
+      "Commander / Lido"
+    ]
   },
   {
     "id": "navigation-systems",
@@ -489,15 +808,30 @@
     "summary": "Navigation suite at the bridge and the outdoor pilot house: radar, charting, AIS, autopilot and instruments. Equipment is not selected.",
     "approval_status": "Not reviewed. Requires navigation-equipment and classification review before any selection.",
     "key_parameters": [
-      { "label": "Command position", "value": "Bridge (concept)", "basis": "model" },
-      { "label": "Radar, charting and AIS", "value": "To be determined", "basis": "tbd" },
-      { "label": "Backup navigation", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Command position",
+        "value": "Bridge (concept)",
+        "basis": "model"
+      },
+      {
+        "label": "Radar, charting and AIS",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Backup navigation",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Navigation remains safety-critical; equipment and redundancy are not chosen.",
       "Power supply for navigation is not linked to the emergency power design."
     ],
-    "related_decks": ["Bridge", "Commander / Lido"]
+    "related_decks": [
+      "Bridge",
+      "Commander / Lido"
+    ]
   },
   {
     "id": "external-communications",
@@ -509,15 +843,29 @@
     "summary": "Satellite and radio communications for distress, weather, shore and crew contact. Equipment and antenna positions are not chosen.",
     "approval_status": "Not reviewed. Requires radio licensing and GMDSS review before any selection.",
     "key_parameters": [
-      { "label": "Satellite links", "value": "To be determined", "basis": "tbd" },
-      { "label": "Radio and distress equipment", "value": "To be determined", "basis": "tbd" },
-      { "label": "Antenna positions", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Satellite links",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Radio and distress equipment",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Antenna positions",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Distress communications must meet licensing rules and are not yet specified.",
       "Antenna positions are not checked for interference with the rig."
     ],
-    "related_decks": ["Bridge"]
+    "related_decks": [
+      "Bridge"
+    ]
   },
   {
     "id": "ship-communications",
@@ -529,8 +877,16 @@
     "summary": "Internal ship communications: intercom, crew paging and alarm notification across the five levels.",
     "approval_status": "Not reviewed. Requires alarm and emergency-notification review before any selection.",
     "key_parameters": [
-      { "label": "Intercom zones", "value": "To be determined", "basis": "tbd" },
-      { "label": "Alarm integration", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Intercom zones",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Alarm integration",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Emergency notification must reach every level and is not yet designed."
@@ -547,15 +903,31 @@
     "summary": "Integrated control of propulsion, power, alarms and systems status from the bridge, with local control at machinery.",
     "approval_status": "Not reviewed. Requires control-system and classification review before any design decision.",
     "key_parameters": [
-      { "label": "Control architecture", "value": "To be determined", "basis": "tbd" },
-      { "label": "Redundancy", "value": "To be determined", "basis": "tbd" },
-      { "label": "Local control points", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Control architecture",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Redundancy",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Local control points",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Control redundancy is not defined, so failure modes are not analysed.",
       "Software and cybersecurity requirements are not written."
     ],
-    "related_decks": ["Bridge", "Commander / Lido", "Tank / Technical"]
+    "related_decks": [
+      "Bridge",
+      "Commander / Lido",
+      "Tank / Technical"
+    ]
   },
   {
     "id": "av-media",
@@ -567,8 +939,16 @@
     "summary": "Audio, video and media distribution across salons, cabins and the lido, with central control.",
     "approval_status": "Not reviewed. Requires electrical and acoustic review before any selection.",
     "key_parameters": [
-      { "label": "Media zones", "value": "To be determined", "basis": "tbd" },
-      { "label": "Central control", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Media zones",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Central control",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Equipment racks and cable routes are not placed."
@@ -585,8 +965,16 @@
     "summary": "Onboard wireless and wired network for guests, crew and systems, separated by security zone. Design is not started.",
     "approval_status": "Not designed. Requires network security review before any deployment.",
     "key_parameters": [
-      { "label": "Network zones", "value": "Guest, crew and systems (to be defined)", "basis": "tbd" },
-      { "label": "Access points", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Network zones",
+        "value": "Guest, crew and systems (to be defined)",
+        "basis": "tbd"
+      },
+      {
+        "label": "Access points",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Systems and guest networks must be separated; not yet designed.",
@@ -604,8 +992,16 @@
     "summary": "Physical security for the vessel, including perimeter, cameras, alarms and protected areas. Layout is not designed.",
     "approval_status": "Not designed. Requires security-consultant review. Details are withheld from public release.",
     "key_parameters": [
-      { "label": "Protected areas", "value": "To be determined", "basis": "tbd" },
-      { "label": "Surveillance coverage", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Protected areas",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Surveillance coverage",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Security layout is not designed and is withheld from public release."
@@ -622,8 +1018,16 @@
     "summary": "Keycard access to cabins, technical spaces and restricted areas, with logging. Technology and zones are not selected.",
     "approval_status": "Not designed. Requires security and life-safety review, including egress, before any selection. Withheld from public release.",
     "key_parameters": [
-      { "label": "Access zones", "value": "To be determined", "basis": "tbd" },
-      { "label": "Egress override", "value": "Must not block emergency escape", "basis": "target" }
+      {
+        "label": "Access zones",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Egress override",
+        "value": "Must not block emergency escape",
+        "basis": "target"
+      }
     ],
     "risks": [
       "Access must never block emergency egress; the failure mode is not designed.",
@@ -641,8 +1045,16 @@
     "summary": "Written operating policies and procedures for safety, environmental management, guests and crew. None has been drafted yet.",
     "approval_status": "Not drafted. Requires flag-state and class review once written.",
     "key_parameters": [
-      { "label": "Policy set", "value": "Not yet drafted", "basis": "tbd" },
-      { "label": "Document control", "value": "Revision history to be set up", "basis": "tbd" }
+      {
+        "label": "Policy set",
+        "value": "Not yet drafted",
+        "basis": "tbd"
+      },
+      {
+        "label": "Document control",
+        "value": "Revision history to be set up",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "No policies exist yet, so operational assumptions are not recorded."
@@ -659,8 +1071,16 @@
     "summary": "Structured checklists for operations and maintenance, linked to each system. Draft checklists are stored in checklists.json and are not approved for use.",
     "approval_status": "Draft only. Each checklist requires an approved procedure before use on a vessel.",
     "key_parameters": [
-      { "label": "Checklists drafted", "value": "See the checklists on each system", "basis": "model" },
-      { "label": "Approval workflow", "value": "To be defined", "basis": "tbd" }
+      {
+        "label": "Checklists drafted",
+        "value": "See the checklists on each system",
+        "basis": "model"
+      },
+      {
+        "label": "Approval workflow",
+        "value": "To be defined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Draft checklists must not be used for operations until approved."
@@ -677,8 +1097,16 @@
     "summary": "Automation of routine ship functions such as monitoring, alarms and scheduled tasks. Scope and control authority are not yet defined.",
     "approval_status": "Not reviewed. Requires control-system and classification review. Automation must not override manual control.",
     "key_parameters": [
-      { "label": "Automated functions", "value": "To be defined", "basis": "tbd" },
-      { "label": "Manual override", "value": "Required for all automated functions", "basis": "target" }
+      {
+        "label": "Automated functions",
+        "value": "To be defined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Manual override",
+        "value": "Required for all automated functions",
+        "basis": "target"
+      }
     ],
     "risks": [
       "Automation scope is undefined, so failure behaviour cannot be analysed."
@@ -695,7 +1123,11 @@
     "summary": "Guest request handling, concierge and housekeeping. Proposed for a separate guest application; not yet confirmed as in scope for this repository.",
     "approval_status": "Not designed. Scope decision pending.",
     "key_parameters": [
-      { "label": "Request channels", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Request channels",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Guest data is personal data and needs a backend, which this static app does not have."
@@ -712,13 +1144,24 @@
     "summary": "Dining service across the Main salon, Aft Lido and bar. Proposed for a separate guest application; not yet confirmed as in scope.",
     "approval_status": "Not designed. Scope decision pending.",
     "key_parameters": [
-      { "label": "Dining venues", "value": "Main salon, Aft Lido, bar (concept)", "basis": "model" },
-      { "label": "Menu and service model", "value": "To be determined", "basis": "tbd" }
+      {
+        "label": "Dining venues",
+        "value": "Main salon, Aft Lido, bar (concept)",
+        "basis": "model"
+      },
+      {
+        "label": "Menu and service model",
+        "value": "To be determined",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Service routes between galley and venues are not yet checked."
     ],
-    "related_decks": ["Main / Master", "Commander / Lido"]
+    "related_decks": [
+      "Main / Master",
+      "Commander / Lido"
+    ]
   },
   {
     "id": "booking-reservations",
@@ -730,8 +1173,16 @@
     "summary": "Reservations for dining and experiences. Proposed for a separate guest application because it needs accounts, payments and personal data.",
     "approval_status": "Not designed. Scope decision pending. Payments and personal data need a separate review.",
     "key_parameters": [
-      { "label": "Booking system", "value": "To be determined", "basis": "tbd" },
-      { "label": "Payments", "value": "Not in scope for this repository", "basis": "tbd" }
+      {
+        "label": "Booking system",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Payments",
+        "value": "Not in scope for this repository",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Personal and payment data are outside what a static app can hold securely."
@@ -748,8 +1199,16 @@
     "summary": "A private dinner for two served in the bay. Proposed experience only; service location, tender and safety arrangements are not designed.",
     "approval_status": "Not designed. Requires operational and safety review of tender and bay use.",
     "key_parameters": [
-      { "label": "Service location", "value": "Bay (concept)", "basis": "model" },
-      { "label": "Service support", "value": "Tender or platform (to be defined)", "basis": "tbd" }
+      {
+        "label": "Service location",
+        "value": "Bay (concept)",
+        "basis": "model"
+      },
+      {
+        "label": "Service support",
+        "value": "Tender or platform (to be defined)",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "Bay service needs safe access and weather limits, not yet defined.",
@@ -767,11 +1226,69 @@
     "summary": "Guest-facing app for information, requests and bookings. Proposed for a separate project; not part of this repository.",
     "approval_status": "Not designed. Scope decision pending.",
     "key_parameters": [
-      { "label": "Platform", "value": "To be determined", "basis": "tbd" },
-      { "label": "Connection to onboard network", "value": "Via separate guest network (to be defined)", "basis": "tbd" }
+      {
+        "label": "Platform",
+        "value": "To be determined",
+        "basis": "tbd"
+      },
+      {
+        "label": "Connection to onboard network",
+        "value": "Via separate guest network (to be defined)",
+        "basis": "tbd"
+      }
     ],
     "risks": [
       "App depends on backend services and the onboard network, neither of which exists yet."
+    ],
+    "related_decks": []
+  },
+  {
+    "id": "engineering-components",
+    "domain": "mechanical-structure",
+    "name": "Engineering components (general)",
+    "status": "concept",
+    "safety_critical": true,
+    "public_release": true,
+    "summary": "Shared engineering components across the vessel: machinery seating, pumps, valves, and serviceability clearances. Equipment list is not yet compiled.",
+    "approval_status": "Not reviewed. Requires marine engineering and classification review before any selection.",
+    "key_parameters": [
+      {
+        "label": "Equipment list",
+        "value": "To be compiled",
+        "basis": "tbd"
+      },
+      {
+        "label": "Machinery space layout",
+        "value": "Tank / Technical deck (candidate)",
+        "basis": "target"
+      }
+    ],
+    "risks": [
+      "Machinery space and service clearances are not placed on the layout.",
+      "Shared components have not been traced to systems."
+    ],
+    "related_decks": [
+      "Tank / Technical"
+    ]
+  },
+  {
+    "id": "hospitality-systems",
+    "domain": "hospitality-guest",
+    "name": "Hospitality systems (general)",
+    "status": "concept",
+    "safety_critical": false,
+    "public_release": false,
+    "summary": "Shared hospitality infrastructure linking guest services, dining, booking and guest apps. Proposed for a separate guest application; scope not yet confirmed.",
+    "approval_status": "Not designed. Scope decision pending.",
+    "key_parameters": [
+      {
+        "label": "Shared services",
+        "value": "To be defined",
+        "basis": "tbd"
+      }
+    ],
+    "risks": [
+      "Guest data needs a backend, which this static app does not have."
     ],
     "related_decks": []
   }
