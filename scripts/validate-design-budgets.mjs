@@ -76,7 +76,18 @@ const buf = energy.buffer_architecture;
 if (buf) {
   const bufKwh = buf.peak_load_kw * buf.buffer_hours_at_peak;
   const bufT = bufKwh / (spec * dod) / 1000;
-  console.log(`\nBuffer architecture: ${buf.peak_load_kw} kW × ${buf.buffer_hours_at_peak} h = ${bufKwh} kWh, LFP battery ${bufT.toFixed(1)} t (${(100 * bufT / register.reference_displacement_t).toFixed(2)}% of displacement)`);
+  // 90-day fuel case: energy = load x hours, fuel = energy / (genset efficiency x diesel LHV).
+{
+  const days = energy.endurance_design_basis?.endurance_days_target ?? energy.endurance_target_days;
+  const fuel = energy.fuel_option;
+  console.log(`\nEndurance design basis: ${energy.endurance_design_basis?.decision ?? 'not recorded'} for ${days} days`);
+  for (const sc of energy.hotel_load_scenarios_kw) {
+    const kwh = sc.average_kw * 24 * days;
+    const fuelT = kwh / fuel.genset_electrical_efficiency / fuel.lower_heating_value_kwh_per_kg / 1000;
+    console.log(`  ${sc.label.padEnd(7)} ${sc.average_kw} kW average: ${kwh.toLocaleString('en-US')} kWh, fuel ${fuelT.toFixed(1)} t at ${(100 * fuel.genset_electrical_efficiency).toFixed(0)}% efficiency`);
+  }
+}
+console.log(`\nBuffer architecture: ${buf.peak_load_kw} kW × ${buf.buffer_hours_at_peak} h = ${bufKwh} kWh, LFP battery ${bufT.toFixed(1)} t (${(100 * bufT / register.reference_displacement_t).toFixed(2)}% of displacement)`);
 }
 
 // Battery room options: module size needed, heat load and airflow for each rack layout.

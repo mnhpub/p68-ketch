@@ -47,6 +47,12 @@ const checks = {
     const flags = (r.out.match(/FLAG .*battery alone needs/g) ?? []).length;
     return {pass: flags === 0, detail: `${flags} battery-only load(s) above the 10% review limit`};
   },
+  endurance_design_basis_recorded() {
+    const e = load('weights/energy-budget.json');
+    const b = e.endurance_design_basis;
+    const ok = b?.decision === 'fuel_and_genset' && b?.endurance_days_target === 90;
+    return {pass: ok, detail: ok ? '90 days, fuel and genset as the energy source, battery as buffer' : 'design basis not recorded in weights/energy-budget.json'};
+  },
   access_passes() {
     const r = run('node scripts/validate-access.mjs');
     return {pass: r.ok, detail: r.ok ? 'no gaps' : 'accessibility gaps reported'};

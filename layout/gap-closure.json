@@ -86,9 +86,9 @@
           "auto": false
         },
         {
-          "step": "Battery-only share at the review load is under 10% of displacement, or the fuel and genset case is recorded as the design basis",
+          "step": "Endurance design basis recorded: 90 days, fuel and genset as the energy source, battery as buffer (ADR-0005)",
           "auto": true,
-          "check": "battery_share_reviewed"
+          "check": "endurance_design_basis_recorded"
         }
       ]
     },
