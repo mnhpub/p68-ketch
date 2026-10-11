@@ -6,3 +6,4 @@ build/
 dist-public/
 dist-private/
 __pycache__/
+tests/compiled/

@@ -1,0 +1,95 @@
+{
+  "_note": "Energy budget for the 60-day endurance target, battery-only. Hotel loads are placeholder scenarios for sensitivity, not measured or designed loads. The battery figures are assumptions to be replaced with supplier data. The battery-only figures are an upper bound for a battery-only design. fuel_option gives the fuel mass for the same energy from a diesel genset. The validator reports both.",
+  "endurance_target_days": 90,
+  "hotel_load_scenarios_kw": [
+    {
+      "label": "Low",
+      "average_kw": 20,
+      "basis": "Placeholder. Lighting, galley, HVAC and comms at a low average."
+    },
+    {
+      "label": "Medium",
+      "average_kw": 50,
+      "basis": "Placeholder. Adds a fuller crew and guest load."
+    },
+    {
+      "label": "High",
+      "average_kw": 100,
+      "basis": "Placeholder. Adds air-conditioning in warm climates and water-making."
+    }
+  ],
+  "battery_specific_energy_kwh_per_kg": 0.12,
+  "battery_specific_energy_status": "Assumption for a marine LFP pack, system level including enclosure and busbars. Not a supplier figure. Replaces the earlier generic 0.2 kWh/kg, which was too high for LFP. To verify.",
+  "usable_depth_of_discharge": 0.8,
+  "usable_depth_of_discharge_status": "Assumption: a common planning value. To verify against the chemistry chosen.",
+  "mass_fraction_limit_pct": 10,
+  "mass_fraction_limit_status": "Assumption for flagging only: a battery above this share of the reference displacement needs a stability and weight review. Not a regulatory limit.",
+  "fuel_option": {
+    "fuel": "Marine diesel",
+    "lower_heating_value_kwh_per_kg": 11.9,
+    "lhv_status": "Reference constant: diesel lower heating value of about 43 MJ/kg (43 / 3.6 ≈ 11.9 kWh/kg).",
+    "genset_electrical_efficiency": 0.35,
+    "efficiency_status": "Assumption: typical diesel genset electrical efficiency at a steady load. To verify against the chosen model. The diesel-generation system is a Kohler candidate with no model yet (systems.json).",
+    "scope_note": "Fuel mass only. Genset mass, fuel tank mass and exhaust are not included."
+  },
+  "generation_efficiency_scenarios": [
+    {
+      "label": "Conventional genset, part load",
+      "electrical_efficiency": 0.3,
+      "basis": "Placeholder. A standard genset running well below rated load."
+    },
+    {
+      "label": "Current assumption",
+      "electrical_efficiency": 0.35,
+      "basis": "Assumption used in fuel_option above."
+    },
+    {
+      "label": "Low-speed engine, permanent-magnet generator",
+      "electrical_efficiency": 0.42,
+      "basis": "Placeholder: engine about 44% × generator about 96% ≈ 42%. Assumes the engine is near its efficient band at the chosen load."
+    },
+    {
+      "label": "Best case, optimised at rated load",
+      "electrical_efficiency": 0.46,
+      "basis": "Placeholder: engine about 48% × generator about 96% ≈ 46%. Only at a load the engine is designed for; not a 20 kW figure."
+    }
+  ],
+  "efficiency_note": "Efficiency is for the whole electrical chain at the load the genset runs at. A large engine's efficiency falls sharply at low load, so the rated figure is not the 20 kW figure. The scenarios are placeholders until a part-load curve from a real engine exists.",
+  "battery_chemistry": "LiFePO4 (LFP)",
+  "buffer_architecture": {
+    "description": "All generation (diesel gensets, solar, shore) charges the battery bank. The battery is sized as a buffer for peaks and quiet running, not for the full endurance energy. Fuel supplies the energy.",
+    "buffer_hours_at_peak": 4,
+    "peak_load_kw": 100,
+    "status": "Placeholder. Buffer hours and peak load are design choices, not derived from a load study."
+  },
+  "battery_room": {
+    "_note": "Rack layout options for the rackmount LFP bank. Placeholders for review; no product or room has been designed.",
+    "nameplate_kwh_needed": null,
+    "usable_buffer_kwh": 400,
+    "module_u": 4,
+    "rack_u": 42,
+    "rack_footprint_m2": 0.6,
+    "rack_service_depth_m": 1.0,
+    "loss_fraction_at_peak": 0.03,
+    "loss_fraction_status": "Placeholder. Round-trip and conversion losses at peak discharge; to verify with the cell and converter data.",
+    "peak_load_kw": 100,
+    "air_density_kg_m3": 1.2,
+    "air_cp_j_kgk": 1005,
+    "design_delta_t_k": 10,
+    "delta_t_status": "Placeholder. Allowable air temperature rise across the racks.",
+    "options": [
+      {
+        "label": "A: four racks, packed",
+        "racks": 4,
+        "spacing": "Racks saturated, modules touching"
+      },
+      {
+        "label": "B: eight racks, spread",
+        "racks": 8,
+        "spacing": "Racks with an aisle between each for air"
+      }
+    ],
+    "ip_rating_target": "IP67 for the battery enclosure",
+    "ip67_note": "IP67 is dust-tight and protected against temporary immersion (1 m for 30 min). Open air intakes and exhausts conflict with it. Cooling must be a closed loop, with a sealed air or liquid circuit and a heat exchanger outside the battery space."
+  }
+}
