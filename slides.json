@@ -7,7 +7,7 @@
     "title": "A farther horizon.",
     "subtitle": "120 meters / approximately 394 feet",
     "body": "A 120-meter ocean-going expedition four-mast ketch: serious bluewater engineering with the warmth, restraint and confidence of a private maritime residence.",
-    "image": "hero-full-greece.webp",
+    "image": "p120-exterior-port.jpg",
     "layout": "hero",
     "notes": [
       "120 m provisional design length (concept, not for construction)",
@@ -23,7 +23,7 @@
     "title": "The long view.",
     "subtitle": "68 meters. One continuous line.",
     "body": "Deep midnight-blue steel hull, restrained ivory superstructure, clear teak working decks, and a disciplined two-mast profile.",
-    "image": "profile-full-greece.webp",
+    "image": "p120-exterior-anchor.jpg",
     "layout": "wide",
     "notes": [
       "Full-height masts retained in reference imagery",
@@ -38,7 +38,7 @@
     "title": "Heritage, refined.",
     "subtitle": "Oyster discipline. Beneteau clarity.",
     "body": "Warm joinery and weather-protected spaces meet practical circulation, visibility and robust long-range engineering.",
-    "image": "hero-alt-greece.webp",
+    "image": "p120-exterior-underway.jpg",
     "layout": "split",
     "notes": [
       "Oyster / Beneteau used as precedent, not identity",
@@ -53,7 +53,7 @@
     "title": "A working sail plan.",
     "subtitle": "Two masts, multiple configurations.",
     "body": "A carbon mainmast and smaller aft mizzen provide distributed sail area. Sail loads, reefing geometry and aero-hydrodynamic performance are not yet approved.",
-    "image": "sails-luxury.webp",
+    "image": "p120-exterior-underway.jpg",
     "layout": "split",
     "notes": [
       "Keel-up draft target 4.8–5.0 m",
@@ -68,7 +68,7 @@
     "title": "A captain’s library.",
     "subtitle": "Walnut, leather, brass and instrument glass.",
     "body": "The bridge is a working navigation platform with the warmth of a private library. Panoramic sightlines, chart-work, deep leather chairs and quiet spaces for the passage.",
-    "image": "bridge-luxury.webp",
+    "image": "p120-interior-bridge-helm.jpg",
     "layout": "split",
     "notes": [
       "Navigation remains safety-critical",
@@ -83,7 +83,7 @@
     "title": "Look forward.",
     "subtitle": "The observation salon beneath the bridge.",
     "body": "A protected panoramic forward room for reading, conversation and passage-watching. A central circulation spine leads aft toward the Lido.",
-    "image": "lookout-luxury.webp",
+    "image": "p120-interior-observation-lounge.jpg",
     "layout": "split",
     "notes": [
       "Forward below bridge",
@@ -98,7 +98,7 @@
     "title": "Open sea. Open air.",
     "subtitle": "Aft dining, bar, terrace and pool.",
     "body": "The Lido occupies the aft portion of the Commander level, balancing outdoor hospitality with safe deck circulation and weather protection.",
-    "image": "lido-luxury.webp",
+    "image": "p120-interior-lido-pool.jpg",
     "layout": "split",
     "notes": [
       "Pool mass / free-surface / drains to be engineered",
@@ -113,7 +113,7 @@
     "title": "A place to gather.",
     "subtitle": "An ocean-facing residential salon.",
     "body": "Soft ivory upholstery, restrained bronze details and timber surfaces create a residential atmosphere with sea views and secure, integrated furniture.",
-    "image": "salon-luxury.webp",
+    "image": "p120-interior-salon.jpg",
     "layout": "split",
     "notes": [
       "Main/Master at +3.35 m nominal deck datum",
@@ -128,7 +128,7 @@
     "title": "Private sanctuary.",
     "subtitle": "A quiet space within the ship.",
     "body": "A warm owner’s suite with generous stowage, privacy and marine-secured furnishings. Volume and glazing must reconcile with the final hull and bulkheads.",
-    "image": "master-luxury.webp",
+    "image": "p120-interior-owner-suite.jpg",
     "layout": "split",
     "notes": [
       "Cabin partitions not construction-approved",
@@ -143,7 +143,7 @@
     "title": "Hospitality at sea.",
     "subtitle": "Guest comfort with offshore discipline.",
     "body": "Flexible suites use natural finishes, controllable light and carefully positioned stowage, while respecting hull curvature and protected exits.",
-    "image": "guest-luxury.webp",
+    "image": "p120-interior-guest-cabin.jpg",
     "layout": "split",
     "notes": [
       "Guest and crew circulation to be separated",
@@ -158,7 +158,7 @@
     "title": "Behind every gathering.",
     "subtitle": "A true professional galley.",
     "body": "Chef-grade preparation space and cold storage support long voyages. Bars and food service are linked through efficient, secure routes.",
-    "image": "galley-luxury.webp",
+    "image": "p120-interior-galley.jpg",
     "layout": "split",
     "notes": [
       "90-day provisioning requirement under study, aligned to the 90-day endurance target (ADR-0005)",
@@ -173,7 +173,7 @@
     "title": "Quietly capable.",
     "subtitle": "The systems behind the experience.",
     "body": "Crew facilities, laundry, stores, a workshop and maintenance routes support practical independence and humane long-range operation.",
-    "image": "crew-luxury.webp",
+    "image": "p120-finish-plan-tween.jpg",
     "layout": "split",
     "notes": [
       "Tween deck is a real accommodation level",
@@ -188,7 +188,7 @@
     "title": "Independence by design.",
     "subtitle": "Serviceability is luxury.",
     "body": "Protected hybrid-ready propulsion, electrical distribution, water production, bilges, fuel treatment and maintenance clearance form the operational core.",
-    "image": "mechanical-luxury.webp",
+    "image": "p120-features-battery-racks.png",
     "layout": "split",
     "notes": [
       "Power / fuel and water budgets require reconciliation",
@@ -203,7 +203,7 @@
     "title": "Five connected levels.",
     "subtitle": "Architecture, properly arranged.",
     "body": "Bridge above Commander/Lido, Main/Master, Tween and Tank. The vertical travel strategy separates guest hospitality from technical access.",
-    "image": "deck-plans.png",
+    "image": "p120-deck-plans.png",
     "layout": "technical",
     "notes": [
       "Plans are early block arrangements, not dimensioned rooms",
@@ -218,7 +218,7 @@
     "title": "Within the hull.",
     "subtitle": "Five levels, one structural system.",
     "body": "Deck elevations, mast foundations, the lifting keel envelope and watertight subdivision must be reconciled with the 68-meter immersed hull.",
-    "image": "long-section.png",
+    "image": "p120-centreline-profile.png",
     "layout": "technical",
     "notes": [
       "Bridge +9.30 / Commander +6.60 / Main +3.35 m",
@@ -233,7 +233,7 @@
     "title": "The numbers beneath.",
     "subtitle": "A model, not yet a verdict.",
     "body": "The concept reference is 1,487 t of displacement, about 1,451 m³ of seawater, at a 1.8 m keel-up draft. The waterline and draft are model values until a lines plan exists.",
-    "image": "hydrostatics.png",
+    "image": "p120-underway-heel-section.png",
     "layout": "technical",
     "notes": [
       "120 m LOA · 109 m waterline · 20.0 m beam (concept)",
@@ -323,7 +323,7 @@
     "title": "Built once. Learned from forever.",
     "subtitle": "Contribute to a community of builders.",
     "body": "P68-KETCH-G focuses on coordinated general arrangement, weight and structure. Subsequent releases should progress through steel shop trials, approved manufacturing files, construction evidence and independent performance verification.",
-    "image": "profile-full-greece.webp",
+    "image": "p120-exterior-dusk.jpg",
     "layout": "wide",
     "notes": [
       "Next gate: reconciled weight register + structure + deck volume",
