@@ -129,7 +129,7 @@
   "program_enclosed_m2": 717.2,
   "program_source": "Bridge 192.8 + Commander / Lido 191.5 (excludes the 87.5 m2 aft lido, which is open) + Main / Master 332.9, from layout/decks-layout.json unique rooms. Tween accommodation is on its own deck and not counted here.",
   "stability": {
-    "_note": "Recommended: 1,487 t displacement, GM for an 11 s roll at 20 m beam (k = 0.4 B). Sail area is derived from the rig triangles, scaled by sail_area_scale to about 4,000 m2 (about 31 sail area to displacement^(2/3), a performance range). Centre of effort is at a third of the luff. Cf is the placeholder force coefficient from docs/hull-dynamics-first-pass.md. Draft at 1,487 t is about 1.8 m, so the 4.8 m keel-up target no longer applies.",
+    "_note": "Recommended: 1,487 t displacement, GM for an 11 s roll at 20 m beam (k = 0.4 B). Sail area is derived from the rig triangles, scaled by sail_area_scale to about 4,000 m2 (about 31 sail area to displacement^(2/3), a performance range). Centre of effort is at a third of the luff. Cf is the placeholder force coefficient from docs/archive/68m/hull-dynamics-first-pass.md. Draft at 1,487 t is about 1.8 m, so the 4.8 m keel-up target no longer applies.",
     "displacement_t": 1487,
     "gm_m": 2.13,
     "roll_period_target_s": 11.0,
@@ -146,6 +146,7 @@
     "reef_heel_deg": [
       15,
       20
-    ]
+    ],
+    "draft_m": 1.8
   }
 }

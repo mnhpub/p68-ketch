@@ -20,14 +20,14 @@ Counts below come from the repo as of the revision pass: 48 room entries in `lay
 
 ### C2. The envelope volume does not agree with the reference hull volume
 
-- **Evidence:** each deck uses the same 643.6 m² outline (`layout/decks-layout.json`). At the smallest deck spacing, 2.35 m (Tween to Tank, from `decks.json`), one deck encloses about 1,513 m³. The reference displacement is 786.3 m³. See `docs/envelope-revision.md`, step 10.
+- **Evidence:** each deck uses the same 643.6 m² outline (`layout/decks-layout.json`). At the smallest deck spacing, 2.35 m (Tween to Tank, from `decks.json`), one deck encloses about 1,513 m³. The reference displacement is 786.3 m³. See `docs/archive/68m/envelope-revision.md`, step 10.
 - **Why it is critical:** enclosed volume above the waterline does not have to equal displaced volume, so the two numbers need not match. But a single deck at about twice the total displacement means the plan-area model cannot be trusted. Any mass or stability figure built on it would be wrong.
 - **Next action:** replace the single outline with per-deck outlines (C3), then recompute the volume and compare it with the reference.
 
 ### C3. One outline is used for every deck
 
 - **Evidence:** all five decks in `layout/decks-layout.json` share the same ellipse, 68 m by 12.1 m, giving 643.6 m² each.
-- **Why it is critical:** a real hull narrows toward the bow and stern and toward the upper decks. The uniform outline makes the upper and end decks look larger than they can be, which inflates the plan-area budget (`docs/envelope-revision.md`) and the volume.
+- **Why it is critical:** a real hull narrows toward the bow and stern and toward the upper decks. The uniform outline makes the upper and end decks look larger than they can be, which inflates the plan-area budget (`docs/archive/68m/envelope-revision.md`) and the volume.
 - **Next action:** draw an outline per deck from the sections and the lines plan. Until then, every area figure is an upper bound.
 
 ### C4. Stability and endurance both depend on numbers that do not exist
@@ -74,7 +74,7 @@ Counts below come from the repo as of the revision pass: 48 room entries in `lay
 
 ### M1. The checks can pass on a model that is not dimensioned
 
-- **Evidence:** the validators pass on the current geometry (`npm run validate:layout`, `validate:access`). The roof-exclusion error (`docs/envelope-revision.md`, lessons) was only caught when the numbers were compared with hand figures.
+- **Evidence:** the validators pass on the current geometry (`npm run validate:layout`, `validate:access`). The roof-exclusion error (`docs/archive/68m/envelope-revision.md`, lessons) was only caught when the numbers were compared with hand figures.
 - **Why it matters:** green checks read as completeness. They should be reported as "consistent with the model", not "correct".
 - **Next action:** label each check with what it can and cannot prove, as in the revision doc.
 
@@ -108,7 +108,7 @@ Counts below come from the repo as of the revision pass: 48 room entries in `lay
 
 ## What this means
 
-The previous design looked more complete than it was. The layout passed its checks, the room list was detailed, and the scope register was long. But the critical numbers (displacement, stability, endurance, and the keel draft) were never derived from the geometry. Each check was real but narrow, and no check tied the rooms to the weight or the volume of the hull. The envelope revision in `docs/envelope-revision.md` addresses the area question, but it leaves C1 to C4 open. Those four must be closed before the design can make a claim about performance.
+The previous design looked more complete than it was. The layout passed its checks, the room list was detailed, and the scope register was long. But the critical numbers (displacement, stability, endurance, and the keel draft) were never derived from the geometry. Each check was real but narrow, and no check tied the rooms to the weight or the volume of the hull. The envelope revision in `docs/archive/68m/envelope-revision.md` addresses the area question, but it leaves C1 to C4 open. Those four must be closed before the design can make a claim about performance.
 
 ## Implementation status
 

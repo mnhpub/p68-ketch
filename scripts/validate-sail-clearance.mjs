@@ -10,7 +10,7 @@ import {fileURLToPath} from 'node:url';
 import {dirname, join} from 'node:path';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
-const file = process.argv[2] ?? 'layout/sail-clearance-128m.json';
+const file = process.argv[2] ?? 'layout/sail-clearance-120m-4mast.json';
 const c = JSON.parse(readFileSync(join(root, file), 'utf8'));
 const errors = [];
 const info = [];

@@ -1,6 +1,6 @@
 # ADR-0001: Hull size: 68 m LOA, 62 m waterline, 13.0 m beam
 
-Status: Accepted (owner)
+Status: Superseded by the 120 m concept (docs/concept-120m-four-mast.md) and ADR-0011. Kept for the record.
 
 ## Context
 
@@ -8,7 +8,7 @@ P68 is a 68 m ketch. The room layout fits a 64 m minimum, but the name and ident
 
 ## Decision
 
-Design displacement target 1,487 t. Outlines regenerated at 68 m by 13.0 m. Stability, sea and roll numbers in docs/hull-dynamics-first-pass.md are superseded by docs/hull-size-p68-13m.md.
+Design displacement target 1,487 t. Outlines regenerated at 68 m by 13.0 m. Stability, sea and roll numbers in docs/archive/68m/hull-dynamics-first-pass.md are superseded by docs/archive/68m/hull-size-p68-13m.md.
 
 ## Open gates
 

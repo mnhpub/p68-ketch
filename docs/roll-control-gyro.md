@@ -1,6 +1,6 @@
 # Roll control: isolation, damping, and gyro stabilisation
 
-Status: sizing and technology options. No equipment is chosen. Inputs are the final size, the 1,350 t displacement target and the GM target of 1.0 m, all from `docs/hull-dynamics-first-pass.md` and `docs/hull-size-final.md`. Placeholders are marked.
+Status: sizing and technology options. No equipment is chosen. Inputs are the final size, the 1,350 t displacement target and the GM target of 1.0 m, all from `docs/archive/68m/hull-dynamics-first-pass.md` and `docs/archive/68m/hull-size-final.md`. Placeholders are marked.
 
 ## Why roll control is needed
 

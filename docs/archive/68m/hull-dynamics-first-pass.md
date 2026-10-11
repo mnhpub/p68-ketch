@@ -1,15 +1,15 @@
 # Hull dynamics, first pass: waves, stability and sail heel
 
-Status: first-pass calculations on the final size (`docs/hull-size-final.md`). They are built piece by piece, and each block takes the previous block's output. The mass register is not yet populated, so the results use the 1,350 t displacement target and the placeholder proportions below. Each number is labelled as given, derived or placeholder. Nothing here replaces a stability study, a seakeeping analysis or a sail plan.
+Status: first-pass calculations on the final size (`docs/archive/68m/hull-size-final.md`). They are built piece by piece, and each block takes the previous block's output. The mass register is not yet populated, so the results use the 1,350 t displacement target and the placeholder proportions below. Each number is labelled as given, derived or placeholder. Nothing here replaces a stability study, a seakeeping analysis or a sail plan.
 
 ## Inputs
 
 | Input | Value | Status |
 |---|---|---|
-| LOA | 66.0 m | Derived (`docs/hull-size-final.md`) |
+| LOA | 66.0 m | Derived (`docs/archive/68m/hull-size-final.md`) |
 | LWL | 60.2 m | Derived |
 | Beam | 12.1 m | Derived, kept |
-| Displacement | 1,350 t | Design target (`docs/hull-size-final.md`) |
+| Displacement | 1,350 t | Design target (`docs/archive/68m/hull-size-final.md`) |
 | Block coefficient, Cb | 0.375 | Placeholder (range 0.30 to 0.45) |
 | Waterplane coefficient, Cwp | 0.70 | Placeholder |
 | KB | T / 2 | Placeholder rule of thumb |

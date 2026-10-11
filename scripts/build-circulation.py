@@ -23,7 +23,6 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "drawings" / "schematics"
 OUT.mkdir(parents=True, exist_ok=True)
 NOTICE = json.loads((ROOT / "layout/release-notice.json").read_text())
-SIZE = json.loads((ROOT / "layout/proposed-size.json").read_text())
 LOA = float(json.loads((ROOT / "layout" / "decks-layout.json").read_text())["loa"])
 STATUS = "CONCEPT - NOT FOR CONSTRUCTION"
 DATE = "10 Oct 2026"
