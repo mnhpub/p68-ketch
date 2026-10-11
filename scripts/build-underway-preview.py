@@ -13,6 +13,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 ROOT = Path(__file__).resolve().parent.parent
+_HULL = json.loads((ROOT / "layout" / "decks-layout.json").read_text())
 OUT = ROOT / "drawings" / "previews"
 OUT.mkdir(parents=True, exist_ok=True)
 size = json.loads((ROOT / "layout/proposed-size.json").read_text())
@@ -55,7 +56,7 @@ def main():
         ax.set_title(label, fontsize=10, color="#102027")
         ax.axis("off")
     fig.suptitle("P68 underway: midship section at heel (schematic, not a rendering)", fontsize=13, color="#102027", y=0.97)
-    fig.text(0.02, 0.04, f"Section at 68 m LOA, 13.0 m beam. Heel from the placeholder sail (600 m², Cf 0.7, h 30 m) at GM 1.0 m. The waterline is shown level; the hull heels about it.", fontsize=8, color="#5d7887")
+    fig.text(0.02, 0.04, f"Section at {_HULL['loa']:g} m LOA, {_HULL['beam']:.1f} m beam. Heel from the placeholder sail (600 m², Cf 0.7, h 30 m) at GM 1.0 m. The waterline is shown level; the hull heels about it.", fontsize=8, color="#5d7887")
     fig.text(0.02, 0.015, f"CONCEPT - NOT FOR CONSTRUCTION. Open design release, {notice['release_class']}. Licence to be confirmed.", fontsize=7, color="#8e3b6a")
     fig.savefig(OUT / "underway-heel-section.png", dpi=160)
     fig.savefig(OUT / "underway-heel-section.pdf")

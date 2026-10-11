@@ -46,8 +46,8 @@ FLOORS = {
 ROOF_Z = ACCESS['roof']['level_m']
 COVER_Z = ACCESS['roof']['pilot_house_cover_top_m']
 
-# Mast stations, approximate, from the longitudinal section (same as build-elevations).
-MASTS = {'Mizzen': 21.0, 'Main': 39.9}
+# Mast stations from layout/hull.json (via decks-layout.json): approximate, from the longitudinal section.
+MASTS = {m['name']: float(m['x']) for m in LAYOUT['masts']}
 
 ROUTE = re.compile(r'lobby|passage|corridor|circulation|access', re.I)
 GUEST_LEVELS = set(ACCESS['public_levels'])

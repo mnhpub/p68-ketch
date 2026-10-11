@@ -67,3 +67,11 @@ Open items per level live in `layout/deck-status.json` and print on each sheet's
   the tender are illustrative.
 - **Interiors** are built from the DXF rooms. Outboard walls are glazed on the upper levels and have portholes on Tween.
   They are not a coordinated interior design.
+
+## Hull scale: one source for every drawing
+
+- `layout/hull.json` holds the hull: LOA, beam and mast stations (as fractions of LOA, with height and foundation). It is the only place these values are set.
+- `npm run build:hull` builds `layout/decks-layout.json` from `layout/source/decks-layout-68m.json` and the hull file. Outlines come from the hull's ellipse. Each room keeps its size and moves with its nearest anchor (stern, mizzen, main, bow), so extra length goes into the gaps.
+- The same command then rebuilds the deck plans, elevations and bird's-eye views, and runs the layout, envelope and access checks. The CAD sheets (`npm run build:cad`) and renders (`npm run build:renders`) read the same layout, but run separately.
+- To draw another hull, copy its file over `layout/hull.json` (for example `layout/hull-120m-4mast.json`) and run `npm run build:hull`. Restore the 68 m file to return to the current drawings.
+- Not yet driven by the hull: the sail clearance houses (`layout/sail-clearance-*.json`), the underway-preview heel inputs, and the deck list, which is still five decks.

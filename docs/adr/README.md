@@ -14,3 +14,4 @@ Each ADR records one decision, its status, and the gates still open. Status refl
 | [0008](0008-water-produced-onboard-atmospheric-capture-for-drinking-wate.md) | Water: produced onboard; atmospheric capture for drinking water only | Accepted (owner for production; sizing proposed) |
 | [0009](0009-circulation-lifts-for-accessible-movement-stairs-are-the-esc.md) | Circulation: lifts for accessible movement; stairs are the escape routes | Proposed |
 | [0010](0010-conceptual-renderings-inputs-gates-and-what-is-needed.md) | Conceptual renderings: inputs, gates and what is needed | Proposed |
+| [0011](0011-hull-scale-one-source-and-lessons-from-68-m.md) | Hull scale from one source; lessons from the 68 m hull | Proposed (for owner review) |

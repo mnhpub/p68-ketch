@@ -7,6 +7,8 @@ import {dirname, join} from 'node:path';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const layout = JSON.parse(readFileSync(join(root, 'layout/decks-layout.json'), 'utf8'));
+const LOA = layout.loa;
+const HB = layout.beam / 2 + 0.5; // label offset beyond the hull, from the centreline
 const decks = JSON.parse(readFileSync(join(root, 'decks.json'), 'utf8'));
 const outDir = join(root, 'drawings');
 mkdirSync(outDir, {recursive: true});
@@ -69,12 +71,12 @@ function drawDeck(ld, deck, dy = 0) {
 
   const pieces = [];
   // Grid every 10 m along the length
-  for (let x = 0; x <= 68; x += 10) {
-    pieces.push(`<line x1="${px(x)}" y1="${py(-7)}" x2="${px(x)}" y2="${py(7)}" stroke="#cfd8dc" stroke-dasharray="2 4"/>`);
-    pieces.push(`<text x="${px(x)}" y="${py(-7) - 6}" font-size="9" fill="#78909c" text-anchor="middle">${x} m</text>`);
+  for (let x = 0; x <= LOA; x += 10) {
+    pieces.push(`<line x1="${px(x)}" y1="${py(-HB)}" x2="${px(x)}" y2="${py(HB)}" stroke="#cfd8dc" stroke-dasharray="2 4"/>`);
+    pieces.push(`<text x="${px(x)}" y="${py(-HB) - 6}" font-size="9" fill="#78909c" text-anchor="middle">${x} m</text>`);
   }
   // Centreline
-  pieces.push(`<line x1="${px(0)}" y1="${py(0)}" x2="${px(68)}" y2="${py(0)}" stroke="#90a4ae" stroke-dasharray="8 4 2 4"/>`);
+  pieces.push(`<line x1="${px(0)}" y1="${py(0)}" x2="${px(LOA)}" y2="${py(0)}" stroke="#90a4ae" stroke-dasharray="8 4 2 4"/>`);
   // Hull outline for this deck
   pieces.push(`<polygon points="${outline}" fill="#f7f3ea" stroke="#263238" stroke-width="1.6"/>`);
 
@@ -104,23 +106,23 @@ function drawDeck(ld, deck, dy = 0) {
   }
 
   // Bow and stern markers
-  pieces.push(`<text x="${px(0) - 6}" y="${py(-7) + 14}" font-size="11" fill="#263238" text-anchor="end">STERN</text>`);
-  pieces.push(`<text x="${px(68) + 6}" y="${py(-7) + 14}" font-size="11" fill="#263238">BOW</text>`);
+  pieces.push(`<text x="${px(0) - 6}" y="${py(-HB) + 14}" font-size="11" fill="#263238" text-anchor="end">STERN</text>`);
+  pieces.push(`<text x="${px(LOA) + 6}" y="${py(-HB) + 14}" font-size="11" fill="#263238">BOW</text>`);
 
   // Title block
   const dl = deck.elevation;
-  pieces.push(`<text x="${X0}" y="${py(7) + 34}" font-size="13" font-weight="600" fill="#102027">P68 KETCH · ${esc(ld.name.toUpperCase())}</text>`);
-  pieces.push(`<text x="${X0}" y="${py(7) + 52}" font-size="10" fill="#37474f">Datum ${esc(dl)} · Zone: ${esc(deck.zone)}</text>`);
-  pieces.push(`<text x="${X0}" y="${py(7) + 68}" font-size="10" fill="#37474f">Assigned ${assigned.toFixed(0)} m² of ${outlineArea.toFixed(0)} m² deck outline (${((assigned / outlineArea) * 100).toFixed(0)}%). Unassigned area is open for layout.</text>`);
-  pieces.push(`<text x="${X0}" y="${py(7) + 84}" font-size="10" font-weight="600" fill="#8e3b6a">PROVISIONAL SCHEMATIC · NOT FOR CONSTRUCTION · NOT FOR FABRICATION · NOT SCALED</text>`);
+  pieces.push(`<text x="${X0}" y="${py(HB) + 34}" font-size="13" font-weight="600" fill="#102027">P68 KETCH · ${esc(ld.name.toUpperCase())}</text>`);
+  pieces.push(`<text x="${X0}" y="${py(HB) + 52}" font-size="10" fill="#37474f">Datum ${esc(dl)} · Zone: ${esc(deck.zone)}</text>`);
+  pieces.push(`<text x="${X0}" y="${py(HB) + 68}" font-size="10" fill="#37474f">Assigned ${assigned.toFixed(0)} m² of ${outlineArea.toFixed(0)} m² deck outline (${((assigned / outlineArea) * 100).toFixed(0)}%). Unassigned area is open for layout.</text>`);
+  pieces.push(`<text x="${X0}" y="${py(HB) + 84}" font-size="10" font-weight="600" fill="#8e3b6a">PROVISIONAL SCHEMATIC · NOT FOR CONSTRUCTION · NOT FOR FABRICATION · NOT SCALED</text>`);
   // Legend
   const legendItems=[["#8fd0e6","Mag-rail lift"],["#dfe9f5","Lobby / passage / circulation"],["#c5e8c0","Accessible guest cabin"],["#e3ebee","Other room"]];
-  legendItems.forEach(([c,label],i)=>{const lx=X0+i*190;const ly=py(7)+120;pieces.push(`<rect x="${lx}" y="${ly}" width="12" height="10" fill="${c}" stroke="#455a64"/><text x="${lx+17}" y="${ly+9}" font-size="9" fill="#37474f">${label}</text>`);});
+  legendItems.forEach(([c,label],i)=>{const lx=X0+i*190;const ly=py(HB)+120;pieces.push(`<rect x="${lx}" y="${ly}" width="12" height="10" fill="${c}" stroke="#455a64"/><text x="${lx+17}" y="${ly+9}" font-size="9" fill="#37474f">${label}</text>`);});
   // Scale bar: 10 m
-  pieces.push(`<line x1="${X0}" y1="${py(7) + 96}" x2="${X0 + 10 * S}" y2="${py(7) + 96}" stroke="#263238" stroke-width="2"/>`);
-  pieces.push(`<text x="${X0}" y="${py(7) + 110}" font-size="9" fill="#37474f">0</text>`);
-  pieces.push(`<text x="${X0 + 10 * S}" y="${py(7) + 110}" font-size="9" fill="#37474f" text-anchor="middle">10 m</text>`);
-  pieces.push(`<text x="${WIDTH - 20}" y="${py(7) + 110}" font-size="9" fill="#78909c" text-anchor="end">Source: layout/decks-layout.json · draft 00</text>`);
+  pieces.push(`<line x1="${X0}" y1="${py(HB) + 96}" x2="${X0 + 10 * S}" y2="${py(HB) + 96}" stroke="#263238" stroke-width="2"/>`);
+  pieces.push(`<text x="${X0}" y="${py(HB) + 110}" font-size="9" fill="#37474f">0</text>`);
+  pieces.push(`<text x="${X0 + 10 * S}" y="${py(HB) + 110}" font-size="9" fill="#37474f" text-anchor="middle">10 m</text>`);
+  pieces.push(`<text x="${WIDTH - 20}" y="${py(HB) + 110}" font-size="9" fill="#78909c" text-anchor="end">Source: layout/decks-layout.json · draft 00</text>`);
 
   g(pieces.join('\n'));
   return {svg: parts.join('\n'), assigned, outlineArea};

@@ -1,0 +1,99 @@
+{
+  "_note": "Single source for hull dimensions. Every drawing, elevation, CAD sheet and check reads LOA, beam and the mast stations from here. This is the active hull: 120 m by 20 m four-mast concept (same values as layout/hull-120m-4mast.json, plus its additions). Rooms are re-flowed from layout/source/decks-layout-68m.json by nearest anchor. To return to the 68 m hull, set loa 68, beam 13.0 and Mizzen/Main x_fraction to 21.0/68 and 39.9/68. Run: npm run build:hull",
+  "loa": 120,
+  "beam": 20.0,
+  "masts": [
+    {
+      "name": "Jigger",
+      "x_fraction": 0.14,
+      "foundation_m2": 1.0,
+      "top_m": 30
+    },
+    {
+      "name": "Mizzen",
+      "x_fraction": 0.3088235,
+      "foundation_m2": 1.5,
+      "top_m": 42
+    },
+    {
+      "name": "Main",
+      "x_fraction": 0.5867647,
+      "foundation_m2": 2.0,
+      "top_m": 55
+    },
+    {
+      "name": "Fore",
+      "x_fraction": 0.8,
+      "foundation_m2": 2.0,
+      "top_m": 50
+    }
+  ],
+  "additions": [
+    {
+      "deck": "Tween",
+      "name": "Theatre: stage and audience",
+      "rect": [
+        8,
+        -4,
+        24,
+        4
+      ],
+      "kind": "Public entertainment"
+    },
+    {
+      "deck": "Tween",
+      "name": "Cinema: screening room",
+      "rect": [
+        88,
+        -4,
+        100,
+        4
+      ],
+      "kind": "Public entertainment"
+    },
+    {
+      "deck": "Tween",
+      "name": "Broadcast studio: main stage",
+      "rect": [
+        44,
+        -6,
+        52,
+        3
+      ],
+      "kind": "Production"
+    },
+    {
+      "deck": "Tween",
+      "name": "Broadcast studio: side stage",
+      "rect": [
+        44,
+        4,
+        50,
+        8
+      ],
+      "kind": "Production"
+    },
+    {
+      "deck": "Tween",
+      "name": "Broadcast studio: production control",
+      "rect": [
+        52,
+        4,
+        58,
+        8
+      ],
+      "kind": "Production"
+    },
+    {
+      "deck": "Tween",
+      "name": "A/V media room: racks, servers and storage",
+      "rect": [
+        52,
+        -6,
+        58,
+        3
+      ],
+      "kind": "Production"
+    }
+  ]
+}
