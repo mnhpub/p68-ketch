@@ -31,10 +31,18 @@ function App(){
  async function toggleFullscreen(){const el=document.getElementById('presentation-root');if(!document.fullscreenElement&&el?.requestFullscreen){await el.requestFullscreen();setExpanded(true)}else if(document.fullscreenElement){await document.exitFullscreen();setExpanded(false)}}
  function toggleGate(i:number){setGates(old=>old.includes(i)?old.filter(x=>x!==i):[...old,i])}
  return <div className="studio" id="presentation-root">
- {!aboard&&<div role="dialog" aria-label="Welcome aboard" style={{position:'fixed',inset:0,zIndex:1000,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',gap:28,background:'#071b29',color:'#faf6ef'}}>
-  <div style={{fontSize:14,letterSpacing:'0.3em',color:'#c6a67d'}}>P68 KETCH · OCEAN ARCHITECTURE STUDIO</div>
-  <div style={{fontSize:42,fontWeight:300,letterSpacing:'0.06em'}}>Welcome aboard.</div>
-  <button onClick={allAboard} style={{padding:'16px 40px',fontSize:18,letterSpacing:'0.2em',background:'transparent',color:'#c6a67d',border:'1px solid #c6a67d',cursor:'pointer'}}>ALL ABOARD</button>
+ {!aboard&&<div role="dialog" aria-label="Welcome aboard" style={{position:'fixed',inset:0,zIndex:1000,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',gap:22,color:'#faf6ef',background:'linear-gradient(rgba(7,27,41,0.78),rgba(7,27,41,0.92)),url(/assets/p120-exterior-dusk.jpg) center/cover no-repeat #071b29',textAlign:'center',padding:24}}>
+  <svg width="96" height="96" viewBox="0 0 96 96" aria-label="Crest placeholder" role="img" style={{opacity:0.85}}>
+   <circle cx="48" cy="48" r="44" fill="none" stroke="#c6a67d" strokeWidth="1.5"/>
+   <circle cx="48" cy="48" r="34" fill="none" stroke="#c6a67d" strokeWidth="0.8" strokeDasharray="3 3"/>
+   <text x="48" y="54" textAnchor="middle" fontSize="11" fill="#c6a67d" letterSpacing="2">CREST</text>
+  </svg>
+  <div style={{fontSize:13,letterSpacing:'0.35em',color:'#c6a67d'}}>128K CLASS · FOUR-MAST KETCH</div>
+  <div style={{fontSize:64,fontWeight:300,letterSpacing:'0.12em'}}>ENDURANCE</div>
+  <div style={{fontSize:14,letterSpacing:'0.2em',color:'#b8c5ca'}}>Established: [year to confirm]</div>
+  <div style={{fontSize:16,color:'#b8c5ca',maxWidth:520,lineHeight:1.6}}>Welcome aboard. The presentation opens when you are ready.</div>
+  <button onClick={allAboard} style={{marginTop:12,padding:'16px 40px',fontSize:18,letterSpacing:'0.2em',background:'transparent',color:'#c6a67d',border:'1px solid #c6a67d',cursor:'pointer'}}>ALL ABOARD</button>
+  <div style={{position:'absolute',bottom:18,fontSize:11,letterSpacing:'0.15em',color:'#8da5b0'}}>PLACEHOLDER IMAGERY · CONCEPT · NOT FOR CONSTRUCTION</div>
  </div>}
  <header className="masthead"><div className="mark"><span className="compass">✧</span><div><div className="wordmark">P68 <b>KETCH</b></div><div className="word-sub">OCEAN ARCHITECTURE STUDIO <i/> 120 M / 394 FT</div></div></div><div className="head-controls"><span className="status">CONCEPT DESIGN <em>REV 02</em></span><button title="Toggle chapters" onClick={()=>setShowNav(!showNav)}>{showNav?<PanelLeftClose size={17}/>:<PanelLeftOpen size={17}/>}</button><button title="Fullscreen" onClick={toggleFullscreen}>{expanded?<Minimize2 size={17}/>:<Maximize2 size={17}/>}</button></div></header>
  <div className="workspace">
