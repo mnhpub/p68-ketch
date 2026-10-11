@@ -16,6 +16,7 @@
     "validate:sails": "node scripts/validate-sail-clearance.mjs layout/sail-clearance-120m-4mast.json",
     "validate:gaps": "node scripts/validate-gap-closure.mjs",
     "export:drawings": "python3 scripts/export-drawings-web.py",
+    "check:dxf": "python3 scripts/check-dxf-vs-layout.py",
     "validate:budgets": "node scripts/validate-design-budgets.mjs",
     "validate:ventilation": "node scripts/validate-ventilation.mjs",
     "build:elevations": "node scripts/build-elevations.mjs",
