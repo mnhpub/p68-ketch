@@ -1,6 +1,6 @@
 """The P68 vessel model for exterior renders: hull, superstructure, rig and sails.
 
-Main dimensions come from the repository (LOA 68.0 m, beam 12.1 m, deck levels from
+Main dimensions come from the repository (LOA and beam from the layout, deck levels from
 the vertical space schedule, mast stations from the longitudinal section, the Lido
 roof and pilot house cover heights from accessibility.json). Everything the data does
 not set is illustrative and labelled as such in the renders: hull lines, superstructure
@@ -47,10 +47,9 @@ def room(deck_name, name):
 SHEER = 4.4  # bulwark top amidships (Main deck +3.35 plus bulwark)
 
 
-# Hull stations scale with LOA. The illustrative lines were drawn for 68 m: midship at LOA/2, and the
-# fore and aft shaping distances in proportion to length (S = LOA / 68).
+# Hull stations follow the layout length: midship at LOA/2.
 MID = LOA / 2
-S = LOA / 68
+S = 1.0  # shaping distances are in metres for the layout's own length
 
 
 def hb_render(x: float) -> float:

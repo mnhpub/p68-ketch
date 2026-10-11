@@ -1,10 +1,7 @@
 # P68 Ketch · Interactive Presentation Studio
 
-A 22-chapter architectural presentation for the 68-meter (approximately 223-foot) expedition sailing ketch. Includes **a standalone offline browser presentation** and **the editable React + TypeScript/Vite source app**.
+A 22-chapter architectural presentation for the 120-meter (approximately 394-foot) four-mast expedition ketch.
 
-## Open without installation
-
-Open `index.html` from the extracted ZIP. Keep the `public/assets` directory and `src/presentation-polish.css` alongside the HTML file in their original folders. All typography and interactions work without network access. The offline build uses system serif/sans-serif fallback fonts. Both versions share the typography and spacing refinements in `src/presentation-polish.css`.
 
 ## React / TypeScript
 

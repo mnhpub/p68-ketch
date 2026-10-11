@@ -26,7 +26,7 @@ layout = json.loads((ROOT / "layout/decks-layout.json").read_text())
 decks = json.loads((ROOT / "decks.json").read_text())
 
 LOA, B = float(layout["loa"]), float(layout["beam"])
-LWL = LOA * 62 / 68  # waterline ratio from docs/archive/68m/hull-size-final.md
+LWL = LOA * 0.912  # waterline ratio LWL/LOA used across the concept documents
 STATUS = "CONCEPT - NOT FOR CONSTRUCTION"
 DATE = "10 Oct 2026"
 NOTICE = json.loads((ROOT / "layout/release-notice.json").read_text())

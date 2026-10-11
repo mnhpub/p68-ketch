@@ -38,7 +38,7 @@ for `render_interiors.py` (see `SHOTS` in the script). Blender rendering needs O
 | Item | Convention |
 |---|---|
 | Units | Model space in metres (`$INSUNITS` 6). Paper space in millimetres. |
-| Axes | X from the aft perpendicular (AP, X 0) to the bow (X 68). Y positive to port. Z above the DWL. |
+| Axes | X from the aft perpendicular (AP, X 0) to the bow (X = LOA, from the layout). Y positive to port. Z above the DWL. |
 | Layers | AIA/NCS style: `A-AREA` room polylines, `A-AREA-PATT` status fills, `A-AREA-IDEN` tags, `A-WALL`, `A-WALL-PRTN`, `A-DOOR`, `A-CONV` lifts, `A-ROOF-OTLN`, `A-FLOR-OTLN` deck outline, `S-GRID` stations and buttocks, `S-MAST`, `A-ANNO-DIMS`, `G-ANNO-*` sheet items, `G-VIEW` viewport (no plot). |
 | Room data | XDATA `P68` on each `A-AREA` polyline: name, status, finish, furniture, number, finish label. |
 | Blocks | `P68-TAG` (room tag, attribute `NUM`), `P68-TITLE` (title block, attributes for number, revision, scale, date, source, datum, status, sheet, title). |
@@ -71,7 +71,7 @@ Open items per level live in `layout/deck-status.json` and print on each sheet's
 ## Hull scale: one source for every drawing
 
 - `layout/hull.json` holds the hull: LOA, beam and mast stations (as fractions of LOA, with height and foundation). It is the only place these values are set.
-- `npm run build:hull` builds `layout/decks-layout.json` from `layout/source/decks-layout-68m.json` and the hull file. Outlines come from the hull's ellipse. Each room keeps its size and moves with its nearest anchor (stern, mizzen, main, bow), so extra length goes into the gaps.
+- `npm run build:hull` extracts `layout/decks-layout.json` from the AutoCAD deck sheets (the source of truth) and builds from it. Outlines come from the hull's ellipse. Each room keeps its size and moves with its nearest anchor (stern, mizzen, main, bow), so extra length goes into the gaps.
 - The same command then rebuilds the deck plans, elevations and bird's-eye views, and runs the layout, envelope and access checks. The CAD sheets (`npm run build:cad`) and renders (`npm run build:renders`) read the same layout, but run separately.
-- To draw another hull, copy its file over `layout/hull.json` (for example `layout/hull.json`) and run `npm run build:hull`. Restore the 68 m file to return to the current drawings.
+- To draw another hull, copy its file over `layout/hull.json` (for example `layout/hull.json`) and run `npm run build:hull`. The current drawings are the 120 m four-mast concept.
 - Not yet driven by the hull: the sail clearance houses (`layout/sail-clearance-*.json`), the underway-preview heel inputs, and the deck list, which is still five decks.
