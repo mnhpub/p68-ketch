@@ -280,15 +280,17 @@ def model(doc, deck: p68.Deck):
     # Masts where they pass through the level.
     x0, x1 = deck.extent
     for label, mx in p68.MASTS.items():
-        if x0 <= mx <= x1 and deck.name != 'Tank / Technical':
+        if x0 <= mx <= x1:  # every level where the mast stands, including the tank level (mast foot)
             msp.add_circle((mx, 0), 0.45, dxfattribs={'layer': 'S-MAST', 'lineweight': 35})
             hatch_pattern(msp, [(mx + 0.45 * math.cos(a / 16 * math.tau), 0.45 * math.sin(a / 16 * math.tau)) for a in range(16)], 'ANSI37', 0.04, (90, 100, 105), 'S-MAST')
             text(msp, f'{label.upper()} MAST (APPROX.)', mx, -0.75, 0.2, 'S-MAST', ACCENT, TextEntityAlignment.TOP_CENTER)
 
     # Roof overlay on the Commander level.
     for r in deck.roof:
-        msp.add_lwpolyline(rect_pts(r.x0, r.y0, r.x1, r.y1), close=True,
-                           dxfattribs={'layer': 'A-ROOF-OTLN', 'linetype': 'DASHED', 'ltscale': 0.06, 'true_color': tc(ACCENT)})
+        roof = msp.add_lwpolyline(rect_pts(r.x0, r.y0, r.x1, r.y1), close=True,
+                                  dxfattribs={'layer': 'A-ROOF-OTLN', 'linetype': 'DASHED', 'ltscale': 0.06, 'true_color': tc(ACCENT)})
+        # Name the roof room in XDATA, so the extract can read it back as a room.
+        roof.set_xdata('P68', [(1000, 'Roof: outdoor pilot house and sun deck (events)'), (1000, 'roof')])
         text(msp, f'ROOF OVER (+{p68.ROOF_Z:.2f}): SUN DECK AND OUTDOOR PILOT HOUSE, COVER TO +{p68.COVER_Z:.2f}',
              r.cx, Y(r.y0) + 0.18, 0.22, 'A-ROOF-OTLN', ACCENT, TextEntityAlignment.BOTTOM_CENTER)
 
@@ -578,6 +580,12 @@ def plot(doc, name):
 
 
 def main():
+    # The deck DXF sheets are the source of truth. This generator writes them from the layout, which
+    # would overwrite AutoCAD edits. It runs only when forced, for a migration from the layout.
+    import sys
+    if '--regenerate-from-layout' not in sys.argv:
+        raise SystemExit('Refusing to overwrite the AutoCAD deck sheets. Edit the DXF in AutoCAD, then run npm run build:cad. '
+                         'To regenerate from the layout (migration only), pass --regenerate-from-layout.')
     CAD.mkdir(parents=True, exist_ok=True)
     checks = [('Layout', *p68.run_validator('validate-layout.mjs')), ('Access', *p68.run_validator('validate-access.mjs'))]
     book = fitz.open()
