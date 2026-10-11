@@ -17,3 +17,10 @@
   .scope-row { grid-template-columns: 1fr; gap: 3px; }
   .scope-head { display: none; }
 }
+.sheet figcaption a, .sheet-links a { color: #d8b46a; font-size: 11px; text-decoration: underline; }
+.sheet-links { margin: -4px 0 12px; color: #8da5b0; font-size: 12px; }
+.pending-tile { height: 160px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+  background: repeating-linear-gradient(135deg, #0f2a3a 0 12px, #12303f 12px 24px); border-bottom: 1px solid #2a4656; color: #d8b46a; }
+.pending-tile span { font-size: 12px; letter-spacing: 0.14em; font-weight: 600; }
+.pending-tile small { font-size: 11px; color: #8da5b0; }
+.sheet.pending figcaption b { color: #b8c7ce; }

@@ -2,6 +2,16 @@
 export type Sheet = {file: string; title: string; note: string};
 export type Render = {file: string; title: string};
 
+// Engineering deck plans, plotted from the DXF sources in drawings/cad/ (scripts/drafting/cad_plans.py).
+export const ENGINEERING: (Sheet & {dxf: string})[] = [
+  {file: 'eng-deck-01-bridge.svg', dxf: 'P68-ENG-01-bridge.dxf', title: 'P68-ENG-01 Bridge', note: 'Deck status, room schedule, lift lobbies, roof access'},
+  {file: 'eng-deck-02-commander-lido.svg', dxf: 'P68-ENG-02-commander-lido.dxf', title: 'P68-ENG-02 Commander and Lido', note: 'Deck status, lift lobby, roof overlay'},
+  {file: 'eng-deck-03-main-master.svg', dxf: 'P68-ENG-03-main-master.dxf', title: 'P68-ENG-03 Main and Master', note: 'Deck status, public lift lobby, owner suite'},
+  {file: 'eng-deck-04-tween.svg', dxf: 'P68-ENG-04-tween.dxf', title: 'P68-ENG-04 Tween', note: 'Deck status, accessible cabin, cabin route gap'},
+  {file: 'eng-deck-05-tank-technical.svg', dxf: 'P68-ENG-05-tank-technical.dxf', title: 'P68-ENG-05 Tank and Technical', note: 'Deck status, tank envelopes, lift B'},
+];
+export const ENGINEERING_PDF = 'P68-engineering-deck-plans.pdf';
+
 export const SHEETS: Sheet[] = [
   {file: 'general-arrangement-overview.svg', title: 'General arrangement overview', note: 'All five levels stacked'},
   {file: 'deck-01-bridge.svg', title: 'Bridge', note: 'Command position, lift A and B lobbies, roof access passage'},
@@ -14,9 +24,9 @@ export const SHEETS: Sheet[] = [
 ];
 
 export const RENDERS: Render[] = [
-  {file: '01-bridge-helm.jpg', title: 'Bridge helm and lounge'},
-  {file: '02-commander-lookout-lift-lobby.jpg', title: 'Commander lookout and lift doors'},
-  {file: '03-main-salon-passage.jpg', title: 'Main salon and passage'},
+  {file: '01-bridge-helm.jpg', title: 'Bridge passage and command position'},
+  {file: '02-commander-lookout-lift-lobby.jpg', title: 'Commander lookout and lift lobby'},
+  {file: '03-main-salon-passage.jpg', title: 'Main salon, passage and owner suite doors'},
   {file: '04-tween-accessible-cabin.jpg', title: 'Tween corridor and accessible cabin'},
   {file: '05-tank-technical-corridor.jpg', title: 'Tank technical corridor'},
   {file: '06-aft-lido-exterior.jpg', title: 'Aft Lido with roof and pilot house cover'},
@@ -66,3 +76,37 @@ export function deckBirdseyeSrc(deckName: string, fallback: string): string {
   const sheet = BIRDSEYE_BY_DECK[deckName];
   return sheet ? `/drawings/${sheet}` : fallback;
 }
+
+// Blender renders built from the DXF sources (scripts/drafting/render_*.py). Files live in public/renders/.
+// pending: scripted but not rendered yet; the app shows a placeholder tile.
+export type Shot = {file: string; title: string; note: string; pending?: boolean};
+const DECK_FILES = ['01-bridge', '02-commander-lido', '03-main-master', '04-tween', '05-tank-technical'];
+const DECK_TITLES = ['Bridge', 'Commander and Lido', 'Main and Master', 'Tween', 'Tank and Technical'];
+
+export const FINISH_PLANS: Shot[] = DECK_FILES.map((f, i) => ({
+  file: `finish/finish-plan-${f}.jpg`, title: `${DECK_TITLES[i]} finish-out plan`, note: 'Proposed finishes and furniture, walls cut at 1.10 m',
+}));
+export const CUTAWAYS: Shot[] = DECK_FILES.map((f, i) => ({
+  file: `finish/cutaway-${f}.jpg`, title: `${DECK_TITLES[i]} cutaway`, note: 'Finish-out cutaway from the aft starboard quarter',
+}));
+export const EXTERIORS: Shot[] = [
+  {file: 'exterior/port.jpg', title: 'At port', note: 'Stern-to on the quay, golden hour'},
+  {file: 'exterior/anchor.jpg', title: 'At anchor', note: 'Cycladic bay, tender at the swim platform', pending: true},
+  {file: 'exterior/underway.jpg', title: 'Underway', note: 'Under sail, close reach', pending: true},
+  {file: 'exterior/dusk.jpg', title: 'At anchor, dusk', note: 'Interior and Lido lighting', pending: true},
+];
+export const INTERIORS: Shot[] = [
+  {file: 'interior/bridge-helm.jpg', title: 'Bridge helm', note: 'Controls · command position', pending: true},
+  {file: 'interior/pilot-house.jpg', title: 'Outdoor pilot house', note: 'Controls · roof helm under the cover', pending: true},
+  {file: 'interior/technical-corridor.jpg', title: 'Technical corridor', note: 'Controls · Tank deck, lift B', pending: true},
+  {file: 'interior/salon.jpg', title: 'Main salon', note: 'Feature · lounge and dining', pending: true},
+  {file: 'interior/lido-pool.jpg', title: 'Aft Lido and pool', note: 'Feature · Commander deck', pending: true},
+  {file: 'interior/observation-lounge.jpg', title: 'Observation lounge', note: 'Feature · Commander deck', pending: true},
+  {file: 'interior/chart-library.jpg', title: 'Chart library', note: 'Feature · Bridge', pending: true},
+  {file: 'interior/main-lift-lobby.jpg', title: 'Main lift lobby', note: 'Feature · lifts A and B', pending: true},
+  {file: 'interior/galley.jpg', title: 'Professional galley', note: 'Feature · Main deck', pending: true},
+  {file: 'interior/owner-suite.jpg', title: 'Owner suite', note: 'Accommodation · Main deck', pending: true},
+  {file: 'interior/vip-cabin.jpg', title: 'VIP cabin', note: 'Accommodation · Main deck', pending: true},
+  {file: 'interior/guest-cabin.jpg', title: 'Guest cabin', note: 'Accommodation · Tween', pending: true},
+  {file: 'interior/accessible-cabin.jpg', title: 'Accessible guest cabin', note: 'Accommodation · Tween', pending: true},
+];

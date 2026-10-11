@@ -1,0 +1,50 @@
+{
+  "_note": "Deck status for the engineering plans: the design stage of each level and its open items, drawn from docs/layout-gaps.md, docs/outdoor-pilot-house-impact.md, docs/piloting-console.md and layout/accessibility.json. Update this file when an item closes; the plans read it on every build.",
+  "stage": "Concept · provisional general arrangement · draft 00",
+  "decks": {
+    "Bridge": {
+      "stage": "Layout resolved, not dimensioned",
+      "open": [
+        "Roof level (+9.30 m) assumed equal to the Bridge floor; not confirmed on any sheet.",
+        "Roof access door sits about 0.5 m outboard of the roof edge: check the roof outline.",
+        "Window glare at the command position not checked.",
+        "Positions read from the schematic at about 14 px per metre."
+      ]
+    },
+    "Commander / Lido": {
+      "stage": "Layout resolved, roof under design",
+      "open": [
+        "Pilot house cover footprint not set; roof extent shown.",
+        "Roof: second escape route, guard rails and crowd load not designed.",
+        "Pool mass and free surface to be engineered.",
+        "Mizzen interface with the aft deck structure unresolved."
+      ]
+    },
+    "Main / Master": {
+      "stage": "Layout resolved, interiors not detailed",
+      "open": [
+        "Owner suite interior not detailed (about 7 m by 6.5 m).",
+        "Door widths, thresholds and turning spaces not modelled.",
+        "Galley equipment and food storage not placed."
+      ]
+    },
+    "Tween": {
+      "stage": "Layout resolved, cabin count open",
+      "open": [
+        "Guest cabin blocks (X 10 to 27) touch no corridor or lobby on the layout: a guest route to the cabins is needed.",
+        "Accessible cabin interior to be specified: turning space and accessible bathroom.",
+        "Guest cabin count and sizes not set; partitions shown are indicative.",
+        "ADA figures to be checked against 36 CFR Part 1191.",
+        "Workshop / storage (X 51 to 55) has no route on the layout; reached only past lift B."
+      ]
+    },
+    "Tank / Technical": {
+      "stage": "Blocks placed, machinery not placed",
+      "open": [
+        "Propulsion, generation and battery machinery not placed on the arrangement.",
+        "Lifting keel trunk geometry not set; ballast block is a placeholder.",
+        "Tank capacities not calculated; envelopes shown are gross."
+      ]
+    }
+  }
+}

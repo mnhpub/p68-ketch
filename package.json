@@ -15,7 +15,9 @@
     "build:elevations": "node scripts/build-elevations.mjs",
     "build:public": "node scripts/prepare-public.mjs && tsc -b && VITE_AUDIENCE=public vite build --outDir dist-public && cp dist-public/react.html dist-public/index.html",
     "build:private": "tsc -b && vite build --outDir dist-private && cp dist-private/react.html dist-private/index.html",
-    "build:birdseye": "node scripts/build-birdseye.mjs"
+    "build:birdseye": "node scripts/build-birdseye.mjs",
+    "build:cad": "python3 scripts/drafting/cad_plans.py && mkdir -p public/drawings/cad && cp drawings/eng-deck-*.svg drawings/P68-engineering-deck-plans.pdf public/drawings/ && cp drawings/cad/*.dxf public/drawings/cad/",
+    "build:renders": "python3 scripts/drafting/render_finish.py && python3 scripts/drafting/render_exteriors.py && python3 scripts/drafting/render_interiors.py && mkdir -p public/renders && cp -r drawings/renders/finish drawings/renders/exterior drawings/renders/interior public/renders/"
   },
   "dependencies": {
     "react": "^18.3.1",

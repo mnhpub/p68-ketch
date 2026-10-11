@@ -27,6 +27,12 @@ Visit **http://localhost:5173/react.html**. `src/App.tsx` and `src/styles.css` a
 - Click images to view enlarged source assets
 - Fullscreen icon enters immersive mode where supported
 
+## Drawings and renders
+
+Engineering deck plans are AutoCAD DXF sources in `drawings/cad/`, plotted to `drawings/P68-engineering-deck-plans.pdf`.
+Finish-out plans, cutaways, exterior and interior renders are made in Blender from those DXF files. See
+`docs/drafting-and-rendering.md`.
+
 ## Data and quality restrictions
 
 Ten low-resolution presentation images have been replaced with individually regenerated luxury concept visuals, 1536–1774 px wide, with detailed walnut, ivory upholstery, stone and brass finishes. The three existing exterior compositions now carry Greek flags. Technical drawings are unchanged. Both presentations use the new full-resolution WebP assets in `public/assets/`; original source images are retained. Prompts and output filenames are recorded in `IMAGE_GENERATION.json` (built-in image_gen). These are illustrative AI concept renders, not coordinated architectural or engineering models.
