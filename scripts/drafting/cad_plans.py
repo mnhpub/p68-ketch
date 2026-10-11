@@ -119,7 +119,7 @@ def _title_block_def(doc):
         blk.add_text(s, height=h, dxfattribs={**a, 'style': style, 'true_color': tc(color)}).set_placement((x, y))
 
     txt('P68 KETCH', 4, H - 9, 5.2, style='P68-BOLD')
-    txt('68 m expedition sailing ketch · concept design', 4, H - 15, 1.8, MUTED)
+    txt(f'{p68.LOA:.0f} m expedition four-mast ketch · concept design', 4, H - 15, 1.8, MUTED)
     txt('PROVISIONAL SCHEMATIC · NOT FOR CONSTRUCTION · NOT FOR FABRICATION', 4, 4, 1.8, ACCENT, 'P68-BOLD')
     cells = [(112, 34, H, 'DRAWING NO.', 'DWGNO'), (152, 34, H, 'REVISION', 'REV'),
              (112, 24, 34, 'SCALE', 'SCALE'), (152, 24, 34, 'DATE', 'DATE'),

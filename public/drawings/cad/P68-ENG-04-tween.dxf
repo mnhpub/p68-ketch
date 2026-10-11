@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461324.916886574
+2461325.507025463
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461324.916886574
+2461325.507025463
   9
 $TDUUPDATE
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{A8EE45EA-7C2E-4142-A0EA-3AE47B0CF01D}
+{A44C3847-0FC6-4322-A0FB-1325A8155867}
   9
 $VERSIONGUID
   2
-{32BE733F-39B2-426B-9068-F2898988BA07}
+{41D4780B-2BBC-484C-A707-BD7C46553B7F}
   9
 $EXTNAMES
 290
@@ -6471,7 +6471,7 @@ AcDbText
  40
 1.8
   1
-68 m expedition sailing ketch · concept design
+120 m expedition four-mast ketch · concept design
   7
 P68
  11
@@ -16253,13 +16253,13 @@ Theatre: stage and audience
 1000
 ga
 1000
-stone
+carpet
 1000
-
+theatre
 1070
 16
 1000
-Honed limestone, brass threshold strips
+Wool-silk carpet, ivory
   0
 HATCH
   5
@@ -16367,13 +16367,13 @@ Cinema: screening room
 1000
 ga
 1000
-stone
+carpet
 1000
-
+cinema
 1070
 1
 1000
-Honed limestone, brass threshold strips
+Wool-silk carpet, ivory
   0
 HATCH
   5
@@ -16481,13 +16481,13 @@ Broadcast studio: main stage
 1000
 ga
 1000
-stone
+epoxy
 1000
-
+stage
 1070
 11
 1000
-Honed limestone, brass threshold strips
+Epoxy resin, anti-slip
   0
 HATCH
   5
@@ -16595,13 +16595,13 @@ Broadcast studio: side stage
 1000
 ga
 1000
-stone
+epoxy
 1000
-
+stage_side
 1070
 12
 1000
-Honed limestone, brass threshold strips
+Epoxy resin, anti-slip
   0
 HATCH
   5
@@ -16709,13 +16709,13 @@ Broadcast studio: production control
 1000
 ga
 1000
-stone
+epoxy
 1000
-
+control
 1070
 10
 1000
-Honed limestone, brass threshold strips
+Epoxy resin, anti-slip
   0
 HATCH
   5
@@ -16823,13 +16823,13 @@ A/V media room: racks, servers and storage
 1000
 ga
 1000
-stone
+epoxy
 1000
-
+racks
 1070
 9
 1000
-Honed limestone, brass threshold strips
+Epoxy resin, anti-slip
   0
 LINE
   5
@@ -24759,7 +24759,7 @@ AcDbText
  40
 1.45
   1
-Honed limestone, brass threshold strips
+Wool-silk carpet, ivory
   7
 P68
  11
@@ -27615,7 +27615,7 @@ AcDbText
  40
 1.45
   1
-Honed limestone, brass threshold strips
+Epoxy resin, anti-slip
   7
 P68
  11
@@ -27937,7 +27937,7 @@ AcDbText
  40
 1.45
   1
-Honed limestone, brass threshold strips
+Epoxy resin, anti-slip
   7
 P68
  11
@@ -28329,7 +28329,7 @@ AcDbText
  40
 1.45
   1
-Honed limestone, brass threshold strips
+Epoxy resin, anti-slip
   7
 P68
  11
@@ -28651,7 +28651,7 @@ AcDbText
  40
 1.45
   1
-Honed limestone, brass threshold strips
+Epoxy resin, anti-slip
   7
 P68
  11
@@ -30079,7 +30079,7 @@ AcDbText
  40
 1.45
   1
-Honed limestone, brass threshold strips
+Wool-silk carpet, ivory
   7
 P68
  11
@@ -37301,7 +37301,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-11T03:00:19.929858+00:00
+1.4.4 @ 2026-10-11T17:10:07.432505+00:00
   0
 VISUALSTYLE
   5
@@ -43991,7 +43991,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-11T03:00:19.948519+00:00
+1.4.4 @ 2026-10-11T17:10:07.457148+00:00
   0
 ENDSEC
   0
