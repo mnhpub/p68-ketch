@@ -91,5 +91,12 @@
     ],
     "ip_rating_target": "IP67 for the battery enclosure",
     "ip67_note": "IP67 is dust-tight and protected against temporary immersion (1 m for 30 min). Open air intakes and exhausts conflict with it. Cooling must be a closed loop, with a sealed air or liquid circuit and a heat exchanger outside the battery space."
+  },
+  "endurance_design_basis": {
+    "decision": "fuel_and_genset",
+    "endurance_days_target": 90,
+    "energy_source": "Marine diesel through the gensets. Solar and shore charge the battery bank. The battery is a buffer for peaks and quiet running, not the endurance store.",
+    "record": "docs/adr/0005-endurance-target-90-days.md",
+    "status": "Accepted for the 120 m concept (owner direction: 90 days, fuel is the energy source). Fuel tank sizing and the genset part-load curve remain open."
   }
 }

@@ -1,44 +1,211 @@
 {
   "_note": "Proposed finish schedule for the finish-out renderings. Concept palette only, drawn from the lookbook prompts (walnut, ivory, stone, brass, teak). Not specified, priced or checked for weight, fire rating or class. Rules are tried in order; the first pattern that matches the room name wins.",
   "finishes": {
-    "teak": {"label": "Laid teak deck, caulked seams", "floor": "teak"},
-    "walnut": {"label": "Bookmatched walnut floor, brass inlay", "floor": "walnut"},
-    "stone": {"label": "Honed limestone, brass threshold strips", "floor": "stone"},
-    "marble": {"label": "Calacatta marble, book-matched", "floor": "marble"},
-    "carpet": {"label": "Wool-silk carpet, ivory", "floor": "carpet"},
-    "oak": {"label": "Rift oak, matt lacquer (crew)", "floor": "oak"},
-    "tile": {"label": "Porcelain tile, anti-slip R11", "floor": "tile"},
-    "epoxy": {"label": "Epoxy resin, anti-slip", "floor": "epoxy"},
-    "steel": {"label": "Painted steel, non-slip tread plate", "floor": "steel"},
-    "tank": {"label": "Tank top, coated steel (no finish)", "floor": "tank"},
-    "lift": {"label": "Lift car: brushed brass, stone floor", "floor": "lift"}
+    "teak": {
+      "label": "Laid teak deck, caulked seams",
+      "floor": "teak"
+    },
+    "walnut": {
+      "label": "Bookmatched walnut floor, brass inlay",
+      "floor": "walnut"
+    },
+    "stone": {
+      "label": "Honed limestone, brass threshold strips",
+      "floor": "stone"
+    },
+    "marble": {
+      "label": "Calacatta marble, book-matched",
+      "floor": "marble"
+    },
+    "carpet": {
+      "label": "Wool-silk carpet, ivory",
+      "floor": "carpet"
+    },
+    "oak": {
+      "label": "Rift oak, matt lacquer (crew)",
+      "floor": "oak"
+    },
+    "tile": {
+      "label": "Porcelain tile, anti-slip R11",
+      "floor": "tile"
+    },
+    "epoxy": {
+      "label": "Epoxy resin, anti-slip",
+      "floor": "epoxy"
+    },
+    "steel": {
+      "label": "Painted steel, non-slip tread plate",
+      "floor": "steel"
+    },
+    "tank": {
+      "label": "Tank top, coated steel (no finish)",
+      "floor": "tank"
+    },
+    "lift": {
+      "label": "Lift car: brushed brass, stone floor",
+      "floor": "lift"
+    }
   },
   "rules": [
-    {"match": "Mag-rail lift", "finish": "lift", "furniture": "lift"},
-    {"match": "Aft Lido", "finish": "teak", "furniture": "lido"},
-    {"match": "Bar and dining", "finish": "teak", "furniture": "bar"},
-    {"match": "Owner suite", "finish": "carpet", "furniture": "owner"},
-    {"match": "VIP accommodation", "finish": "carpet", "furniture": "vip"},
-    {"match": "Accessible guest cabin", "finish": "oak", "furniture": "accessible"},
-    {"match": "Guest cabins", "finish": "carpet", "furniture": "cabins"},
-    {"match": "Crew quarters", "finish": "oak", "furniture": "crew"},
-    {"match": "Main salon", "finish": "walnut", "furniture": "salon"},
-    {"match": "Panoramic forward lookout", "finish": "walnut", "furniture": "lookout"},
-    {"match": "Observation lounge", "finish": "walnut", "furniture": "lounge"},
-    {"match": "Leather observation seating", "finish": "walnut", "furniture": "seating"},
-    {"match": "Chart library", "finish": "walnut", "furniture": "library"},
-    {"match": "Command position", "finish": "walnut", "furniture": "helm"},
-    {"match": "Professional galley", "finish": "tile", "furniture": "galley"},
-    {"match": "Laundry", "finish": "tile", "furniture": "laundry"},
-    {"match": "Workshop", "finish": "epoxy", "furniture": "workshop"},
-    {"match": "Service circulation", "finish": "oak", "furniture": null},
-    {"match": "Technical access corridor", "finish": "steel", "furniture": null},
-    {"match": "Fuel / water tanks", "finish": "tank", "furniture": "tank"},
-    {"match": "Wastewater", "finish": "tank", "furniture": "tank"},
-    {"match": "Ballast", "finish": "tank", "furniture": "tank"},
-    {"match": "Pump", "finish": "steel", "furniture": "pumps"},
-    {"match": "lobby", "finish": "marble", "furniture": null},
-    {"match": "passage", "finish": "stone", "furniture": null},
-    {"match": "access", "finish": "stone", "furniture": null}
+    {
+      "match": "Theatre: stage",
+      "finish": "carpet",
+      "furniture": "theatre"
+    },
+    {
+      "match": "Cinema: screening",
+      "finish": "carpet",
+      "furniture": "cinema"
+    },
+    {
+      "match": "Broadcast studio: main stage",
+      "finish": "epoxy",
+      "furniture": "stage"
+    },
+    {
+      "match": "Broadcast studio: side stage",
+      "finish": "epoxy",
+      "furniture": "stage_side"
+    },
+    {
+      "match": "Broadcast studio: production control",
+      "finish": "epoxy",
+      "furniture": "control"
+    },
+    {
+      "match": "A/V media room",
+      "finish": "epoxy",
+      "furniture": "racks"
+    },
+    {
+      "match": "Mag-rail lift",
+      "finish": "lift",
+      "furniture": "lift"
+    },
+    {
+      "match": "Aft Lido",
+      "finish": "teak",
+      "furniture": "lido"
+    },
+    {
+      "match": "Bar and dining",
+      "finish": "teak",
+      "furniture": "bar"
+    },
+    {
+      "match": "Owner suite",
+      "finish": "carpet",
+      "furniture": "owner"
+    },
+    {
+      "match": "VIP accommodation",
+      "finish": "carpet",
+      "furniture": "vip"
+    },
+    {
+      "match": "Accessible guest cabin",
+      "finish": "oak",
+      "furniture": "accessible"
+    },
+    {
+      "match": "Guest cabins",
+      "finish": "carpet",
+      "furniture": "cabins"
+    },
+    {
+      "match": "Crew quarters",
+      "finish": "oak",
+      "furniture": "crew"
+    },
+    {
+      "match": "Main salon",
+      "finish": "walnut",
+      "furniture": "salon"
+    },
+    {
+      "match": "Panoramic forward lookout",
+      "finish": "walnut",
+      "furniture": "lookout"
+    },
+    {
+      "match": "Observation lounge",
+      "finish": "walnut",
+      "furniture": "lounge"
+    },
+    {
+      "match": "Leather observation seating",
+      "finish": "walnut",
+      "furniture": "seating"
+    },
+    {
+      "match": "Chart library",
+      "finish": "walnut",
+      "furniture": "library"
+    },
+    {
+      "match": "Command position",
+      "finish": "walnut",
+      "furniture": "helm"
+    },
+    {
+      "match": "Professional galley",
+      "finish": "tile",
+      "furniture": "galley"
+    },
+    {
+      "match": "Laundry",
+      "finish": "tile",
+      "furniture": "laundry"
+    },
+    {
+      "match": "Workshop",
+      "finish": "epoxy",
+      "furniture": "workshop"
+    },
+    {
+      "match": "Service circulation",
+      "finish": "oak",
+      "furniture": null
+    },
+    {
+      "match": "Technical access corridor",
+      "finish": "steel",
+      "furniture": null
+    },
+    {
+      "match": "Fuel / water tanks",
+      "finish": "tank",
+      "furniture": "tank"
+    },
+    {
+      "match": "Wastewater",
+      "finish": "tank",
+      "furniture": "tank"
+    },
+    {
+      "match": "Ballast",
+      "finish": "tank",
+      "furniture": "tank"
+    },
+    {
+      "match": "Pump",
+      "finish": "steel",
+      "furniture": "pumps"
+    },
+    {
+      "match": "lobby",
+      "finish": "marble",
+      "furniture": null
+    },
+    {
+      "match": "passage",
+      "finish": "stone",
+      "furniture": null
+    },
+    {
+      "match": "access",
+      "finish": "stone",
+      "furniture": null
+    }
   ]
 }

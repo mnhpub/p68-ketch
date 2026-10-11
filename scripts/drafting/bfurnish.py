@@ -273,6 +273,48 @@ def furnish(r: K.CadRoom, z: float, M: dict):
     elif f == 'pumps':
         for i in range(max(1, int(w / 1.4))):
             cylinder(f'pump{i}', r.x0 + 0.7 + i * 1.4, cy, z, 0.3, 0.7, M['steel'])
+    elif f == 'theatre':
+        # Stage at the aft end, raked seating forward, across the beam.
+        stage_x1 = r.x0 + w * 0.3
+        box(f'{r.name} stage', r.x0 + 0.2, r.y0 + 0.2, z, stage_x1, r.y1 - 0.2, z + 0.6, M['walnut'])
+        box(f'{r.name} screen', r.x0 + 0.1, r.y0 + 0.3, z + 0.6, r.x0 + 0.25, r.y1 - 0.3, z + 2.6, M['navy'])
+        seats = max(1, int((d - 0.8) / 0.6))
+        x = stage_x1 + 1.2
+        i = 0
+        while x <= r.x1 - 0.6:
+            for j in range(seats):
+                chair(f'{r.name} seat{i}-{j}', x, r.y0 + 0.5 + j * 0.6, z, math.pi / 2, M, 'navy')
+            x += 0.95
+            i += 1
+    elif f == 'cinema':
+        box(f'{r.name} screen', r.x0 + 0.1, r.y0 + 0.4, z + 0.8, r.x0 + 0.25, r.y1 - 0.4, z + 2.8, M['navy'])
+        seats = max(1, int((d - 0.8) / 0.65))
+        x = r.x0 + 2.2
+        i = 0
+        while x <= r.x1 - 0.6:
+            for j in range(seats):
+                chair(f'{r.name} seat{i}-{j}', x, r.y0 + 0.5 + j * 0.65, z, math.pi / 2, M, 'navy')
+            x += 1.0
+            i += 1
+    elif f == 'stage':
+        box(f'{r.name} set platform', r.x0 + 0.3, r.y0 + 0.3, z, r.x1 - 0.3, r.y1 - 0.3, z + 0.25, M['steel_white'])
+        table(f'{r.name} presenter desk', cx, cy, z + 0.25, 1.6, 0.7, 0.75, M, top='walnut')
+        cbox(f'{r.name} camera pedestal', r.x0 + 1.0, cy, z, 0.5, 0.5, 1.4, M['steel'])
+    elif f == 'stage_side':
+        box(f'{r.name} platform', r.x0 + 0.3, r.y0 + 0.3, z, r.x1 - 0.3, r.y1 - 0.3, z + 0.25, M['steel_white'])
+        table(f'{r.name} stool desk', cx, cy, z + 0.25, 1.0, 0.6, 0.75, M, top='walnut')
+    elif f == 'control':
+        desk_y0, desk_y1 = r.y1 - 1.0, r.y1 - 0.45
+        box(f'{r.name} console', r.x0 + 0.4, desk_y0, z, r.x1 - 0.4, desk_y1, z + 0.8, M['steel'])
+        box(f'{r.name} console top', r.x0 + 0.4, desk_y0, z + 0.8, r.x1 - 0.4, desk_y1, z + 0.84, M['stone_top'])
+        for k, xx in enumerate(range(int(r.x0 + 1), int(r.x1 - 1), 2)):
+            cbox(f'{r.name} monitor{k}', xx + 0.5, desk_y1 - 0.15, z + 0.9, 0.7, 0.05, 0.5, M['steel'])
+        chair(f'{r.name} operator', cx, desk_y0 - 0.6, z, 0.0, M, 'navy')
+    elif f == 'racks':
+        n = max(1, int((w - 0.6) / 0.7))
+        for k in range(n):
+            xx = r.x0 + 0.3 + k * 0.7
+            box(f'{r.name} rack{k}', xx, r.y0 + 0.3, z, xx + 0.6, r.y0 + 1.2, z + 2.0, M['steel'])
     elif f == 'lift':
         box(f'{r.name} car', cx - 1.0, cy - 0.75, z, cx + 1.0, cy + 0.75, z + 0.02, M['brass'])
         for sx in (-1, 1):

@@ -51,6 +51,13 @@ SHOTS = {
     'observation-lounge': (2, 'Observation lounge', 'Observation lounge, Commander', 'Feature', (0.05, 0.15, 1.5), (0.95, 0.7, 1.0), 20),
     'galley': (3, 'Professional galley', 'Professional galley', 'Feature', (0.03, 0.5, 1.65), (0.95, 0.45, 0.9), 20),
     'technical-corridor': (5, 'Technical access corridor', 'Technical access corridor, Tank deck', 'Controls', (0.95, 0.5, 1.6), (0.0, 0.5, 1.0), 20),
+    # A/V and entertainment rooms on the Tween deck (120 m concept)
+    'theatre': (4, 'Theatre: stage and audience', 'Theatre, stage and audience, Tween', 'Entertainment', (0.7, 0.5, 1.2), (0.12, 0.5, 1.0), 20),
+    'cinema': (4, 'Cinema: screening room', 'Cinema screening room, Tween', 'Entertainment', (0.05, 0.5, 1.4), (0.95, 0.5, 1.0), 18),
+    'broadcast-main-stage': (4, 'Broadcast studio: main stage', 'Broadcast studio, main stage, Tween', 'Production', (0.92, 0.5, 1.5), (0.1, 0.5, 1.1), 20),
+    'broadcast-side-stage': (4, 'Broadcast studio: side stage', 'Broadcast studio, side stage, Tween', 'Production', (0.05, 0.5, 1.5), (0.95, 0.5, 1.2), 20),
+    'broadcast-production-control': (4, 'Broadcast studio: production control', 'Production control room, Tween', 'Production', (0.05, 0.5, 1.5), (0.95, 0.5, 1.1), 20),
+    'av-media-room': (4, 'A/V media room: racks, servers and storage', 'A/V media room, racks and servers, Tween', 'Production', (0.05, 0.85, 1.4), (0.95, 0.2, 1.1), 18),
 }
 VESSEL_SHOTS = {
     'pilot-house': ('Outdoor pilot house helm, roof +9.30 m', 'Controls'),
