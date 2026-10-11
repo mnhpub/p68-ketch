@@ -41,7 +41,7 @@ These are my decisions on the open items. Change any of them in `layout/decks-la
 
 ## Open: renders
 
-1. **Renders 01, 02, 03, 06, 07, 12 and 13** were regenerated on 10 Oct 2026 to match the resolved layout. The superseded versions are in `drawings/renders/superseded/`. Renders 01 and 12 show a wheel, which the brief does not specify.
+1. **Renders 01, 02, 03, 06, 07, 12 and 13** were regenerated on 10 Oct 2026 to match the resolved layout. The earlier versions are in git history. Renders 01 and 12 show a wheel, which the brief does not specify.
 2. **Renders 04, 05, 08, 09, 10 and 11** still predate the resolved layout (single lift doors, a corridor instead of the Bridge lobbies). Regenerate them when the Figma AI usage limit resets.
 3. **All AI renders** are concept illustrations for mood and material direction only.
 4. **Blender renders, done (10 Oct 2026):** finish-out plans and cutaways for all five levels, and the at-port exterior. See `docs/drafting-and-rendering.md`.

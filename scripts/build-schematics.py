@@ -2,7 +2,7 @@
 
 Requires: pip install ezdxf matplotlib (a virtual environment, not a project dependency).
 Sources: layout/decks-layout.json (room rectangles), decks.json (deck elevations),
-layout/proposed-size.json (final principal dimensions).
+layout/decks-layout.json (hull dimensions from layout/hull.json).
 Output: drawings/schematics/. Every sheet is marked CONCEPT, NOT FOR CONSTRUCTION.
 Run with: python3 scripts/build-schematics.py
 """
@@ -24,10 +24,9 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 layout = json.loads((ROOT / "layout/decks-layout.json").read_text())
 decks = json.loads((ROOT / "decks.json").read_text())
-size = json.loads((ROOT / "layout/proposed-size.json").read_text())
 
 LOA, B = float(layout["loa"]), float(layout["beam"])
-LWL = LOA * 62 / 68  # waterline ratio from docs/hull-size-final.md
+LWL = LOA * 62 / 68  # waterline ratio from docs/archive/68m/hull-size-final.md
 STATUS = "CONCEPT - NOT FOR CONSTRUCTION"
 DATE = "10 Oct 2026"
 NOTICE = json.loads((ROOT / "layout/release-notice.json").read_text())

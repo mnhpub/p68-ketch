@@ -1,5 +1,5 @@
 // Sailing dynamics: stability, heel, natural periods and hull speed, checked against the closed-form
-// relations in docs/hull-dynamics-first-pass.md.
+// relations in docs/archive/68m/hull-dynamics-first-pass.md.
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 

@@ -6,7 +6,7 @@ Status: a register of what is drafted, what is modelled, and what needs owner da
 
 | Sheet | Format | Status | Source |
 |---|---|---|---|
-| 1. Principal dimensions and deck profile | DXF and PDF | Drafted | `layout/proposed-size.json`, `decks.json` |
+| 1. Principal dimensions and deck profile | DXF and PDF | Drafted | `layout/hull.json`, `decks.json` |
 | 2 to 6. Deck plans (Bridge, Commander / Lido, Main / Master, Tween, Tank / Technical) | DXF and PDF | Drafted from layout coordinates | `layout/decks-layout.json`, regenerated outline at 68 m by 13.0 m |
 | 7. Midship section | DXF and PDF | Model section (rectangular, no tumblehome) | Deck levels and the regenerated outline |
 | 8. Centreline profile | DXF and PDF | Model profile | Deck levels and centreline room extents |
