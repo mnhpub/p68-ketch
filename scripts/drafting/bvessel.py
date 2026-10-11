@@ -24,26 +24,32 @@ MAIN_TOP, MIZZEN_TOP = 55.0, 42.0  # illustrative air draft of each mast (m abov
 SHEER = 4.4  # bulwark top amidships (Main deck +3.35 plus bulwark)
 
 
+# Hull stations scale with LOA. The illustrative lines were drawn for 68 m: midship at LOA/2, and the
+# fore and aft shaping distances in proportion to length (S = LOA / 68).
+MID = LOA / 2
+S = LOA / 68
+
+
 def hb_render(x: float) -> float:
     """Half-breadth at the sheer: a transom aft and a fine entry forward (illustrative lines)."""
-    if x <= 34:
-        t = (34 - x) / 40
+    if x <= MID:
+        t = (MID - x) / (40 * S)
         return HB * math.sqrt(max(0.0, 1 - t * t))
-    t = (x - 34) / 34
+    t = (x - MID) / MID
     return HB * max(0.0, 1 - t ** 1.9) ** 0.72
 
 
 def sheer_z(x: float) -> float:
-    return SHEER + 0.9 * max(0.0, (x - 40) / 28) ** 2 + 0.15 * max(0.0, (12 - x) / 12)
+    return SHEER + 0.9 * max(0.0, (x - 40 * S) / (28 * S)) ** 2 + 0.15 * max(0.0, (12 * S - x) / (12 * S))
 
 
 def keel_z(x: float) -> float:
     """Canoe-body bottom: -2.5 m amidships, rising to the transom and the stem."""
-    if x <= 34:
-        t = (34 - x) / 34
+    if x <= MID:
+        t = (MID - x) / MID
         return -2.5 + 2.75 * t ** 2.2
-    t = (x - 34) / 34
-    return -2.5 + (sheer_z(68) + 2.5) * t ** 3.2
+    t = (x - MID) / MID
+    return -2.5 + (sheer_z(LOA) + 2.5) * t ** 3.2
 
 
 def hull_paint():
@@ -80,7 +86,7 @@ def build_hull(M):
     for x in stations:
         hb = max(0.02, hb_render(x))
         zs, zb = sheer_z(x), keel_z(x)
-        mid = 1 - abs(x - 34) / 34
+        mid = 1 - abs(x - MID) / MID
         n = 2.0 + 1.6 * mid  # fuller sections amidships
         for j in range(ring + 1):
             th = -math.pi / 2 + math.pi * j / ring
@@ -342,7 +348,7 @@ def vessel_parent(heel_deg=0.0, pitch_deg=0.0, yaw_deg=0.0, z=0.0):
 
 def water(M, size=3000, wave_scale=0.6, wind=6.0, chop=0.8, color='#1b5a7a', shallow=None, resolution=14, foam=False, time=4.0):
     K.collection('Sea')
-    bpy.ops.mesh.primitive_plane_add(size=2, location=(34, 0, 0))
+    bpy.ops.mesh.primitive_plane_add(size=2, location=(MID, 0, 0))
     o = bpy.context.object
     bpy.context.scene.collection.objects.unlink(o) if o.name in bpy.context.scene.collection.objects else None
     bpy.data.collections['Sea'].objects.link(o) if o.name not in bpy.data.collections['Sea'].objects else None
@@ -362,7 +368,7 @@ def water(M, size=3000, wave_scale=0.6, wind=6.0, chop=0.8, color='#1b5a7a', sha
         oc.use_foam = True
         oc.foam_layer_name = 'foam'
         oc.foam_coverage = 0.25
-    o.location = (34 - 220 * 6, -220 * 6, 0)
+    o.location = (MID - 220 * 6, -220 * 6, 0)
     o.scale = (1, 1, 1)
     m = bpy.data.materials.new('Sea')
     nt = m.node_tree
