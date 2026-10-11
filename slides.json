@@ -181,6 +181,96 @@
     ]
   },
   {
+    "id": "av-theatre",
+    "label": "Theatre",
+    "section": "ENTERTAINMENT",
+    "tag": "11a / ENTERTAINMENT",
+    "title": "Theatre.",
+    "subtitle": "Tween and production levels, 120 m four-mast concept",
+    "body": "A raked theatre on the Tween level, with the stage aft and seating forward (128 m²).",
+    "image": "p120-av-theatre.jpg",
+    "layout": "split",
+    "notes": [
+      "Indicative fit-out render from the AutoCAD layout",
+      "Not a coordinated interior design"
+    ]
+  },
+  {
+    "id": "av-cinema",
+    "label": "Cinema",
+    "section": "ENTERTAINMENT",
+    "tag": "11b / ENTERTAINMENT",
+    "title": "Cinema.",
+    "subtitle": "Tween and production levels, 120 m four-mast concept",
+    "body": "A screening room with a wall screen and raked seating (96 m²).",
+    "image": "p120-av-cinema.jpg",
+    "layout": "split",
+    "notes": [
+      "Indicative fit-out render from the AutoCAD layout",
+      "Not a coordinated interior design"
+    ]
+  },
+  {
+    "id": "av-broadcast-main-stage",
+    "label": "Broadcast studio, main stage",
+    "section": "ENTERTAINMENT",
+    "tag": "11c / PRODUCTION",
+    "title": "Broadcast studio, main stage.",
+    "subtitle": "Tween and production levels, 120 m four-mast concept",
+    "body": "The main studio stage with a presenter desk and camera pedestal (72 m²).",
+    "image": "p120-av-broadcast-main-stage.jpg",
+    "layout": "split",
+    "notes": [
+      "Indicative fit-out render from the AutoCAD layout",
+      "Not a coordinated interior design"
+    ]
+  },
+  {
+    "id": "av-broadcast-side-stage",
+    "label": "Broadcast studio, side stage",
+    "section": "ENTERTAINMENT",
+    "tag": "11d / PRODUCTION",
+    "title": "Broadcast studio, side stage.",
+    "subtitle": "Tween and production levels, 120 m four-mast concept",
+    "body": "A smaller side stage for interviews and second sets (24 m²).",
+    "image": "p120-av-broadcast-side-stage.jpg",
+    "layout": "split",
+    "notes": [
+      "Indicative fit-out render from the AutoCAD layout",
+      "Not a coordinated interior design"
+    ]
+  },
+  {
+    "id": "av-broadcast-production-control",
+    "label": "Production control",
+    "section": "ENTERTAINMENT",
+    "tag": "11e / PRODUCTION",
+    "title": "Production control.",
+    "subtitle": "Tween and production levels, 120 m four-mast concept",
+    "body": "The production desk with monitor wall, operator seating and cable routing (24 m²).",
+    "image": "p120-av-broadcast-production-control.jpg",
+    "layout": "split",
+    "notes": [
+      "Indicative fit-out render from the AutoCAD layout",
+      "Not a coordinated interior design"
+    ]
+  },
+  {
+    "id": "av-av-media-room",
+    "label": "A/V media room",
+    "section": "ENTERTAINMENT",
+    "tag": "11f / PRODUCTION",
+    "title": "A/V media room.",
+    "subtitle": "Tween and production levels, 120 m four-mast concept",
+    "body": "Racks, servers and storage for the studio and cinema, with its own cooling and fire detection (54 m²).",
+    "image": "p120-av-av-media-room.jpg",
+    "layout": "split",
+    "notes": [
+      "Indicative fit-out render from the AutoCAD layout",
+      "Not a coordinated interior design"
+    ]
+  },
+  {
     "id": "engineering",
     "label": "Mechanical Systems",
     "section": "OPERATIONS",
@@ -208,6 +298,81 @@
     "notes": [
       "Plans are early block arrangements, not dimensioned rooms",
       "Commander ↔ Main elevator; lower decks by stairs"
+    ]
+  },
+  {
+    "id": "deck-bridge",
+    "label": "Deck: Bridge deck",
+    "section": "TECHNICAL",
+    "tag": "14a / ENGINEERING SHEET",
+    "title": "Bridge deck.",
+    "subtitle": "Bridge, +9.30 to +11.70 m",
+    "body": "Command position, chart library, observation seating and the mag-rail lifts. Protected bridge access from the Commander level.",
+    "image": "p120-deck-01-bridge.png",
+    "layout": "technical",
+    "notes": [
+      "Plotted from the AutoCAD deck sheet (source of truth)",
+      "Provisional concept, not for construction"
+    ]
+  },
+  {
+    "id": "deck-commander",
+    "label": "Deck: Commander and Lido",
+    "section": "TECHNICAL",
+    "tag": "14b / ENGINEERING SHEET",
+    "title": "Commander and Lido.",
+    "subtitle": "Commander level, +6.60 to +9.30 m",
+    "body": "Panoramic lookout, bar and dining, observation lounge and the aft Lido with pool. The pilot-house roof sits above the Lido.",
+    "image": "p120-deck-02-commander.png",
+    "layout": "technical",
+    "notes": [
+      "Plotted from the AutoCAD deck sheet (source of truth)",
+      "Provisional concept, not for construction"
+    ]
+  },
+  {
+    "id": "deck-main",
+    "label": "Deck: Main and Master",
+    "section": "TECHNICAL",
+    "tag": "14c / ENGINEERING SHEET",
+    "title": "Main and Master.",
+    "subtitle": "Main level, +3.35 to +6.60 m",
+    "body": "Main salon and dining, owner suite, VIP cabin, professional galley and the provisioning stores beside it.",
+    "image": "p120-deck-03-main.png",
+    "layout": "technical",
+    "notes": [
+      "Plotted from the AutoCAD deck sheet (source of truth)",
+      "Provisional concept, not for construction"
+    ]
+  },
+  {
+    "id": "deck-tween",
+    "label": "Deck: Tween",
+    "section": "TECHNICAL",
+    "tag": "14d / ENGINEERING SHEET",
+    "title": "Tween.",
+    "subtitle": "Tween level, +0.85 m",
+    "body": "Guest and accessible cabins, crew quarters, the theatre, cinema and broadcast suite, and the medical bay.",
+    "image": "p120-deck-04-tween.png",
+    "layout": "technical",
+    "notes": [
+      "Plotted from the AutoCAD deck sheet (source of truth)",
+      "Provisional concept, not for construction"
+    ]
+  },
+  {
+    "id": "deck-tank",
+    "label": "Deck: Tank and Technical",
+    "section": "TECHNICAL",
+    "tag": "14e / ENGINEERING SHEET",
+    "title": "Tank and Technical.",
+    "subtitle": "Tank level, -1.50 to +0.85 m",
+    "body": "Fuel and water tanks, ballast and keel trunk, wastewater, battery room, mechanical workshop and tender storage.",
+    "image": "p120-deck-05-tank.png",
+    "layout": "technical",
+    "notes": [
+      "Plotted from the AutoCAD deck sheet (source of truth)",
+      "Provisional concept, not for construction"
     ]
   },
   {
