@@ -5,13 +5,13 @@
     "section": "INTRODUCTION",
     "tag": "01 / THE VESSEL",
     "title": "A farther horizon.",
-    "subtitle": "68 meters / approximately 223 feet",
-    "body": "A 68-meter ocean-going expedition ketch: serious bluewater engineering with the warmth, restraint and confidence of a private maritime residence.",
+    "subtitle": "120 meters / approximately 394 feet",
+    "body": "A 120-meter ocean-going expedition four-mast ketch: serious bluewater engineering with the warmth, restraint and confidence of a private maritime residence.",
     "image": "hero-full-greece.webp",
     "layout": "hero",
     "notes": [
-      "68 m provisional design length",
-      "True ketch / mainmast forward / mizzen aft",
+      "120 m provisional design length (concept, not for construction)",
+      "Four fore-and-aft masts: fore, main, mizzen and jigger",
       "Performance and stability subject to naval-engineering validation"
     ]
   },
@@ -161,7 +161,7 @@
     "image": "galley-luxury.webp",
     "layout": "split",
     "notes": [
-      "60-day provisioning requirement under study",
+      "90-day provisioning requirement under study, aligned to the 90-day endurance target (ADR-0005)",
       "Cold chain and fire boundaries not yet fixed"
     ]
   },
@@ -232,11 +232,11 @@
     "tag": "16 / NAVAL ARCHITECTURE",
     "title": "The numbers beneath.",
     "subtitle": "A model, not yet a verdict.",
-    "body": "The current canoe-body model estimates 786 m³ at the design waterline, equivalent to approximately 806 tonnes displaced in seawater before appendage contributions.",
+    "body": "The concept reference is 1,487 t of displacement, about 1,451 m³ of seawater, at a 1.8 m keel-up draft. The waterline and draft are model values until a lines plan exists.",
     "image": "hydrostatics.png",
     "layout": "technical",
     "notes": [
-      "68 m LOA · 62 m waterline · 12.1 m beam",
+      "120 m LOA · 109 m waterline · 20.0 m beam (concept)",
       "No validated GZ curve or full mass balance yet"
     ]
   },
