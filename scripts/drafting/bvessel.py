@@ -19,8 +19,31 @@ import p68
 
 LOA = p68.LOA
 HB = p68.BEAM / 2
-MAIN_X, MIZZEN_X = p68.MASTS['Main'], p68.MASTS['Mizzen']
-MAIN_TOP, MIZZEN_TOP = 55.0, 42.0  # illustrative air draft of each mast (m above DWL)
+MID = LOA / 2
+# Masts from the layout (generated from the DXF sheets), with their air draft from layout/hull.json.
+MASTS = {m['name']: m for m in p68.LAYOUT['masts']}
+MAIN_X, MIZZEN_X = MASTS['Main']['x'], MASTS['Mizzen']['x']
+MAIN_TOP, MIZZEN_TOP = MASTS['Main']['top_m'], MASTS['Mizzen']['top_m']
+
+
+def deck_rooms(deck_name, keep=lambda n: True):
+    """Rooms of one deck from the layout, roof rooms excluded, filtered by name."""
+    out = []
+    for d in p68.LAYOUT['decks']:
+        if d['name'] == deck_name:
+            out += [r for r in d['rooms'] if not r.get('roof') and keep(r['name'])]
+    return out
+
+
+def envelope(rooms):
+    """Bounding box (x0, y0, x1, y1) of a set of room rectangles."""
+    return (min(r['rect'][0] for r in rooms), min(r['rect'][1] for r in rooms),
+            max(r['rect'][2] for r in rooms), max(r['rect'][3] for r in rooms))
+
+
+def room(deck_name, name):
+    return next(r['rect'] for d in p68.LAYOUT['decks'] if d['name'] == deck_name
+                for r in d['rooms'] if r['name'] == name)
 SHEER = 4.4  # bulwark top amidships (Main deck +3.35 plus bulwark)
 
 
@@ -149,40 +172,50 @@ def glass_rail(name, pts, z, M, h=1.05):
 
 
 def build_superstructure(M, night=False):
-    # Main tier over the hull deck (+3.35 to +6.60).
-    tier('Main', 9.0, 58.5, 4.6, 3.35, 6.6, M, r_fwd=7.0, night=night)
-    # Commander tier, enclosed forward of the Lido (+6.60 to +9.30).
-    tier('Commander', 21.5, 53.5, 4.0, 6.6, 9.3, M, r_fwd=6.0, glass=(0.12, 0.92), night=night)
+    """Superstructure from the rooms on each deck (the AutoCAD sheets), so it follows the layout."""
+    # Main tier over the hull deck (+3.35 to +6.60): the envelope of the Main / Master rooms.
+    x0, y0, x1, y1 = envelope(deck_rooms('Main / Master'))
+    tier('Main', x0, x1, max(abs(y0), abs(y1)), 3.35, 6.6, M, r_fwd=7.0, night=night)
+    # Commander tier (+6.60 to +9.30): its enclosed rooms, excluding the aft Lido.
+    enclosed = deck_rooms('Commander / Lido', lambda n: 'Lido' not in n)
+    x0, y0, x1, y1 = envelope(enclosed)
+    tier('Commander', x0, x1, max(abs(y0), abs(y1)), 6.6, 9.3, M, r_fwd=6.0, glass=(0.12, 0.92), night=night)
     # Aft Lido terrace deck with the pool, and the roof (sun deck) above on slim columns.
-    lido = rounded_plan(6.5, 21.6, 4.3, 1.0, 1.4)
+    lx0, ly0, lx1, ly1 = room('Commander / Lido', 'Aft Lido / pool')
+    lido = rounded_plan(lx0, lx1, max(abs(ly0), abs(ly1)), 1.0, 1.4)
     K.extrude_polygon('Lido deck', lido, 6.45, 6.62, K.floor_material('teak', 15, 8.6, 50))
-    pw, pl, px = 4.6, 3.0, 14.2
-    K.box('Pool coping', px - pl / 2 - 0.3, -pw / 2 - 0.3, 6.62, px + pl / 2 + 0.3, pw / 2 + 0.3, 6.68, M['stone_top'])
-    K.box('Pool', px - pl / 2, -pw / 2, 6.0, px + pl / 2, pw / 2, 6.69, M['pool_tile'])
-    K.plane('Pool water', px - pl / 2, -pw / 2, px + pl / 2, pw / 2, 6.64, M['water'])
-    roof = rounded_plan(6.9, 21.6, 3.9, 1.0, 1.0)
+    pcx, pcy = (lx0 + lx1) / 2, 0.0
+    pw, pl = 4.6, 3.0
+    K.box('Pool coping', pcx - pl / 2 - 0.3, pcy - pw / 2 - 0.3, 6.62, pcx + pl / 2 + 0.3, pcy + pw / 2 + 0.3, 6.68, M['stone_top'])
+    K.box('Pool', pcx - pl / 2, pcy - pw / 2, 6.0, pcx + pl / 2, pcy + pw / 2, 6.69, M['pool_tile'])
+    K.plane('Pool water', pcx - pl / 2, pcy - pw / 2, pcx + pl / 2, pcy + pw / 2, 6.64, M['water'])
+    rx0, ry0, rx1, ry1 = room('Commander / Lido', 'Roof: outdoor pilot house and sun deck (events)')
+    roof = rounded_plan(rx0, rx1, max(abs(ry0), abs(ry1)), 1.0, 1.0)
     K.extrude_polygon('Sun deck roof', roof, 9.1, 9.3, M['super'])
     K.extrude_polygon('Sun deck teak', [(x, y * 0.97) for x, y in roof], 9.3, 9.33, K.floor_material('teak', 15, 7.8, 50))
-    for x in (8.0, 13.0, 18.0):
-        for y in (-3.6, 3.6):
+    for x in (lx0 + (lx1 - lx0) * f for f in (0.2, 0.5, 0.8)):
+        for y in (-ly1 * 0.9, ly1 * 0.9):
             K.cylinder('Lido column', x, y, 6.62, 0.09, 2.5, M['chrome'], 16)
     glass_rail('Lido rail', [(x, y * 1.02) for x, y in lido[len(lido) // 2:]] + [lido[0]], 6.62, M)
     glass_rail('Roof rail', [(x, y * 1.0) for x, y in roof], 9.33, M)
     # Outdoor pilot house cover at the aft end of the sun deck, to +11.70.
-    cover = rounded_plan(7.2, 12.8, 2.8, 1.6, 0.8)
+    cx0, cx1 = rx0, rx0 + (rx1 - rx0) * 0.55
+    cover = rounded_plan(cx0, cx1, max(abs(ry0), abs(ry1)) * 0.8, 1.6, 0.8)
     K.extrude_polygon('Pilot house cover', cover, 11.5, 11.7, M['super'])
-    for x, y in ((7.6, -2.4), (7.6, 2.4), (12.2, -2.4), (12.2, 2.4)):
+    for x, y in ((cx0 + 0.4, -2.4), (cx0 + 0.4, 2.4), (cx1 - 0.6, -2.4), (cx1 - 0.6, 2.4)):
         K.cylinder('Cover post', x, y, 9.33, 0.07, 2.2, M['chrome'], 16)
-    K.box('Outdoor helm', 9.6, -1.4, 9.33, 10.4, 1.4, 10.3, M['walnut'], bevel=0.04)
+    K.box('Outdoor helm', cx0 + 1.5, -1.4, 9.33, cx0 + 2.5, 1.4, 10.3, M['walnut'], bevel=0.04)
     for y in (-0.6, 0.6):
-        K.cylinder('Helm seat', 8.8, y, 9.33, 0.25, 0.75, M['cognac'], 20)
-    # Bridge tier (+9.30 to +11.70) and its roof with radar and domes.
-    tier('Bridge', 22.0, 51.0, 3.3, 9.3, 11.7, M, r_fwd=5.5, glass=(0.18, 0.9), night=night)
-    K.cylinder('Radar post', 33, 0, 11.75, 0.18, 1.6, M['super'])
-    K.cbox('Radar', 33, 0, 13.35, 4.2, 0.35, 0.22, M['steel_white'])
+        K.cylinder('Helm seat', cx0 + 1.1, y, 9.33, 0.25, 0.75, M['cognac'], 20)
+    # Bridge tier (+9.30 to +11.70): the Bridge rooms, and its roof with radar and domes.
+    x0, y0, x1, y1 = envelope(deck_rooms('Bridge'))
+    tier('Bridge', x0, x1, max(abs(y0), abs(y1)), 9.3, 11.7, M, r_fwd=5.5, glass=(0.18, 0.9), night=night)
+    bxm = (x0 + x1) / 2
+    K.cylinder('Radar post', bxm, 0, 11.75, 0.18, 1.6, M['super'])
+    K.cbox('Radar', bxm, 0, 13.35, 4.2, 0.35, 0.22, M['steel_white'])
     for y in (-1.6, 1.6):
-        dome = K.cylinder('Dome', 29, y, 11.75, 0.45, 0.6, M['steel_white'], 24, r_top=0.42)
-        K.cylinder('Dome cap', 29, y, 12.35, 0.42, 0.18, M['steel_white'], 24, r_top=0.2)
+        K.cylinder('Dome', bxm - 4, y, 11.75, 0.45, 0.6, M['steel_white'], 24, r_top=0.42)
+        K.cylinder('Dome cap', bxm - 4, y, 12.35, 0.42, 0.18, M['steel_white'], 24, r_top=0.2)
     # Swim platform at the transom.
     K.box('Swim platform', -1.6, -2.8, 0.45, 0.4, 2.8, 0.75, K.floor_material('teak', 2, 5.6, 60))
 
@@ -233,18 +266,20 @@ def build_flag(M, x=0.2, wind=0.0):
 
 
 def build_rig(M, sails=False, boom_angle=0.0, heel=0.0):
-    """Masts, booms, spreaders and standing rigging; sails when underway."""
+    """Every mast in the layout, with spreaders, booms, standing rigging and sails when underway."""
     objs = []
-    for name, x, top in (('Main', MAIN_X, MAIN_TOP), ('Mizzen', MIZZEN_X, MIZZEN_TOP)):
-        base = 9.3 if name == 'Main' else 9.33
+    # Boom height and length by mast; masts without an entry get the default below.
+    booms = {'Main': (13.6, 16.5), 'Mizzen': (13.0, 12.5), 'Fore': (12.0, 14.0), 'Jigger': (9.0, 8.0)}
+    for name, m in sorted(MASTS.items(), key=lambda kv: -kv[1]['x']):
+        x, top = m['x'], m['top_m']
+        base = 9.3 if name == 'Main' else (9.33 if name == 'Mizzen' else 6.6)
         objs.append(K.cylinder(f'{name} mast', x, 0, base, 0.42, top - base, M['carbon'], 24, r_top=0.22))
         n_spr = 4 if name == 'Main' else 3
         for k in range(1, n_spr + 1):
             zz = base + (top - base) * k / (n_spr + 1)
             span = 2.6 * (1 - 0.18 * k)
             objs.append(K.rod(f'{name} spreader', (x - 0.4, -span, zz), (x - 0.4, span, zz), 0.07, M['carbon']))
-        boom_z = 13.6 if name == 'Main' else 13.0
-        boom_len = 16.5 if name == 'Main' else 12.5
+        boom_z, boom_len = booms.get(name, (9.0, 10.0))
         bx = x - boom_len * math.cos(boom_angle)
         by = -boom_len * math.sin(boom_angle)
         objs.append(K.rod(f'{name} boom', (x, 0, boom_z), (bx, by, boom_z), 0.3, M['carbon'], 16))
@@ -253,14 +288,15 @@ def build_rig(M, sails=False, boom_angle=0.0, heel=0.0):
             objs.append(K.rod(f'{name} shroud', (x - 0.3, 0, top - 1.5), (x - 0.6, chain_y, sheer_z(x)), 0.025, M['rope']))
             objs.append(K.rod(f'{name} lower', (x, 0, base + (top - base) * 0.4), (x + 1.2, chain_y, sheer_z(x)), 0.022, M['rope']))
         if sails:
-            # Mainsail or mizzen: luff on the mast, foot on the boom, slight roach.
+            # Luff on the mast, foot on the boom, slight roach.
             head = (x - 0.4, 0, top - 2.0)
             tack = (x - 0.5, 0, boom_z + 0.4)
             clew = (bx + 0.6 * math.cos(boom_angle), by + 0.6 * math.sin(boom_angle), boom_z + 0.5)
             objs.append(sail(f'{name}sail', tack, head, clew, M, camber=0.07, side=-1 if boom_angle > 0 else 1))
-    # Forestay and genoa, triatic and backstays.
+    # Forestay from the foremost mast to the stem, inner forestay and triatic, and the backstay.
+    fore = max(MASTS.values(), key=lambda m: m['x'])
     stem = (LOA + 0.6, 0, sheer_z(LOA) + 0.3)
-    objs.append(K.rod('Forestay', (MAIN_X + 0.3, 0, MAIN_TOP - 1.0), stem, 0.03, M['rope']))
+    objs.append(K.rod('Forestay', (fore['x'] + 0.3, 0, fore['top_m'] - 1.0), stem, 0.03, M['rope']))
     objs.append(K.rod('Inner forestay', (MAIN_X + 0.3, 0, MAIN_TOP * 0.72), (LOA - 6.0, 0, sheer_z(LOA - 6)), 0.025, M['rope']))
     objs.append(K.rod('Triatic', (MAIN_X - 0.2, 0, MAIN_TOP - 1.5), (MIZZEN_X + 0.2, 0, MIZZEN_TOP - 0.6), 0.025, M['rope']))
     for side in (-1, 1):
@@ -325,7 +361,7 @@ def build_vessel(M, sails=False, boom_angle=0.0, night=False):
     # Stanchions and wires along the Main deck sheer, forward of the superstructure.
     for side in (1, -1):
         prev = None
-        for x in range(58, 67):
+        for x in range(int(0.85 * LOA), int(0.95 * LOA)):
             y = side * (hb_render(x) - 0.2)
             K.cylinder('Stanchion', x, y, sheer_z(x), 0.025, 0.75, M['chrome'], 8)
             if prev:
