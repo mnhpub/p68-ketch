@@ -19,8 +19,10 @@ const flags = [];
 const deckNames = new Set(decks.map((d) => d.name));
 const systemIds = new Set(systems.map((s) => s.id));
 const SEAWATER = 1.025; // t/m³, standard seawater density
-const KEEL_UP_MIN_M = 4.8; // slides.json keel-up draft target, lower bound
-const KEEL_DOWN_MIN_M = 7.2; // slides.json keel-down draft target, lower bound
+// Design draft and keel-down from the active concept's stability block (docs/concept-120m-four-mast.md).
+const CONCEPT = load('layout/sail-clearance-120m-4mast.json');
+const KEEL_UP_MIN_M = CONCEPT.stability.draft_m;
+const KEEL_DOWN_MIN_M = +(KEEL_UP_MIN_M * 1.5).toFixed(2); // placeholder ratio, as in the first-pass note
 
 // Weight register: structure, references and coverage.
 const ids = new Set();
@@ -44,11 +46,9 @@ const coverage = (100 * known) / register.items.length;
 console.log(`Weight register: ${register.items.length} items, ${known} with a mass (${coverage.toFixed(0)}% coverage), known mass ${knownMass.toFixed(1)} t`);
 if (known < register.items.length) flags.push(`weight register is ${coverage.toFixed(0)}% covered, so no total displacement can be checked against the reference ${register.reference_displacement_t} t`);
 
-// Reference volume consistency: 786.3 m³ × 1.025 should give the reference displacement.
-const refVolume = 786.3;
-const refMass = refVolume * SEAWATER;
-console.log(`Reference: ${refVolume} m³ × ${SEAWATER} t/m³ = ${refMass.toFixed(1)} t (stated ${register.reference_displacement_t} t)`);
-if (Math.abs(refMass - register.reference_displacement_t) > 1) errors.push(`reference displacement ${register.reference_displacement_t} t does not match ${refVolume} m³ × ${SEAWATER}`);
+// Reference volume is derived from the reference displacement, not typed in.
+const refVolume = register.reference_displacement_t / SEAWATER;
+console.log(`Reference: ${register.reference_displacement_t} t / ${SEAWATER} t/m³ = ${refVolume.toFixed(1)} m³`);
 
 // Energy budget: battery-only requirement for the endurance target.
 const days = energy.endurance_target_days;
@@ -134,8 +134,8 @@ const minSpacing = (() => {
   return m;
 })();
 const perDeckVolume = outlineArea * minSpacing;
-console.log(`Enclosed volume of one deck at the smallest spacing (${minSpacing.toFixed(2)} m): ${perDeckVolume.toFixed(0)} m³ against a reference ${refVolume} m³`);
-if (perDeckVolume > refVolume) flags.push(`one deck encloses ${perDeckVolume.toFixed(0)} m³, more than the whole reference displacement volume of ${refVolume} m³`);
+console.log(`Enclosed volume of one deck at the smallest spacing (${minSpacing.toFixed(2)} m): ${perDeckVolume.toFixed(0)} m³ against a reference ${refVolume.toFixed(1)} m³`);
+if (perDeckVolume > refVolume) flags.push(`one deck encloses ${perDeckVolume.toFixed(0)} m³, more than the whole reference displacement volume of ${refVolume.toFixed(1)} m³`);
 
 if (errors.length) {
   console.error(`\ndesign budgets: ${errors.length} structural problem(s)`);

@@ -1,0 +1,290 @@
+{
+  "_note": "Gap closure register for the 120 m four-mast concept. Each gap has a checklist. Automated steps are checked by scripts/validate-gap-closure.mjs against the repository; manual steps are closed by evidence added to the repo and marked here. Run: npm run validate:gaps",
+  "hull": "layout/hull.json",
+  "gaps": [
+    {
+      "id": "G01",
+      "severity": "critical",
+      "title": "Weight register has no masses; 1,487 t is not covered",
+      "source": "design-gap-analysis C1",
+      "owner": "Naval architecture and systems",
+      "checklist": [
+        {
+          "step": "Mass and centre height for every hull, fit-out and systems item, from supplier or schedule data",
+          "auto": false
+        },
+        {
+          "step": "Register covers at least 95% of the 1,487 t reference",
+          "auto": true,
+          "check": "register_coverage_95"
+        }
+      ]
+    },
+    {
+      "id": "G02",
+      "severity": "critical",
+      "title": "Reference displacement and draft targets are not one set of numbers",
+      "source": "design-gap-analysis C2",
+      "owner": "Naval architecture",
+      "checklist": [
+        {
+          "step": "Reference displacement, draft and sail stability block all agree (1,487 t, 1.8 m, GM 2.13 m)",
+          "auto": true,
+          "check": "reference_matches_concept"
+        },
+        {
+          "step": "Budget validator has no draft or volume flags for the reference",
+          "auto": true,
+          "check": "budgets_no_draft_flag"
+        }
+      ]
+    },
+    {
+      "id": "G03",
+      "severity": "critical",
+      "title": "One outline for every deck; no lines plan or waterplane",
+      "source": "design-gap-analysis C3",
+      "owner": "Naval architecture",
+      "checklist": [
+        {
+          "step": "Lines plan with Cb, Cwp and per-deck outlines (tapered by level)",
+          "auto": false
+        },
+        {
+          "step": "Per-deck outlines replace the single hull ellipse in layout/hull.json",
+          "auto": false
+        }
+      ]
+    },
+    {
+      "id": "G04",
+      "severity": "critical",
+      "title": "Stability: KG not calculated; GZ curve and heel limit not done",
+      "source": "design-gap-analysis C4, hull dynamics",
+      "owner": "Naval architecture",
+      "checklist": [
+        {
+          "step": "KG from the weight register, below the KG limit for GM 2.13 m",
+          "auto": false,
+          "note": "KG limit is in docs/concept-120m-four-mast.md"
+        },
+        {
+          "step": "GZ curve and heel limit against the applicable rules",
+          "auto": false
+        }
+      ]
+    },
+    {
+      "id": "G05",
+      "severity": "critical",
+      "title": "Endurance: battery-only does not close at 20 kW or above",
+      "source": "design-gap-analysis C4, energy budget",
+      "owner": "Energy and systems",
+      "checklist": [
+        {
+          "step": "Real hotel load profile replaces the placeholder loads",
+          "auto": false
+        },
+        {
+          "step": "Battery-only share at the review load is under 10% of displacement, or the fuel and genset case is recorded as the design basis",
+          "auto": true,
+          "check": "battery_share_reviewed"
+        }
+      ]
+    },
+    {
+      "id": "G06",
+      "severity": "high",
+      "title": "Keel and watertight subdivision not reconciled with the hull",
+      "source": "design-gap-analysis H1",
+      "owner": "Naval architecture",
+      "checklist": [
+        {
+          "step": "Keel and ballast position for the 1.8 m draft",
+          "auto": false
+        },
+        {
+          "step": "Watertight subdivision drawn on the lines plan",
+          "auto": false
+        }
+      ]
+    },
+    {
+      "id": "G07",
+      "severity": "high",
+      "title": "Most room geometry is inferred, not dimensioned",
+      "source": "design-gap-analysis H2",
+      "owner": "Design team",
+      "checklist": [
+        {
+          "step": "Dimensioned general arrangement for every room on the 120 m hull",
+          "auto": false
+        },
+        {
+          "step": "Layout regenerated from the dimensioned plan",
+          "auto": false
+        }
+      ]
+    },
+    {
+      "id": "G08",
+      "severity": "high",
+      "title": "Roof level assumed; pilot house depends on it",
+      "source": "design-gap-analysis H3",
+      "owner": "Design team",
+      "checklist": [
+        {
+          "step": "Roof level confirmed on a sheet and entered in layout/accessibility.json",
+          "auto": false
+        }
+      ]
+    },
+    {
+      "id": "G09",
+      "severity": "high",
+      "title": "Accessibility rule checks pass on current criteria",
+      "source": "design-gap-analysis H4",
+      "owner": "Design team",
+      "checklist": [
+        {
+          "step": "validate:access reports no gaps",
+          "auto": true,
+          "check": "access_passes"
+        }
+      ]
+    },
+    {
+      "id": "G10",
+      "severity": "high",
+      "title": "Tender launch point and bay not placed",
+      "source": "design-gap-analysis H5",
+      "owner": "Design team",
+      "checklist": [
+        {
+          "step": "Bay and starboard launch point placed on the general arrangement",
+          "auto": false
+        }
+      ]
+    },
+    {
+      "id": "G11",
+      "severity": "high",
+      "title": "Sail plan missing; rig is a triangle estimate, clearances use placeholder geometry",
+      "source": "design-gap-analysis H6",
+      "owner": "Rig and sail design",
+      "checklist": [
+        {
+          "step": "Sail plan with real areas, mast stations and boom lengths",
+          "auto": false
+        },
+        {
+          "step": "Sail clearance file uses the same LOA and beam as layout/hull.json",
+          "auto": true,
+          "check": "sail_matches_hull"
+        },
+        {
+          "step": "Sail clearance check passes",
+          "auto": true,
+          "check": "sails_pass"
+        }
+      ]
+    },
+    {
+      "id": "G12",
+      "severity": "high",
+      "title": "Genset exhaust outlet blocked on the pilot-house roof",
+      "source": "ventilation register, genset-exhaust-and-systems",
+      "owner": "Owner (review) and systems",
+      "checklist": [
+        {
+          "step": "Owner review of the alternative stern or aft exhaust route",
+          "auto": false
+        },
+        {
+          "step": "Ventilation register has no blocking problems",
+          "auto": true,
+          "check": "ventilation_clear"
+        }
+      ]
+    },
+    {
+      "id": "G13",
+      "severity": "medium",
+      "title": "Systems register mostly undecided",
+      "source": "design-gap-analysis M3",
+      "owner": "Systems",
+      "checklist": [
+        {
+          "step": "Each system in systems.json names its review gate (approval_status) and lists at least one risk",
+          "auto": true,
+          "check": "systems_have_gates"
+        }
+      ]
+    },
+    {
+      "id": "G14",
+      "severity": "medium",
+      "title": "Renders and brief can disagree: new A/V rooms have no interior render",
+      "source": "design-gap-analysis M4",
+      "owner": "Visualisation",
+      "checklist": [
+        {
+          "step": "Interior render for each new A/V and entertainment room",
+          "auto": true,
+          "check": "av_renders_exist"
+        },
+        {
+          "step": "Renders regenerated from the current layout (formal chain)",
+          "auto": false,
+          "done": true,
+          "evidence": "drawings/renders/interior/{theatre,cinema,broadcast-main-stage,broadcast-side-stage,broadcast-production-control,av-media-room}.jpg (full quality, 120 m hull); other renders from the formal run d13a90e"
+        }
+      ]
+    },
+    {
+      "id": "G15",
+      "severity": "medium",
+      "title": "Medical and pet accommodation placed on the Tween deck",
+      "source": "design-gap-analysis M5",
+      "owner": "Design team",
+      "checklist": [
+        {
+          "step": "Medical bay and pet suites are requests on the Tween deck in the envelope budget",
+          "auto": true,
+          "check": "medical_pet_on_tween"
+        },
+        {
+          "step": "Pet suites deck decision (guest or crew) recorded",
+          "auto": false
+        }
+      ]
+    },
+    {
+      "id": "G16",
+      "severity": "medium",
+      "title": "Site scope register still carries 68 m-era figures",
+      "source": "scope.json",
+      "owner": "Site content",
+      "checklist": [
+        {
+          "step": "scope.json has no 68 m, 64 m, 806 t or 4.8 m keel figures presented as current",
+          "auto": true,
+          "check": "scope_no_stale_figures"
+        }
+      ]
+    },
+    {
+      "id": "G17",
+      "severity": "medium",
+      "title": "Deck structure and headroom not analysed",
+      "source": "design-gap-analysis M2",
+      "owner": "Structure",
+      "checklist": [
+        {
+          "step": "Structural analysis of decks, mast foundations and roof live loads",
+          "auto": false
+        }
+      ]
+    }
+  ]
+}
