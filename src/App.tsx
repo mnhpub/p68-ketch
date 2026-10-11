@@ -24,7 +24,19 @@ function App(){
  const [active,setActive]=useState(0),[mode,setMode]=useState<'story'|'decks'|'fabrication'|'register'|'systems'|'piloting'|'scope'|'drawings'>('story'),[showNav,setShowNav]=useState(true),[notes,setNotes]=useState(true),[index,setIndex]=useState(false),[deck,setDeck]=useState(0),[expanded,setExpanded]=useState(false),[zoom,setZoom]=useState(1),[lightbox,setLightbox]=useState(false),[gates,setGates]=useState<number[]>([]),[birdseye,setBirdseye]=useState(false);
  const current=slides[active];
  const go=(i:number)=>{setActive(Math.max(0,Math.min(slides.length-1,i)));setMode('story');setIndex(false);setLightbox(false);};
- useEffect(()=>{function key(e:KeyboardEvent){const t=e.target as HTMLElement;if(['INPUT','TEXTAREA','SELECT'].includes(t?.tagName))return;if(e.key==='ArrowRight')go(Math.min(active+1,slides.length-1));if(e.key==='ArrowLeft')go(Math.max(active-1,0));if(e.key==='Escape'){setLightbox(false);setIndex(false)}}window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[active]);
+ useEffect(()=>{
+    // Bosun's whistle when the presentation loads. Browsers block autoplay until the page is used,
+    // so the whistle also plays on the first click or key press if the load-time attempt is blocked.
+    const whistle=new Audio(A('bosun-whistle.wav'));
+    let played=false;
+    const play=()=>{ if(played) return; played=true; whistle.play().catch(()=>{ played=false; }); };
+    play();
+    const first=()=>{ play(); window.removeEventListener('pointerdown',first); window.removeEventListener('keydown',first); };
+    window.addEventListener('pointerdown',first);
+    window.addEventListener('keydown',first);
+    return ()=>{ window.removeEventListener('pointerdown',first); window.removeEventListener('keydown',first); };
+  },[]);
+  useEffect(()=>{function key(e:KeyboardEvent){const t=e.target as HTMLElement;if(['INPUT','TEXTAREA','SELECT'].includes(t?.tagName))return;if(e.key==='ArrowRight')go(Math.min(active+1,slides.length-1));if(e.key==='ArrowLeft')go(Math.max(active-1,0));if(e.key==='Escape'){setLightbox(false);setIndex(false)}}window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[active]);
  const sectionGroups=useMemo(()=>sections.map(s=>({section:s,items:slides.map((d,i)=>({...d,i})).filter(d=>d.section===s)})),[]);
  async function toggleFullscreen(){const el=document.getElementById('presentation-root');if(!document.fullscreenElement&&el?.requestFullscreen){await el.requestFullscreen();setExpanded(true)}else if(document.fullscreenElement){await document.exitFullscreen();setExpanded(false)}}
  function toggleGate(i:number){setGates(old=>old.includes(i)?old.filter(x=>x!==i):[...old,i])}
