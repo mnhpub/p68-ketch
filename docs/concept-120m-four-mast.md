@@ -1,6 +1,6 @@
 # Concept: 120 m four-mast ketch, 20 m beam, 1,487 t
 
-Status: concept, placeholder rig and houses. Supersedes the 68 m hull size and the 4.8 m keel-up draft target for this concept. The 68 m documents remain as the record of the earlier size.
+Status: concept, placeholder rig and houses. The 4.8 m keel-up draft target no longer applies.
 
 ## Decisions
 
@@ -14,7 +14,7 @@ Status: concept, placeholder rig and houses. Supersedes the 68 m hull size and t
 | GM | 2.13 m | Gives an 11 s roll (k = 0.4 B). Relaxed, comfortable roll, clear of the 5 to 8 s sea band |
 | KG | Not yet calculated | Limit is well above the rig. Mass register still to populate |
 | Sail area | About 4,000 m² | Triangle estimate from the rig, scaled. About 31 sail area to displacement^(2/3): a performance range |
-| Masts | Jigger 0.14 L, mizzen 0.31 L, main 0.59 L, fore 0.80 L | Placeholder stations, from the 68 m section ratios |
+| Masts | Jigger 0.14 L, mizzen 0.31 L, main 0.59 L, fore 0.80 L | Placeholder stations |
 | Accommodation | Tween (guest, crew, medical, pet suites) | Owner direction |
 | Tank / Technical | Mechanical engineering only | Owner direction. Pet wash and medical tender store moved to Tween |
 
@@ -57,4 +57,4 @@ Checked by `npm run validate:sails` against `layout/sail-clearance-120m-4mast.js
 3. Real sail plan, to replace the triangle estimate and set the reef points.
 4. Stability study: GZ curve, heel limit and the righting arm.
 5. Roll control: a first-pass roll-damping review (bilge keels or a roll tank) is still to be done against the 11 s target.
-6. `layout/decks-layout.json` is still the 68 m outline. The 120 m concept needs its own outlines and room positions before the checks in `validate:layout` and `validate:access` mean anything for it.
+6. Tapered per-deck outlines are not yet drawn in the AutoCAD sheets; the layout uses the hull ellipse on every deck.

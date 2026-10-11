@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461325.5149189816
+2461325.5426157406
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461325.5149189816
+2461325.5426157406
   9
 $TDUUPDATE
  40
@@ -553,7 +553,7 @@ $SPLINESEGS
   9
 $HANDSEED
   5
-41D
+44D
   9
 $SURFTAB1
  70
@@ -937,7 +937,7 @@ $FINGERPRINTGUID
   9
 $VERSIONGUID
   2
-{66418F45-7C07-4365-8BC5-DA1958F1AFDA}
+{40F4B74F-252F-4243-A565-E00224E3D490}
   9
 $EXTNAMES
 290
@@ -19399,7 +19399,7 @@ ATTRIB
   5
 19D
 330
-17
+19B
 100
 AcDbEntity
   8
@@ -19449,7 +19449,7 @@ SEQEND
   5
 19C
 330
-19B
+17
 100
 AcDbEntity
   8
@@ -19555,7 +19555,7 @@ ATTRIB
   5
 1A2
 330
-17
+1A0
 100
 AcDbEntity
   8
@@ -19605,7 +19605,7 @@ SEQEND
   5
 1A1
 330
-1A0
+17
 100
 AcDbEntity
   8
@@ -19711,7 +19711,7 @@ ATTRIB
   5
 1A7
 330
-17
+1A5
 100
 AcDbEntity
   8
@@ -19761,7 +19761,7 @@ SEQEND
   5
 1A6
 330
-1A5
+17
 100
 AcDbEntity
   8
@@ -19867,7 +19867,7 @@ ATTRIB
   5
 1AC
 330
-17
+1AA
 100
 AcDbEntity
   8
@@ -19917,7 +19917,7 @@ SEQEND
   5
 1AB
 330
-1AA
+17
 100
 AcDbEntity
   8
@@ -20023,7 +20023,7 @@ ATTRIB
   5
 1B1
 330
-17
+1AF
 100
 AcDbEntity
   8
@@ -20073,7 +20073,7 @@ SEQEND
   5
 1B0
 330
-1AF
+17
 100
 AcDbEntity
   8
@@ -20179,7 +20179,7 @@ ATTRIB
   5
 1B6
 330
-17
+1B4
 100
 AcDbEntity
   8
@@ -20229,7 +20229,7 @@ SEQEND
   5
 1B5
 330
-1B4
+17
 100
 AcDbEntity
   8
@@ -20261,7 +20261,7 @@ ATTRIB
   5
 1B9
 330
-17
+1B7
 100
 AcDbEntity
   8
@@ -20311,7 +20311,7 @@ SEQEND
   5
 1B8
 330
-1B7
+17
 100
 AcDbEntity
   8
@@ -20455,7 +20455,7 @@ ATTRIB
   5
 1BF
 330
-17
+1BD
 100
 AcDbEntity
   8
@@ -20505,7 +20505,7 @@ SEQEND
   5
 1BE
 330
-1BD
+17
 100
 AcDbEntity
   8
@@ -20537,7 +20537,7 @@ ATTRIB
   5
 1C2
 330
-17
+1C0
 100
 AcDbEntity
   8
@@ -20587,7 +20587,7 @@ SEQEND
   5
 1C1
 330
-1C0
+17
 100
 AcDbEntity
   8
@@ -20693,7 +20693,7 @@ ATTRIB
   5
 1C7
 330
-17
+1C5
 100
 AcDbEntity
   8
@@ -20743,7 +20743,7 @@ SEQEND
   5
 1C6
 330
-1C5
+17
 100
 AcDbEntity
   8
@@ -20849,7 +20849,7 @@ ATTRIB
   5
 1CC
 330
-17
+1CA
 100
 AcDbEntity
   8
@@ -20899,7 +20899,7 @@ SEQEND
   5
 1CB
 330
-1CA
+17
 100
 AcDbEntity
   8
@@ -21005,7 +21005,7 @@ ATTRIB
   5
 1D1
 330
-17
+1CF
 100
 AcDbEntity
   8
@@ -21055,7 +21055,7 @@ SEQEND
   5
 1D0
 330
-1CF
+17
 100
 AcDbEntity
   8
@@ -21161,7 +21161,7 @@ ATTRIB
   5
 1D6
 330
-17
+1D4
 100
 AcDbEntity
   8
@@ -21211,7 +21211,7 @@ SEQEND
   5
 1D5
 330
-1D4
+17
 100
 AcDbEntity
   8
@@ -21317,7 +21317,7 @@ ATTRIB
   5
 1DB
 330
-17
+1D9
 100
 AcDbEntity
   8
@@ -21367,7 +21367,7 @@ SEQEND
   5
 1DA
 330
-1D9
+17
 100
 AcDbEntity
   8
@@ -21473,7 +21473,7 @@ ATTRIB
   5
 1E0
 330
-17
+1DE
 100
 AcDbEntity
   8
@@ -21523,7 +21523,7 @@ SEQEND
   5
 1DF
 330
-1DE
+17
 100
 AcDbEntity
   8
@@ -35687,7 +35687,7 @@ ATTRIB
   5
 410
 330
-2DD
+40E
 100
 AcDbEntity
  67
@@ -35737,7 +35737,7 @@ ATTRIB
   5
 411
 330
-2DD
+40E
 100
 AcDbEntity
  67
@@ -35787,7 +35787,7 @@ ATTRIB
   5
 412
 330
-2DD
+40E
 100
 AcDbEntity
  67
@@ -35837,7 +35837,7 @@ ATTRIB
   5
 413
 330
-2DD
+40E
 100
 AcDbEntity
  67
@@ -35887,7 +35887,7 @@ ATTRIB
   5
 414
 330
-2DD
+40E
 100
 AcDbEntity
  67
@@ -35907,7 +35907,7 @@ AcDbText
  40
 2.0
   1
-decks-layout.json
+this sheet (source of truth)
   7
 P68-BOLD
  11
@@ -35937,7 +35937,7 @@ ATTRIB
   5
 415
 330
-2DD
+40E
 100
 AcDbEntity
  67
@@ -35987,7 +35987,7 @@ ATTRIB
   5
 416
 330
-2DD
+40E
 100
 AcDbEntity
  67
@@ -36037,7 +36037,7 @@ ATTRIB
   5
 417
 330
-2DD
+40E
 100
 AcDbEntity
  67
@@ -36087,7 +36087,7 @@ ATTRIB
   5
 418
 330
-2DD
+40E
 100
 AcDbEntity
  67
@@ -36137,7 +36137,7 @@ ATTRIB
   5
 419
 330
-2DD
+40E
 100
 AcDbEntity
  67
@@ -36187,7 +36187,7 @@ SEQEND
   5
 40F
 330
-40E
+2DD
 100
 AcDbEntity
  67
@@ -43991,7 +43991,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-11T17:21:29.896828+00:00
+1.4.4 @ 2026-10-11T18:01:22.629578+00:00
   0
 ENDSEC
   0

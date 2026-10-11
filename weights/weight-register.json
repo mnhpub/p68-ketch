@@ -1,7 +1,7 @@
 {
   "_note": "Weight register. Each item has a mass in tonnes only when there is a source for it. mass_t null means unknown, and an unknown item is never counted as zero. mass_status is one of: unknown, placeholder (a stated assumption for review), sourced (taken from a named document). The validator reports coverage, so a short total cannot pass as a complete one.",
   "reference_displacement_t": 1487,
-  "reference_source": "Owner direction for the 120 m four-mast concept: 1,487 t at 1.8 m draft (docs/concept-120m-four-mast.md). Previously 806 t (68 m canoe-body approximation). Not a verified lightship or full-load mass.",
+  "reference_source": "Owner direction for the 120 m four-mast concept: 1,487 t at 1.8 m draft (docs/concept-120m-four-mast.md). Not a verified lightship or full-load mass.",
   "items": [
     {
       "id": "hull-structure",

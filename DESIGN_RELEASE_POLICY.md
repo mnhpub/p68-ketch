@@ -1,6 +1,6 @@
 # P68 Ketch — Proposed Open-Source Design Release Policy
 
-**Scale:** 68.0 meters LOA / approximately 223 feet. This is not a 68-foot amateur kit boat.
+**Scale:** 120.0 meters LOA / approximately 394 feet. This is not a 68-foot amateur kit boat.
 
 ## Release classes
 

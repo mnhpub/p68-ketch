@@ -10,7 +10,7 @@ sun deck and an area for games and events. It is not a new hull, deck or volume 
 
 ## Short answer
 
-- **Hull geometry and hull-volume figures do not change.** Length overall (68.0 m), waterline length (62.0 m),
+- **Hull geometry and hull-volume figures do not change.** Length overall (120.0 m), waterline length (109.4 m),
   beam (12.1 m) and the canoe-body volume (786.3 m³) describe the hull below the waterline. A roof structure above
   the Commander level does not alter them.
 - **The vessel's behaviour does change.** Topside mass raises the centre of gravity, adds windage, and increases
@@ -21,7 +21,7 @@ sun deck and an area for games and events. It is not a new hull, deck or volume 
 
 | Parameter | Value in repo | Effect of this decision | Status |
 |---|---|---|---|
-| Length overall | 68.0 m | None if the roof stays within the hull. Check for any overhang past the transom. | Geometry check needed |
+| Length overall | 120.0 m | None if the roof stays within the hull. Check for any overhang past the transom. | Geometry check needed |
 | Waterline length | 62.0 m | None | Unchanged |
 | Beam | 12.1 m | None unless the roof overhangs the sides | Geometry check needed |
 | Canoe-body volume | 786.3 m³ | None. This is hull volume below the waterline. | Unchanged |

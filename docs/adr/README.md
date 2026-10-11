@@ -4,7 +4,6 @@ Each ADR records one decision, its status, and the gates still open. Status refl
 
 | ADR | Title | Status |
 |---|---|---|
-| [0001](0001-hull-size-68-m-loa-62-m-waterline-130-m-beam.md) | Hull size: 68 m LOA, 62 m waterline, 13.0 m beam | Superseded by the 120 m concept (see ADR-0011) |
 | [0002](0002-propulsion-electric-motors-on-an-800-v-dc-bus.md) | Propulsion: electric motors on an 800 V DC bus | Proposed (owner direction, bus basis in docs/bus-800v-design.md) |
 | [0003](0003-toyota-ev-powerplant-energy-production-only-feeding-the-bus.md) | Toyota EV powerplant: energy production only, feeding the bus | Accepted (owner) |
 | [0004](0004-energy-storage-rackmount-lfp-buffer-option-b.md) | Energy storage: rackmount LFP buffer, option B | Proposed (recommended for review) |
