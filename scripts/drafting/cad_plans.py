@@ -327,8 +327,8 @@ def model(doc, deck: p68.Deck):
     for a, b in zip(chain, chain[1:]):
         msp.add_linear_dim(base=(a, -7.05), p1=(a, -6.4), p2=(b, -6.4), dimstyle='P68-200', dxfattribs={'layer': 'A-ANNO-DIMS'}).render()
     msp.add_linear_dim(base=(0, -7.95), p1=(0, -0.1), p2=(p68.LOA, -0.1), dimstyle='P68-200',
-                       text=f'{p68.LOA:.2f} LOA  (AP X 0 to FP X 68)', dxfattribs={'layer': 'A-ANNO-DIMS'}).render()
-    msp.add_linear_dim(base=(70.4, 0), p1=(69.6, -p68.BEAM / 2), p2=(69.6, p68.BEAM / 2), angle=90, dimstyle='P68-200',
+                       text=f'{p68.LOA:.2f} LOA  (AP X 0 to FP X {p68.LOA:.0f})', dxfattribs={'layer': 'A-ANNO-DIMS'}).render()
+    msp.add_linear_dim(base=(p68.LOA + 2.4, 0), p1=(p68.LOA + 1.6, -p68.BEAM / 2), p2=(p68.LOA + 1.6, p68.BEAM / 2), angle=90, dimstyle='P68-200',
                        text=f'{p68.BEAM:.2f} MAX BEAM (X 34)', dxfattribs={'layer': 'A-ANNO-DIMS'}).render()
 
     text(msp, 'STERN · AP', -3.2, -8.2, 0.34, 'A-ANNO-NOTE', INK, TextEntityAlignment.BOTTOM_LEFT, 'P68-BOLD')

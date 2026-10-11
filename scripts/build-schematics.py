@@ -26,13 +26,15 @@ layout = json.loads((ROOT / "layout/decks-layout.json").read_text())
 decks = json.loads((ROOT / "decks.json").read_text())
 size = json.loads((ROOT / "layout/proposed-size.json").read_text())
 
-LOA, LWL, B = size["loa_m"], size["lwl_m"], size["beam_m"]
+LOA, B = float(layout["loa"]), float(layout["beam"])
+LWL = LOA * 62 / 68  # waterline ratio from docs/hull-size-final.md
 STATUS = "CONCEPT - NOT FOR CONSTRUCTION"
 DATE = "10 Oct 2026"
 NOTICE = json.loads((ROOT / "layout/release-notice.json").read_text())
 RELEASE = (f"OPEN DESIGN RELEASE - {NOTICE['release_class']}. Licence: {NOTICE['licence']} "
            f"Funding: {NOTICE['funding']}")
-NOTE = ("Hull outline from layout/decks-layout.json at 68 m by 13.0 m. Rooms are from layout coordinates, inferred, not dimensioned. "
+_HULL = json.loads((Path(__file__).resolve().parent.parent / "layout" / "decks-layout.json").read_text())
+NOTE = (f"Hull outline from layout/decks-layout.json at {_HULL['loa']:g} m by {_HULL['beam']:.1f} m. Rooms are from layout coordinates, inferred, not dimensioned. "
         "Deck datum as recorded in decks.json.")
 MM = 1000  # model units are millimetres, real size
 

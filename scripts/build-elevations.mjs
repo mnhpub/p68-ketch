@@ -10,6 +10,10 @@ import {dirname, join} from 'node:path';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const layout = JSON.parse(readFileSync(join(root, 'layout/decks-layout.json'), 'utf8'));
+const LOA = layout.loa;
+const maskX = (name) => layout.masts.find((m) => m.name === name).x;
+const roomRect = (deck, name) => layout.decks.find((d) => d.name === deck).rooms.find((r) => r.name === name).rect;
+const liftA = roomRect('Main / Master', 'Mag-rail lift A');
 const outDir = join(root, 'drawings');
 mkdirSync(outDir, {recursive: true});
 
@@ -42,7 +46,7 @@ function extent(name) {
 {
   const W = 1000;
   const H = 470;
-  const SX = 9.8; // pixels per metre along the length
+  const SX = Math.min(9.8, 800 / LOA); // pixels per metre along the length, fitted to the drawing width
   const SZ = 11; // pixels per metre in height
   const px = (x) => 230 + x * SX;
   const pz = (z) => 350 - z * SZ;
@@ -52,13 +56,13 @@ function extent(name) {
 
   // Hull: waterline at z=0, bottom curve to z=-2.5 at midships
   const bottom = [];
-  for (let x = 0; x <= 68; x += 1) {
+  for (let x = 0; x <= LOA; x += 1) {
     const z = -2.5 * Math.sqrt(Math.max(0, 1 - ((x - 34) / 34) ** 2));
     bottom.push(`${px(x)},${pz(z)}`);
   }
-  parts.push(`<polygon points="${[`${px(0)},${pz(0)}`, `${px(68)},${pz(0)}`, ...bottom.reverse()].join(' ')}" fill="#15324a" stroke="#0a1f2e" stroke-width="1"/>`);
-  parts.push(`<line x1="${px(0)}" y1="${pz(0)}" x2="${px(68)}" y2="${pz(0)}" stroke="#2a9fd6" stroke-dasharray="6 4"/>`);
-  parts.push(`<text x="${px(68) + 6}" y="${pz(0) + 4}" font-size="9" fill="#2a9fd6">DWL</text>`);
+  parts.push(`<polygon points="${[`${px(0)},${pz(0)}`, `${px(LOA)},${pz(0)}`, ...bottom.reverse()].join(' ')}" fill="#15324a" stroke="#0a1f2e" stroke-width="1"/>`);
+  parts.push(`<line x1="${px(0)}" y1="${pz(0)}" x2="${px(LOA)}" y2="${pz(0)}" stroke="#2a9fd6" stroke-dasharray="6 4"/>`);
+  parts.push(`<text x="${px(LOA) + 6}" y="${pz(0) + 4}" font-size="9" fill="#2a9fd6">DWL</text>`);
 
   // Superstructure blocks and deck floors. Labels sit in a fixed left column.
   for (const f of FLOORS) {
@@ -70,28 +74,29 @@ function extent(name) {
   }
 
   // Pilot house cover over the aft roof: roof at +9.30 m, cover to +11.70 m (resolved)
-  const [cx0, cx1] = [7.1, 20.1];
+  const pilot = roomRect('Commander / Lido', 'Roof: outdoor pilot house and sun deck (events)');
+  const [cx0, cx1] = [pilot[0], pilot[2]];
   parts.push(`<line x1="${px(cx0)}" y1="${pz(9.3)}" x2="${px(cx1)}" y2="${pz(9.3)}" stroke="#8e3b6a" stroke-width="2"/>`);
   parts.push(`<rect x="${px(cx0)}" y="${pz(11.7)}" width="${(cx1 - cx0) * SX}" height="${(11.7 - 9.3) * SZ}" fill="none" stroke="#8e3b6a" stroke-dasharray="6 4"/>`);
   parts.push(`<text x="${px((cx0 + cx1) / 2)}" y="${pz(10.5)}" font-size="9" fill="#8e3b6a" text-anchor="middle">Pilot house cover (+11.70 m)</text>`);
 
   // Twin mag-rail lifts at 48–51 m, serving Bridge to Tank (A: Main to Bridge)
-  parts.push(`<rect x="${px(48)}" y="${pz(9.3)}" width="${3 * SX}" height="${(9.3 + 1.5) * SZ}" fill="#8fd0e6" stroke="#263238" stroke-width="0.8"/>`);
-  parts.push(`<line x1="${px(48)}" y1="${pz(3.35)}" x2="${px(51)}" y2="${pz(3.35)}" stroke="#263238" stroke-width="0.8"/>`);
-  parts.push(`<text x="${px(51) + 8}" y="${pz(12.4)}" font-size="9" fill="#102027">Mag-rail lifts A and B, forward (48–51 m)</text>`);
-  parts.push(`<text x="${px(51) + 8}" y="${pz(11.5)}" font-size="8" fill="#546e7a">Lift A serves Main to Bridge. Lift B serves Tank to Bridge.</text>`);
+  parts.push(`<rect x="${px(liftA[0])}" y="${pz(9.3)}" width="${(liftA[2] - liftA[0]) * SX}" height="${(9.3 + 1.5) * SZ}" fill="#8fd0e6" stroke="#263238" stroke-width="0.8"/>`);
+  parts.push(`<line x1="${px(liftA[0])}" y1="${pz(3.35)}" x2="${px(liftA[2])}" y2="${pz(3.35)}" stroke="#263238" stroke-width="0.8"/>`);
+  parts.push(`<text x="${px(liftA[2]) + 8}" y="${pz(12.4)}" font-size="9" fill="#102027">Mag-rail lifts A and B, forward (${liftA[0]}–${liftA[2]} m)</text>`);
+  parts.push(`<text x="${px(liftA[2]) + 8}" y="${pz(11.5)}" font-size="8" fill="#546e7a">Lift A serves Main to Bridge. Lift B serves Tank to Bridge.</text>`);
 
   // Masts (approximate, from the longitudinal section)
   const mast = (x, z0, z1, label) => {
     parts.push(`<line x1="${px(x)}" y1="${pz(z0)}" x2="${px(x)}" y2="${pz(z1)}" stroke="#6b7c86" stroke-width="3"/>`);
     parts.push(`<text x="${px(x) + 6}" y="${pz(z1) + 4}" font-size="9" fill="#37474f">${label}</text>`);
   };
-  mast(21.0, 6.5, 19, 'Mizzen (approx.)');
-  mast(39.9, 7.8, 19, 'Main (approx.)');
+  mast(maskX('Mizzen'), 6.5, 19, 'Mizzen (approx.)');
+  mast(maskX('Main'), 7.8, 19, 'Main (approx.)');
 
   // Bow and stern, scale bar and title block
   parts.push(`<text x="${px(0) - 6}" y="${pz(-2.5) + 22}" font-size="11" fill="#263238" text-anchor="end">STERN</text>`);
-  parts.push(`<text x="${px(68) + 6}" y="${pz(-2.5) + 22}" font-size="11" fill="#263238">BOW</text>`);
+  parts.push(`<text x="${px(LOA) + 6}" y="${pz(-2.5) + 22}" font-size="11" fill="#263238">BOW</text>`);
   parts.push(`<line x1="${px(0)}" y1="${pz(-2.5) + 40}" x2="${px(0) + 10 * SX}" y2="${pz(-2.5) + 40}" stroke="#263238" stroke-width="2"/>`);
   parts.push(`<text x="${px(0) + 10 * SX}" y="${pz(-2.5) + 54}" font-size="9" fill="#37474f" text-anchor="middle">10 m</text>`);
   parts.push(`<text x="${W - 20}" y="${H - 16}" font-size="9" fill="#8e3b6a" text-anchor="end">PROVISIONAL SCHEMATIC · NOT FOR CONSTRUCTION · Source: decks-layout.json, P68-KETCH-E</text>`);

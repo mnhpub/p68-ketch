@@ -493,7 +493,7 @@ $SKPOLY
   9
 $TDCREATE
  40
-2461324.6779166665
+2461324.9169907407
   9
 $TDUCREATE
  40
@@ -501,7 +501,7 @@ $TDUCREATE
   9
 $TDUPDATE
  40
-2461324.6779166665
+2461324.9169907407
   9
 $TDUUPDATE
  40
@@ -933,11 +933,11 @@ $PSTYLEMODE
   9
 $FINGERPRINTGUID
   2
-{51B71C3D-237D-4B19-B7BE-E00BC3FDA1F4}
+{5B87B730-179C-4E76-A0DA-BB0B287F71DB}
   9
 $VERSIONGUID
   2
-{EBA01BBA-1F21-440D-9C87-482FECD6FF09}
+{94D3C01D-86D7-48FF-B6A0-F09D137FD787}
   9
 $EXTNAMES
 290
@@ -1327,9 +1327,9 @@ ISM
   0
 CLASS
   1
-LAYOUT
+ACDBPLACEHOLDER
   2
-AcDbLayout
+AcDbPlaceHolder
   3
 ObjectDBX Classes
  90
@@ -1343,9 +1343,9 @@ ObjectDBX Classes
   0
 CLASS
   1
-ACDBPLACEHOLDER
+LAYOUT
   2
-AcDbPlaceHolder
+AcDbLayout
   3
 ObjectDBX Classes
  90
@@ -5441,13 +5441,13 @@ DECK
 100
 AcDbLine
  10
--6500.0
+-10000.0
  20
 10800.0
  30
 0.0
  11
-6500.0
+10000.0
  21
 10800.0
  31
@@ -5465,7 +5465,7 @@ TEXT
 100
 AcDbText
  10
-6900.0
+10400.0
  20
 10800.0
  30
@@ -5475,7 +5475,7 @@ AcDbText
   1
 Bridge +9.30 m
  11
-6900.0
+10400.0
  21
 10800.0
  31
@@ -5495,13 +5495,13 @@ DECK
 100
 AcDbLine
  10
--6500.0
+-10000.0
  20
 8100.0
  30
 0.0
  11
-6500.0
+10000.0
  21
 8100.0
  31
@@ -5519,7 +5519,7 @@ TEXT
 100
 AcDbText
  10
-6900.0
+10400.0
  20
 8100.0
  30
@@ -5529,7 +5529,7 @@ AcDbText
   1
 Commander / Lido +6.60 m
  11
-6900.0
+10400.0
  21
 8100.0
  31
@@ -5549,13 +5549,13 @@ DECK
 100
 AcDbLine
  10
--6500.0
+-10000.0
  20
 4850.0
  30
 0.0
  11
-6500.0
+10000.0
  21
 4850.0
  31
@@ -5573,7 +5573,7 @@ TEXT
 100
 AcDbText
  10
-6900.0
+10400.0
  20
 4850.0
  30
@@ -5583,7 +5583,7 @@ AcDbText
   1
 Main / Master +3.35 m
  11
-6900.0
+10400.0
  21
 4850.0
  31
@@ -5603,13 +5603,13 @@ DECK
 100
 AcDbLine
  10
--6500.0
+-10000.0
  20
 2350.0
  30
 0.0
  11
-6500.0
+10000.0
  21
 2350.0
  31
@@ -5627,7 +5627,7 @@ TEXT
 100
 AcDbText
  10
-6900.0
+10400.0
  20
 2350.0
  30
@@ -5637,7 +5637,7 @@ AcDbText
   1
 Tween +0.85 m
  11
-6900.0
+10400.0
  21
 2350.0
  31
@@ -5657,13 +5657,13 @@ DECK
 100
 AcDbLine
  10
--6500.0
+-10000.0
  20
 0.0
  30
 0.0
  11
-6500.0
+10000.0
  21
 0.0
  31
@@ -5681,7 +5681,7 @@ TEXT
 100
 AcDbText
  10
-6900.0
+10400.0
  20
 0.0
  30
@@ -5691,7 +5691,7 @@ AcDbText
   1
 Tank / Technical −1.50 m
  11
-6900.0
+10400.0
  21
 0.0
  31
@@ -5715,11 +5715,11 @@ AcDbPolyline
  70
 0
  10
--6500.0
+-10000.0
  20
 0.0
  10
--6500.0
+-10000.0
  20
 10800.0
   0
@@ -5739,11 +5739,11 @@ AcDbPolyline
  70
 0
  10
-6500.0
+10000.0
  20
 0.0
  10
-6500.0
+10000.0
  20
 10800.0
   0
@@ -5759,7 +5759,7 @@ TEXT
 100
 AcDbText
  10
--6500.0
+-10000.0
  20
 -2000.0
  30
@@ -5769,7 +5769,7 @@ AcDbText
   1
 MIDSHIP SECTION (model, rectangular, not a lines plan)
  11
--6500.0
+-10000.0
  21
 -2000.0
  31
@@ -5971,7 +5971,7 @@ AcDbText
  40
 5.0
   1
-MIDSHIP SECTION (x = 34 m)
+MIDSHIP SECTION (x = 60 m)
  11
 255.0
  21
@@ -6067,7 +6067,7 @@ AcDbText
  40
 2.2
   1
-Hull outline from layout/decks-layout.json at 68 m by 13.0 m. Rooms are from layout coordinates, inf
+Hull outline from layout/decks-layout.json at 120 m by 20.0 m. Rooms are from layout coordinates, in
  11
 15.0
  21
@@ -6099,7 +6099,7 @@ AcDbText
  40
 2.2
   1
-erred, not dimensioned. Deck datum as recorded in decks.json.
+ferred, not dimensioned. Deck datum as recorded in decks.json.
  11
 15.0
  21
@@ -7415,7 +7415,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-10T21:16:12.365063+00:00
+1.4.4 @ 2026-10-11T03:00:28.069698+00:00
   0
 VISUALSTYLE
   5
@@ -13977,7 +13977,7 @@ DictionaryVariables
 280
 0
   1
-1.4.4 @ 2026-10-10T21:16:12.367550+00:00
+1.4.4 @ 2026-10-11T03:00:28.072460+00:00
   0
 ENDSEC
   0

@@ -1,0 +1,151 @@
+{
+  "_note": "120 m four-mast ketch concept, 20 m beam. Placeholder rig, houses and heights; see scripts/validate-sail-clearance.mjs. Mast stations are the 68 m section fractions (mizzen 21.0/68, main 39.9/68) with a jigger aft at 0.14 L and a fore at 0.80 L (placeholders). Heights are metres above waterline. Run with: npm run validate:sails -- layout/sail-clearance-120m-4mast.json The bridge sits aft, over the main house between the mizzen and main masts; a bridge in front of the fore mast conflicts with the jib sweep unless the jib foot is about 12 m or less. Heel results come from the stability block (1,487 t, GM 2.13 m); see scripts/validate-sail-clearance.mjs.",
+  "loa": 120,
+  "beam": 20.0,
+  "lwl": 109.4,
+  "clearance_margin_m": 0.5,
+  "heights_m": {
+    "main_deck_floor": 3.35,
+    "main_house_roof": 5.85,
+    "bridge_deck_floor": 9.35,
+    "bridge_roof": 11.85,
+    "jigger_boom": 5.0,
+    "mizzen_boom": 5.0,
+    "main_boom": 6.5,
+    "fore_boom": 6.5,
+    "jib_clew": 6.0
+  },
+  "masts": [
+    {
+      "name": "Jigger",
+      "x": 16.8,
+      "foundation_m2": 1.0,
+      "top_m": 30
+    },
+    {
+      "name": "Mizzen",
+      "x": 37.1,
+      "foundation_m2": 1.5,
+      "top_m": 42
+    },
+    {
+      "name": "Main",
+      "x": 70.4,
+      "foundation_m2": 2.0,
+      "top_m": 55
+    },
+    {
+      "name": "Fore",
+      "x": 96.0,
+      "foundation_m2": 2.0,
+      "top_m": 50
+    }
+  ],
+  "sails": [
+    {
+      "name": "Jigger boom",
+      "pivot_x": 16.8,
+      "pivot_y": 0,
+      "radius_m": 7,
+      "half_angle_deg": 70,
+      "height_key": "jigger_boom",
+      "top_m": 30
+    },
+    {
+      "name": "Mizzen boom",
+      "pivot_x": 37.1,
+      "pivot_y": 0,
+      "radius_m": 9.4,
+      "half_angle_deg": 70,
+      "height_key": "mizzen_boom",
+      "top_m": 42
+    },
+    {
+      "name": "Main boom",
+      "pivot_x": 70.4,
+      "pivot_y": 0,
+      "radius_m": 20.6,
+      "half_angle_deg": 70,
+      "height_key": "main_boom",
+      "top_m": 55
+    },
+    {
+      "name": "Fore boom",
+      "pivot_x": 96.0,
+      "pivot_y": 0,
+      "radius_m": 17,
+      "half_angle_deg": 70,
+      "height_key": "fore_boom",
+      "top_m": 50
+    },
+    {
+      "name": "Jib (forestay foot at 116 m)",
+      "pivot_x": 116,
+      "pivot_y": 0,
+      "radius_m": 18,
+      "half_angle_deg": 60,
+      "height_key": "jib_clew",
+      "top_m": 45
+    }
+  ],
+  "houses": [
+    {
+      "name": "Main house, aft section",
+      "deck": "Main",
+      "rect": [
+        38.5,
+        -6,
+        68.5,
+        6
+      ],
+      "base_key": "main_deck_floor",
+      "roof_key": "main_house_roof"
+    },
+    {
+      "name": "Main house, forward section",
+      "deck": "Main",
+      "rect": [
+        72.5,
+        -6,
+        94,
+        6
+      ],
+      "base_key": "main_deck_floor",
+      "roof_key": "main_house_roof"
+    },
+    {
+      "name": "Bridge, one deck above main, aft (between mizzen and main masts)",
+      "deck": "Bridge",
+      "rect": [
+        39.5,
+        -5,
+        49.5,
+        5
+      ],
+      "base_key": "bridge_deck_floor",
+      "roof_key": "bridge_roof"
+    }
+  ],
+  "program_enclosed_m2": 717.2,
+  "program_source": "Bridge 192.8 + Commander / Lido 191.5 (excludes the 87.5 m2 aft lido, which is open) + Main / Master 332.9, from layout/decks-layout.json unique rooms. Tween accommodation is on its own deck and not counted here.",
+  "stability": {
+    "_note": "Recommended: 1,487 t displacement, GM for an 11 s roll at 20 m beam (k = 0.4 B). Sail area is derived from the rig triangles, scaled by sail_area_scale to about 4,000 m2 (about 31 sail area to displacement^(2/3), a performance range). Centre of effort is at a third of the luff. Cf is the placeholder force coefficient from docs/hull-dynamics-first-pass.md. Draft at 1,487 t is about 1.8 m, so the 4.8 m keel-up target no longer applies.",
+    "displacement_t": 1487,
+    "gm_m": 2.13,
+    "roll_period_target_s": 11.0,
+    "sail_area_scale": 2.7,
+    "cf": 0.7,
+    "air_density_kg_m3": 1.225,
+    "wind_kn": [
+      10,
+      15,
+      20,
+      25,
+      30
+    ],
+    "reef_heel_deg": [
+      15,
+      20
+    ]
+  }
+}

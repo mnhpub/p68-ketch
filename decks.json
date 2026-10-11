@@ -63,7 +63,13 @@
       "Service circulation",
       "Accessible guest cabin",
       "Mag-rail lift B",
-      "Tween lift lobby"
+      "Tween lift lobby",
+      "Theatre: stage and audience",
+      "Cinema: screening room",
+      "Broadcast studio: main stage",
+      "Broadcast studio: side stage",
+      "Broadcast studio: production control",
+      "A/V media room: racks, servers and storage"
     ],
     "access": "Stairs to Main and Tank",
     "img": "deck-3.webp"

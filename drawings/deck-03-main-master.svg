@@ -2,71 +2,83 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" font-family="Helvetica, Arial, sans-serif">
 <title>P68 Ketch Main / Master layout</title>
 <rect width="960" height="470" fill="#ffffff"/>
-<g transform="translate(0 0)"><line x1="70" y1="104.5" x2="70" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
-<text x="70" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">0 m</text>
-<line x1="180" y1="104.5" x2="180" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
-<text x="180" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">10 m</text>
-<line x1="290" y1="104.5" x2="290" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
-<text x="290" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">20 m</text>
-<line x1="400" y1="104.5" x2="400" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
-<text x="400" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">30 m</text>
-<line x1="510" y1="104.5" x2="510" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
-<text x="510" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">40 m</text>
-<line x1="620" y1="104.5" x2="620" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
-<text x="620" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">50 m</text>
-<line x1="730" y1="104.5" x2="730" y2="258.5" stroke="#cfd8dc" stroke-dasharray="2 4"/>
-<text x="730" y="98.5" font-size="9" fill="#78909c" text-anchor="middle">60 m</text>
-<line x1="70" y1="181.5" x2="818" y2="181.5" stroke="#90a4ae" stroke-dasharray="8 4 2 4"/>
-<polygon points="818,181.5 813.38,191.95 799.74,202.07 777.19,211.75 746.61,220.66000000000003 708.4399999999999,228.58 663.78,235.29000000000002 613.8399999999999,240.79000000000002 559.6099999999999,244.75 502.52,247.28 444,248.05 385.48,247.28 328.39,244.75 274.15999999999997,240.79000000000002 224.22,235.29000000000002 179.56,228.58 141.39,220.66000000000003 110.81,211.75 88.25999999999999,202.07 74.62,191.95 70,181.5 74.62,171.05 88.25999999999999,160.93 110.81,151.25 141.39,142.34 179.56,134.42 224.22,127.71000000000001 274.15999999999997,122.21000000000001 328.39,118.25 385.48,115.72 444,114.95 502.52,115.72 559.6099999999999,118.25 613.8399999999999,122.21000000000001 663.78,127.71000000000001 708.4399999999999,134.42 746.61,142.34 777.19,151.25 799.74,160.93 813.38,171.05" fill="#f7f3ea" stroke="#263238" stroke-width="1.6"/>
-<rect x="169.55" y="142.12" width="175.89" height="84.15" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
-<text x="257.495" y="182.195" font-size="9" fill="#102027" text-anchor="middle">Main salon / dining</text>
-<text x="257.495" y="193.195" font-size="8" fill="#546e7a" text-anchor="middle">122 m²</text>
-<rect x="377.78000000000003" y="140.57999999999998" width="131.89" height="30.14" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
-<text x="443.725" y="153.64999999999998" font-size="9" fill="#102027" text-anchor="middle">VIP accommodation</text>
-<text x="443.725" y="164.64999999999998" font-size="8" fill="#546e7a" text-anchor="middle">33 m²</text>
-<rect x="367" y="195.36" width="142.67" height="32.45" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
-<text x="438.335" y="209.585" font-size="9" fill="#102027" text-anchor="middle">Professional galley</text>
-<text x="438.335" y="220.585" font-size="8" fill="#546e7a" text-anchor="middle">38 m²</text>
-<rect x="346.1" y="171.6" width="185.89999999999998" height="23.1" fill="#dfe9f5" stroke="#455a64" stroke-width="0.9"/>
-<text x="439.05" y="181.14999999999998" font-size="9" fill="#102027" text-anchor="middle">Main passage</text>
-<text x="439.05" y="192.14999999999998" font-size="8" fill="#546e7a" text-anchor="middle">35 m²</text>
-<rect x="631" y="148.5" width="77" height="71.5" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
-<text x="669.5" y="182.25" font-size="9" fill="#102027" text-anchor="middle">Owner suite</text>
-<text x="669.5" y="193.25" font-size="8" fill="#546e7a" text-anchor="middle">46 m²</text>
-<rect x="598" y="160.6" width="33" height="20.9" fill="#8fd0e6" stroke="#455a64" stroke-width="0.9"/>
-<text x="614.5" y="163.55" font-size="9" fill="#102027" text-anchor="middle">Mag-rail</text>
-<text x="614.5" y="174.55" font-size="9" fill="#102027" text-anchor="middle">lift A</text>
-<text x="614.5" y="185.55" font-size="8" fill="#546e7a" text-anchor="middle">6 m²</text>
-<rect x="598" y="181.5" width="33" height="20.9" fill="#8fd0e6" stroke="#455a64" stroke-width="0.9"/>
-<text x="614.5" y="184.45" font-size="9" fill="#102027" text-anchor="middle">Mag-rail</text>
-<text x="614.5" y="195.45" font-size="9" fill="#102027" text-anchor="middle">lift B</text>
-<text x="614.5" y="206.45" font-size="8" fill="#546e7a" text-anchor="middle">6 m²</text>
-<rect x="532" y="148.5" width="66" height="71.5" fill="#dfe9f5" stroke="#455a64" stroke-width="0.9"/>
-<text x="565" y="176.75" font-size="9" fill="#102027" text-anchor="middle">Main lift</text>
-<text x="565" y="187.75" font-size="9" fill="#102027" text-anchor="middle">lobby</text>
-<text x="565" y="198.75" font-size="8" fill="#546e7a" text-anchor="middle">39 m²</text>
-<rect x="598" y="148.5" width="33" height="12.100000000000001" fill="#dfe9f5" stroke="#455a64" stroke-width="0.9"/>
-<text x="614.5" y="141.55" font-size="9" fill="#102027" text-anchor="middle">Main</text>
-<text x="614.5" y="152.55" font-size="9" fill="#102027" text-anchor="middle">lift</text>
-<text x="614.5" y="163.55" font-size="9" fill="#102027" text-anchor="middle">lobby</text>
-<text x="614.5" y="174.55" font-size="8" fill="#546e7a" text-anchor="middle">3 m²</text>
-<rect x="598" y="202.4" width="33" height="17.6" fill="#dfe9f5" stroke="#455a64" stroke-width="0.9"/>
-<text x="614.5" y="198.2" font-size="9" fill="#102027" text-anchor="middle">Main</text>
-<text x="614.5" y="209.2" font-size="9" fill="#102027" text-anchor="middle">lift</text>
-<text x="614.5" y="220.2" font-size="9" fill="#102027" text-anchor="middle">lobby</text>
-<text x="614.5" y="231.2" font-size="8" fill="#546e7a" text-anchor="middle">5 m²</text>
-<text x="64" y="118.5" font-size="11" fill="#263238" text-anchor="end">STERN</text>
-<text x="824" y="118.5" font-size="11" fill="#263238">BOW</text>
-<text x="70" y="292.5" font-size="13" font-weight="600" fill="#102027">P68 KETCH · MAIN / MASTER</text>
-<text x="70" y="310.5" font-size="10" fill="#37474f">Datum +3.35 m · Zone: Owner and social spaces</text>
-<text x="70" y="326.5" font-size="10" fill="#37474f">Assigned 333 m² of 644 m² deck outline (52%). Unassigned area is open for layout.</text>
-<text x="70" y="342.5" font-size="10" font-weight="600" fill="#8e3b6a">PROVISIONAL SCHEMATIC · NOT FOR CONSTRUCTION · NOT FOR FABRICATION · NOT SCALED</text>
-<rect x="70" y="378.5" width="12" height="10" fill="#8fd0e6" stroke="#455a64"/><text x="87" y="387.5" font-size="9" fill="#37474f">Mag-rail lift</text>
-<rect x="260" y="378.5" width="12" height="10" fill="#dfe9f5" stroke="#455a64"/><text x="277" y="387.5" font-size="9" fill="#37474f">Lobby / passage / circulation</text>
-<rect x="450" y="378.5" width="12" height="10" fill="#c5e8c0" stroke="#455a64"/><text x="467" y="387.5" font-size="9" fill="#37474f">Accessible guest cabin</text>
-<rect x="640" y="378.5" width="12" height="10" fill="#e3ebee" stroke="#455a64"/><text x="657" y="387.5" font-size="9" fill="#37474f">Other room</text>
-<line x1="70" y1="354.5" x2="180" y2="354.5" stroke="#263238" stroke-width="2"/>
-<text x="70" y="368.5" font-size="9" fill="#37474f">0</text>
-<text x="180" y="368.5" font-size="9" fill="#37474f" text-anchor="middle">10 m</text>
-<text x="940" y="368.5" font-size="9" fill="#78909c" text-anchor="end">Source: layout/decks-layout.json · draft 00</text></g>
+<g transform="translate(0 0)"><line x1="70" y1="66" x2="70" y2="297" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="70" y="60" font-size="9" fill="#78909c" text-anchor="middle">0 m</text>
+<line x1="180" y1="66" x2="180" y2="297" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="180" y="60" font-size="9" fill="#78909c" text-anchor="middle">10 m</text>
+<line x1="290" y1="66" x2="290" y2="297" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="290" y="60" font-size="9" fill="#78909c" text-anchor="middle">20 m</text>
+<line x1="400" y1="66" x2="400" y2="297" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="400" y="60" font-size="9" fill="#78909c" text-anchor="middle">30 m</text>
+<line x1="510" y1="66" x2="510" y2="297" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="510" y="60" font-size="9" fill="#78909c" text-anchor="middle">40 m</text>
+<line x1="620" y1="66" x2="620" y2="297" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="620" y="60" font-size="9" fill="#78909c" text-anchor="middle">50 m</text>
+<line x1="730" y1="66" x2="730" y2="297" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="730" y="60" font-size="9" fill="#78909c" text-anchor="middle">60 m</text>
+<line x1="840" y1="66" x2="840" y2="297" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="840" y="60" font-size="9" fill="#78909c" text-anchor="middle">70 m</text>
+<line x1="950" y1="66" x2="950" y2="297" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="950" y="60" font-size="9" fill="#78909c" text-anchor="middle">80 m</text>
+<line x1="1060" y1="66" x2="1060" y2="297" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="1060" y="60" font-size="9" fill="#78909c" text-anchor="middle">90 m</text>
+<line x1="1170" y1="66" x2="1170" y2="297" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="1170" y="60" font-size="9" fill="#78909c" text-anchor="middle">100 m</text>
+<line x1="1280" y1="66" x2="1280" y2="297" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="1280" y="60" font-size="9" fill="#78909c" text-anchor="middle">110 m</text>
+<line x1="1390" y1="66" x2="1390" y2="297" stroke="#cfd8dc" stroke-dasharray="2 4"/>
+<text x="1390" y="60" font-size="9" fill="#78909c" text-anchor="middle">120 m</text>
+<line x1="70" y1="181.5" x2="1390" y2="181.5" stroke="#90a4ae" stroke-dasharray="8 4 2 4"/>
+<polygon points="1390,181.5 1381.8600000000001,198.66000000000003 1357.66,215.49 1318.06,231.44 1263.94,246.17999999999998 1196.73,259.27 1117.97,270.49 1029.6399999999999,279.51 933.94,286.11 833.29,290.18000000000006 730,291.5 626.71,290.18000000000006 526.06,286.11 430.35999999999996,279.51 342.03000000000003,270.49 263.27,259.27 196.06,246.17999999999998 141.94,231.44 102.34,215.49 78.14,198.66000000000003 70,181.5 78.14,164.34 102.34,147.51 141.94,131.56 196.06,116.82000000000001 263.27,103.72999999999999 342.03000000000003,92.51 430.35999999999996,83.49 526.06,76.89 626.71,72.82 730,71.5 833.29,72.82 933.94,76.89 1029.6399999999999,83.49 1117.97,92.51 1196.73,103.72999999999999 1263.94,116.82000000000001 1318.06,131.56 1357.66,147.51 1381.8600000000001,164.34" fill="#f7f3ea" stroke="#263238" stroke-width="1.6"/>
+<rect x="346.21" y="142.12" width="175.89000000000001" height="84.15" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="434.155" y="182.195" font-size="9" fill="#102027" text-anchor="middle">Main salon / dining</text>
+<text x="434.155" y="193.195" font-size="8" fill="#546e7a" text-anchor="middle">122 m²</text>
+<rect x="713.39" y="140.57999999999998" width="131.89000000000001" height="30.14" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="779.335" y="153.64999999999998" font-size="9" fill="#102027" text-anchor="middle">VIP accommodation</text>
+<text x="779.335" y="164.64999999999998" font-size="8" fill="#546e7a" text-anchor="middle">33 m²</text>
+<rect x="702.61" y="195.36" width="142.67000000000007" height="32.45" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="773.945" y="209.585" font-size="9" fill="#102027" text-anchor="middle">Professional galley</text>
+<text x="773.945" y="220.585" font-size="8" fill="#546e7a" text-anchor="middle">38 m²</text>
+<rect x="681.71" y="171.6" width="185.90000000000006" height="23.1" fill="#dfe9f5" stroke="#455a64" stroke-width="0.9"/>
+<text x="774.6600000000001" y="181.14999999999998" font-size="9" fill="#102027" text-anchor="middle">Main passage</text>
+<text x="774.6600000000001" y="192.14999999999998" font-size="8" fill="#546e7a" text-anchor="middle">35 m²</text>
+<rect x="1203" y="148.5" width="77" height="71.5" fill="#e3ebee" stroke="#455a64" stroke-width="0.9"/>
+<text x="1241.5" y="182.25" font-size="9" fill="#102027" text-anchor="middle">Owner suite</text>
+<text x="1241.5" y="193.25" font-size="8" fill="#546e7a" text-anchor="middle">46 m²</text>
+<rect x="933.61" y="160.6" width="33" height="20.9" fill="#8fd0e6" stroke="#455a64" stroke-width="0.9"/>
+<text x="950.11" y="163.55" font-size="9" fill="#102027" text-anchor="middle">Mag-rail</text>
+<text x="950.11" y="174.55" font-size="9" fill="#102027" text-anchor="middle">lift A</text>
+<text x="950.11" y="185.55" font-size="8" fill="#546e7a" text-anchor="middle">6 m²</text>
+<rect x="933.61" y="181.5" width="33" height="20.9" fill="#8fd0e6" stroke="#455a64" stroke-width="0.9"/>
+<text x="950.11" y="184.45" font-size="9" fill="#102027" text-anchor="middle">Mag-rail</text>
+<text x="950.11" y="195.45" font-size="9" fill="#102027" text-anchor="middle">lift B</text>
+<text x="950.11" y="206.45" font-size="8" fill="#546e7a" text-anchor="middle">6 m²</text>
+<rect x="867.61" y="148.5" width="66" height="71.5" fill="#dfe9f5" stroke="#455a64" stroke-width="0.9"/>
+<text x="900.61" y="176.75" font-size="9" fill="#102027" text-anchor="middle">Main lift</text>
+<text x="900.61" y="187.75" font-size="9" fill="#102027" text-anchor="middle">lobby</text>
+<text x="900.61" y="198.75" font-size="8" fill="#546e7a" text-anchor="middle">39 m²</text>
+<rect x="933.61" y="148.5" width="33" height="12.100000000000001" fill="#dfe9f5" stroke="#455a64" stroke-width="0.9"/>
+<text x="950.11" y="141.55" font-size="9" fill="#102027" text-anchor="middle">Main</text>
+<text x="950.11" y="152.55" font-size="9" fill="#102027" text-anchor="middle">lift</text>
+<text x="950.11" y="163.55" font-size="9" fill="#102027" text-anchor="middle">lobby</text>
+<text x="950.11" y="174.55" font-size="8" fill="#546e7a" text-anchor="middle">3 m²</text>
+<rect x="933.61" y="202.4" width="33" height="17.6" fill="#dfe9f5" stroke="#455a64" stroke-width="0.9"/>
+<text x="950.11" y="198.2" font-size="9" fill="#102027" text-anchor="middle">Main</text>
+<text x="950.11" y="209.2" font-size="9" fill="#102027" text-anchor="middle">lift</text>
+<text x="950.11" y="220.2" font-size="9" fill="#102027" text-anchor="middle">lobby</text>
+<text x="950.11" y="231.2" font-size="8" fill="#546e7a" text-anchor="middle">5 m²</text>
+<text x="64" y="80" font-size="11" fill="#263238" text-anchor="end">STERN</text>
+<text x="1396" y="80" font-size="11" fill="#263238">BOW</text>
+<text x="70" y="331" font-size="13" font-weight="600" fill="#102027">P68 KETCH · MAIN / MASTER</text>
+<text x="70" y="349" font-size="10" fill="#37474f">Datum +3.35 m · Zone: Owner and social spaces</text>
+<text x="70" y="365" font-size="10" fill="#37474f">Assigned 333 m² of 1877 m² deck outline (18%). Unassigned area is open for layout.</text>
+<text x="70" y="381" font-size="10" font-weight="600" fill="#8e3b6a">PROVISIONAL SCHEMATIC · NOT FOR CONSTRUCTION · NOT FOR FABRICATION · NOT SCALED</text>
+<rect x="70" y="417" width="12" height="10" fill="#8fd0e6" stroke="#455a64"/><text x="87" y="426" font-size="9" fill="#37474f">Mag-rail lift</text>
+<rect x="260" y="417" width="12" height="10" fill="#dfe9f5" stroke="#455a64"/><text x="277" y="426" font-size="9" fill="#37474f">Lobby / passage / circulation</text>
+<rect x="450" y="417" width="12" height="10" fill="#c5e8c0" stroke="#455a64"/><text x="467" y="426" font-size="9" fill="#37474f">Accessible guest cabin</text>
+<rect x="640" y="417" width="12" height="10" fill="#e3ebee" stroke="#455a64"/><text x="657" y="426" font-size="9" fill="#37474f">Other room</text>
+<line x1="70" y1="393" x2="180" y2="393" stroke="#263238" stroke-width="2"/>
+<text x="70" y="407" font-size="9" fill="#37474f">0</text>
+<text x="180" y="407" font-size="9" fill="#37474f" text-anchor="middle">10 m</text>
+<text x="940" y="407" font-size="9" fill="#78909c" text-anchor="end">Source: layout/decks-layout.json · draft 00</text></g>
 </svg>

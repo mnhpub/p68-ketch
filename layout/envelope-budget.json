@@ -11,9 +11,9 @@
     },
     {
       "item": "Medical tender fit-out store",
-      "deck": "Tank / Technical",
+      "deck": "Tween",
       "area_m2": 6,
-      "basis": "Placeholder. Stores the EMS fit-out kit for the medical tender."
+      "basis": "Placeholder. Moved from Tank / Technical: the Tank level is mechanical engineering only. Stores the EMS fit-out kit for the medical tender."
     },
     {
       "item": "Tender storage: three tenders",
@@ -23,9 +23,9 @@
     },
     {
       "item": "Pet wash station",
-      "deck": "Tank / Technical",
+      "deck": "Tween",
       "area_m2": 8,
-      "basis": "Placeholder. Near wastewater for drainage."
+      "basis": "Placeholder. Moved from Tank / Technical: the Tank level is mechanical engineering only. Near wastewater for drainage, which must be routed from the Tween level."
     },
     {
       "item": "Pet resort suites (four)",
@@ -113,6 +113,7 @@
   "decisions_recorded": [
     "Three tenders. The third tender is dedicated to medical and EMS use.",
     "Tenders one and two carry an EMS fit-out: AED (automated external defibrillator) and CPR (cardiopulmonary resuscitation) kit, so either can respond while staying general-purpose.",
-    "Pet relief area is outdoor and on the aft Lido, so it is not counted in the hull-plan budget."
+    "Pet relief area is outdoor and on the aft Lido, so it is not counted in the hull-plan budget.",
+    "Tank / Technical is mechanical engineering only. Accommodation and medical stores move to the Tween level."
   ]
 }

@@ -1,0 +1,99 @@
+{
+  "_note": "120 m four-mast concept, 20 m beam. Placeholder stations. Switch layout/hull.json to this file to draw the concept. additions: A/V and entertainment rooms on the Tween deck, placed in hull coordinates (not re-flowed).",
+  "loa": 120,
+  "beam": 20.0,
+  "masts": [
+    {
+      "name": "Jigger",
+      "x_fraction": 0.14,
+      "foundation_m2": 1.0,
+      "top_m": 30
+    },
+    {
+      "name": "Mizzen",
+      "x_fraction": 0.3088235,
+      "foundation_m2": 1.5,
+      "top_m": 42
+    },
+    {
+      "name": "Main",
+      "x_fraction": 0.5867647,
+      "foundation_m2": 2.0,
+      "top_m": 55
+    },
+    {
+      "name": "Fore",
+      "x_fraction": 0.8,
+      "foundation_m2": 2.0,
+      "top_m": 50
+    }
+  ],
+  "additions": [
+    {
+      "deck": "Tween",
+      "name": "Theatre: stage and audience",
+      "rect": [
+        8,
+        -4,
+        24,
+        4
+      ],
+      "kind": "Public entertainment"
+    },
+    {
+      "deck": "Tween",
+      "name": "Cinema: screening room",
+      "rect": [
+        88,
+        -4,
+        100,
+        4
+      ],
+      "kind": "Public entertainment"
+    },
+    {
+      "deck": "Tween",
+      "name": "Broadcast studio: main stage",
+      "rect": [
+        44,
+        -6,
+        52,
+        3
+      ],
+      "kind": "Production"
+    },
+    {
+      "deck": "Tween",
+      "name": "Broadcast studio: side stage",
+      "rect": [
+        44,
+        4,
+        50,
+        8
+      ],
+      "kind": "Production"
+    },
+    {
+      "deck": "Tween",
+      "name": "Broadcast studio: production control",
+      "rect": [
+        52,
+        4,
+        58,
+        8
+      ],
+      "kind": "Production"
+    },
+    {
+      "deck": "Tween",
+      "name": "A/V media room: racks, servers and storage",
+      "rect": [
+        52,
+        -6,
+        58,
+        3
+      ],
+      "kind": "Production"
+    }
+  ]
+}

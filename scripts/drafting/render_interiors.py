@@ -22,8 +22,18 @@ import p68
 OUT = p68.OUT / 'renders' / 'interior'
 FAST = '--fast' in sys.argv
 W, H = (1200, 675) if FAST else (2400, 1350)
-FONT = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
-FONT_B = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
+import os as _os
+
+def _font(names):
+    """First installed font from a list of paths (DejaVu on Linux, Arial on macOS)."""
+    for n in names:
+        if _os.path.exists(n):
+            return n
+    raise FileNotFoundError(f'no font found in {names}')
+
+
+FONT = _font(['/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf', '/System/Library/Fonts/Supplemental/Arial.ttf'])
+FONT_B = _font(['/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', '/System/Library/Fonts/Supplemental/Arial Bold.ttf'])
 CEILING = 2.5
 SKY = 0.06
 
