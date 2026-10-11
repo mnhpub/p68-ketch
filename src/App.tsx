@@ -24,23 +24,26 @@ function App(){
  const [active,setActive]=useState(0),[mode,setMode]=useState<'story'|'decks'|'fabrication'|'register'|'systems'|'piloting'|'scope'|'drawings'>('story'),[showNav,setShowNav]=useState(true),[notes,setNotes]=useState(true),[index,setIndex]=useState(false),[deck,setDeck]=useState(0),[expanded,setExpanded]=useState(false),[zoom,setZoom]=useState(1),[lightbox,setLightbox]=useState(false),[gates,setGates]=useState<number[]>([]),[birdseye,setBirdseye]=useState(false);
  const current=slides[active];
  const go=(i:number)=>{setActive(Math.max(0,Math.min(slides.length-1,i)));setMode('story');setIndex(false);setLightbox(false);};
- useEffect(()=>{
-    // Bosun's whistle when the presentation loads. Browsers block autoplay until the page is used,
-    // so the whistle also plays on the first click or key press if the load-time attempt is blocked.
-    const whistle=new Audio(A('bosun-whistle.wav'));
-    let played=false;
-    const play=()=>{ if(played) return; played=true; whistle.play().catch(()=>{ played=false; }); };
-    play();
-    const first=()=>{ play(); window.removeEventListener('pointerdown',first); window.removeEventListener('keydown',first); };
-    window.addEventListener('pointerdown',first);
-    window.addEventListener('keydown',first);
-    return ()=>{ window.removeEventListener('pointerdown',first); window.removeEventListener('keydown',first); };
-  },[]);
+  const [aboard,setAboard]=useState(false);
+  function allAboard(){ try { new Audio(A('bosun-whistle.wav')).play().catch(()=>{}); } catch { /* sound is optional */ } setAboard(true); }
   useEffect(()=>{function key(e:KeyboardEvent){const t=e.target as HTMLElement;if(['INPUT','TEXTAREA','SELECT'].includes(t?.tagName))return;if(e.key==='ArrowRight')go(Math.min(active+1,slides.length-1));if(e.key==='ArrowLeft')go(Math.max(active-1,0));if(e.key==='Escape'){setLightbox(false);setIndex(false)}}window.addEventListener('keydown',key);return()=>window.removeEventListener('keydown',key)},[active]);
  const sectionGroups=useMemo(()=>sections.map(s=>({section:s,items:slides.map((d,i)=>({...d,i})).filter(d=>d.section===s)})),[]);
  async function toggleFullscreen(){const el=document.getElementById('presentation-root');if(!document.fullscreenElement&&el?.requestFullscreen){await el.requestFullscreen();setExpanded(true)}else if(document.fullscreenElement){await document.exitFullscreen();setExpanded(false)}}
  function toggleGate(i:number){setGates(old=>old.includes(i)?old.filter(x=>x!==i):[...old,i])}
  return <div className="studio" id="presentation-root">
+ {!aboard&&<div role="dialog" aria-label="Welcome aboard" style={{position:'fixed',inset:0,zIndex:1000,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',gap:22,color:'#faf6ef',background:'linear-gradient(rgba(7,27,41,0.78),rgba(7,27,41,0.92)),url(/assets/p120-exterior-dusk.jpg) center/cover no-repeat #071b29',textAlign:'center',padding:24}}>
+  <svg width="96" height="96" viewBox="0 0 96 96" aria-label="Crest placeholder" role="img" style={{opacity:0.85}}>
+   <circle cx="48" cy="48" r="44" fill="none" stroke="#c6a67d" strokeWidth="1.5"/>
+   <circle cx="48" cy="48" r="34" fill="none" stroke="#c6a67d" strokeWidth="0.8" strokeDasharray="3 3"/>
+   <text x="48" y="54" textAnchor="middle" fontSize="11" fill="#c6a67d" letterSpacing="2">CREST</text>
+  </svg>
+  <div style={{fontSize:13,letterSpacing:'0.35em',color:'#c6a67d'}}>128K CLASS · FOUR-MAST KETCH</div>
+  <div style={{fontSize:64,fontWeight:300,letterSpacing:'0.12em'}}>ENDURANCE</div>
+  <div style={{fontSize:14,letterSpacing:'0.2em',color:'#b8c5ca'}}>Established: [year to confirm]</div>
+  <div style={{fontSize:16,color:'#b8c5ca',maxWidth:520,lineHeight:1.6}}>Welcome aboard. The presentation opens when you are ready.</div>
+  <button onClick={allAboard} style={{marginTop:12,padding:'16px 40px',fontSize:18,letterSpacing:'0.2em',background:'transparent',color:'#c6a67d',border:'1px solid #c6a67d',cursor:'pointer'}}>ALL ABOARD</button>
+  <div style={{position:'absolute',bottom:18,fontSize:11,letterSpacing:'0.15em',color:'#8da5b0'}}>PLACEHOLDER IMAGERY · CONCEPT · NOT FOR CONSTRUCTION</div>
+ </div>}
  <header className="masthead"><div className="mark"><span className="compass">✧</span><div><div className="wordmark">P68 <b>KETCH</b></div><div className="word-sub">OCEAN ARCHITECTURE STUDIO <i/> 120 M / 394 FT</div></div></div><div className="head-controls"><span className="status">CONCEPT DESIGN <em>REV 02</em></span><button title="Toggle chapters" onClick={()=>setShowNav(!showNav)}>{showNav?<PanelLeftClose size={17}/>:<PanelLeftOpen size={17}/>}</button><button title="Fullscreen" onClick={toggleFullscreen}>{expanded?<Minimize2 size={17}/>:<Maximize2 size={17}/>}</button></div></header>
  <div className="workspace">
  {showNav&&<aside className="sidebar"><div className="nav-label">COLLECTION <span>{slides.length} STUDIES</span></div><div className="nav-scroll"><div className="nav-special">{[['story','Presentation',BookOpen],['decks','Deck explorer',Layers3],['fabrication','Fabrication workflow',Factory],['register','Design register',ShieldCheck],['systems','Systems register',Cpu],['piloting','Piloting console',Gauge],['scope','Scope and status',ListChecks],['drawings','Drawings and renders',Images]].map(([m,name,Icon]:any)=><button className={`mode ${mode===m?'chosen':''}`} key={m} onClick={()=>{setMode(m);setIndex(false)}}><Icon size={16}/>{name}</button>)}</div><div className="rule"/>{sectionGroups.map(gr=><div className="nav-group" key={gr.section}><div className="group-label">{gr.section}</div>{gr.items.map(d=><button className={`chapter ${(mode==='story'&&active===d.i)?'sel':''}`} key={d.id} onClick={()=>go(d.i)}><span className="num">{String(d.i+1).padStart(2,'0')}</span><span>{d.label}</span></button>)}</div>)}</div><div className="side-footer"><div className="side-small">DESIGN AUTHORITY</div>Professional verification required before construction or CNC cutting.</div></aside>}
