@@ -16,7 +16,7 @@ const sail = load('layout/sail-clearance-120m-4mast.json');
 const weights = load('weights/weight-register.json');
 const budget = load('layout/envelope-budget.json');
 const decks = load('layout/decks-layout.json');
-const scope = readFileSync(join(root, 'scope.json'), 'utf8');
+const scope = readFileSync(join(root, 'scope.json'), 'utf8') + readFileSync(join(root, 'slides.json'), 'utf8');
 
 const run = (cmd) => {
   try {
