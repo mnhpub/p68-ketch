@@ -78,7 +78,8 @@ export function deckBirdseyeSrc(deckName: string, fallback: string): string {
 }
 
 // Blender renders built from the DXF sources (scripts/drafting/render_*.py). Files live in public/renders/.
-export type Shot = {file: string; title: string; note: string};
+// pending: scripted but not rendered yet; the app shows a placeholder tile.
+export type Shot = {file: string; title: string; note: string; pending?: boolean};
 const DECK_FILES = ['01-bridge', '02-commander-lido', '03-main-master', '04-tween', '05-tank-technical'];
 const DECK_TITLES = ['Bridge', 'Commander and Lido', 'Main and Master', 'Tween', 'Tank and Technical'];
 
@@ -88,9 +89,24 @@ export const FINISH_PLANS: Shot[] = DECK_FILES.map((f, i) => ({
 export const CUTAWAYS: Shot[] = DECK_FILES.map((f, i) => ({
   file: `finish/cutaway-${f}.jpg`, title: `${DECK_TITLES[i]} cutaway`, note: 'Finish-out cutaway from the aft starboard quarter',
 }));
-// Rendered so far at full quality. Anchor, underway, dusk and the interiors are scripted in
-// scripts/drafting/render_exteriors.py and render_interiors.py and are added here once rendered.
 export const EXTERIORS: Shot[] = [
   {file: 'exterior/port.jpg', title: 'At port', note: 'Stern-to on the quay, golden hour'},
+  {file: 'exterior/anchor.jpg', title: 'At anchor', note: 'Cycladic bay, tender at the swim platform', pending: true},
+  {file: 'exterior/underway.jpg', title: 'Underway', note: 'Under sail, close reach', pending: true},
+  {file: 'exterior/dusk.jpg', title: 'At anchor, dusk', note: 'Interior and Lido lighting', pending: true},
 ];
-export const INTERIORS: Shot[] = [];
+export const INTERIORS: Shot[] = [
+  {file: 'interior/bridge-helm.jpg', title: 'Bridge helm', note: 'Controls · command position', pending: true},
+  {file: 'interior/pilot-house.jpg', title: 'Outdoor pilot house', note: 'Controls · roof helm under the cover', pending: true},
+  {file: 'interior/technical-corridor.jpg', title: 'Technical corridor', note: 'Controls · Tank deck, lift B', pending: true},
+  {file: 'interior/salon.jpg', title: 'Main salon', note: 'Feature · lounge and dining', pending: true},
+  {file: 'interior/lido-pool.jpg', title: 'Aft Lido and pool', note: 'Feature · Commander deck', pending: true},
+  {file: 'interior/observation-lounge.jpg', title: 'Observation lounge', note: 'Feature · Commander deck', pending: true},
+  {file: 'interior/chart-library.jpg', title: 'Chart library', note: 'Feature · Bridge', pending: true},
+  {file: 'interior/main-lift-lobby.jpg', title: 'Main lift lobby', note: 'Feature · lifts A and B', pending: true},
+  {file: 'interior/galley.jpg', title: 'Professional galley', note: 'Feature · Main deck', pending: true},
+  {file: 'interior/owner-suite.jpg', title: 'Owner suite', note: 'Accommodation · Main deck', pending: true},
+  {file: 'interior/vip-cabin.jpg', title: 'VIP cabin', note: 'Accommodation · Main deck', pending: true},
+  {file: 'interior/guest-cabin.jpg', title: 'Guest cabin', note: 'Accommodation · Tween', pending: true},
+  {file: 'interior/accessible-cabin.jpg', title: 'Accessible guest cabin', note: 'Accommodation · Tween', pending: true},
+];

@@ -10,10 +10,17 @@ function ShotGroup({title, shots, open}: {title: string; shots: Shot[]; open: (s
       <h2 className="sheet-group">{title}</h2>
       <div className="sheet-grid">
         {shots.map((r) => (
-          <figure key={r.file} className="sheet">
-            <button type="button" onClick={() => open(`/renders/${r.file}`)} aria-label={`Open ${r.title}`}>
-              <img src={`/renders/${r.file}`} alt={`${r.title}. ${r.note}. Blender concept render.`} loading="lazy" />
-            </button>
+          <figure key={r.file} className={`sheet${r.pending ? ' pending' : ''}`}>
+            {r.pending ? (
+              <div className="pending-tile" role="img" aria-label={`${r.title}: render pending`}>
+                <span>RENDER PENDING</span>
+                <small>Scripted · not yet rendered</small>
+              </div>
+            ) : (
+              <button type="button" onClick={() => open(`/renders/${r.file}`)} aria-label={`Open ${r.title}`}>
+                <img src={`/renders/${r.file}`} alt={`${r.title}. ${r.note}. Blender concept render.`} loading="lazy" />
+              </button>
+            )}
             <figcaption><b>{r.title}</b><span>{r.note}</span></figcaption>
           </figure>
         ))}
@@ -81,7 +88,7 @@ export default function DrawingsView() {
 
       <ShotGroup title="Finish-out plans" shots={FINISH_PLANS} open={setOpen} />
       <ShotGroup title="Finish-out cutaways" shots={CUTAWAYS} open={setOpen} />
-      <ShotGroup title="Exterior renders" shots={EXTERIORS} open={setOpen} />
+      <ShotGroup title="Exterior renders: at port, at anchor, underway" shots={EXTERIORS} open={setOpen} />
       <ShotGroup title="Interior renders: controls, features, accommodation" shots={INTERIORS} open={setOpen} />
 
       <h2 className="sheet-group">Concept renders (AI)</h2>
