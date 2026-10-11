@@ -1,51 +1,393 @@
 {
   "_note": "Scope register: each item from the original brief, where it appears in the app, where it sits on the layout, and its status. Status values: register (in the systems register), layout (placed on the provisional layout), open (needs a decision or source). Layout references are room names from layout/decks-layout.json.",
   "items": [
-    {"item": "Engineering components", "system": "engineering-components", "layout": "Tank / Technical (candidate)", "status": "register"},
-    {"item": "Electrical systems", "system": "electrical-distribution", "layout": "Not placed", "status": "register"},
-    {"item": "600 V electric propulsion", "system": "propulsion-600v", "layout": "Not placed (machinery)", "status": "register"},
-    {"item": "Batteries", "system": "battery-storage", "layout": "Not placed", "status": "register"},
-    {"item": "Solar", "system": "solar-generation", "layout": "Roof surfaces (candidate)", "status": "register"},
-    {"item": "LED lighting", "system": "led-lighting", "layout": "All decks", "status": "register"},
-    {"item": "Water makers", "system": "water-makers", "layout": "Tank / Technical (candidate)", "status": "register"},
-    {"item": "Food storage", "system": "food-storage", "layout": "Professional galley (candidate)", "status": "register"},
-    {"item": "HVAC", "system": "hvac", "layout": "Not placed", "status": "register"},
-    {"item": "Plumbing", "system": "plumbing", "layout": "Tween and Tank / Technical", "status": "register"},
-    {"item": "Kitchen accommodation", "system": "kitchen-accommodation", "layout": "Professional galley", "status": "register"},
-    {"item": "Bathroom accommodation", "system": "bathroom-accommodation", "layout": "Guest and crew cabins", "status": "register"},
-    {"item": "Waste processing", "system": "waste-processing", "layout": "Wastewater / bilges", "status": "register"},
-    {"item": "Fuel processing", "system": "fuel-processing", "layout": "Fuel / water tanks", "status": "register"},
-    {"item": "Tween deck accommodation", "system": "tween-deck-accommodation", "layout": "Guest cabins, crew quarters, laundry", "status": "layout"},
-    {"item": "Systems (general)", "system": null, "layout": "This register", "status": "register"},
-    {"item": "Navigation", "system": "navigation-systems", "layout": "Bridge, command position", "status": "register"},
-    {"item": "Communications", "system": "external-communications", "layout": "Bridge (antenna positions open)", "status": "register"},
-    {"item": "Ship com", "system": "ship-communications", "layout": "All decks (intercom zones open)", "status": "register"},
-    {"item": "Command and control", "system": "command-and-control", "layout": "Bridge, Tank / Technical", "status": "register"},
-    {"item": "Backup systems", "system": "backup-power", "layout": "Not placed", "status": "register"},
-    {"item": "Policies and procedures", "system": "policies-procedures", "layout": "Not applicable", "status": "register"},
-    {"item": "Checklist systems", "system": "checklist-system", "layout": "Not applicable", "status": "register"},
-    {"item": "Premise security", "system": "premise-security", "layout": "Not placed", "status": "register"},
-    {"item": "Keycards", "system": "keycard-access", "layout": "Not placed", "status": "register"},
-    {"item": "A/V media systems", "system": "av-media", "layout": "Salons and lounges", "status": "register"},
-    {"item": "Anchor systems", "system": "anchor-system", "layout": "Forward (not placed)", "status": "register"},
-    {"item": "Sail systems", "system": "sail-system", "layout": "Rig (not on layout)", "status": "register"},
-    {"item": "Curated art", "system": "curated-art", "layout": "Shared spaces", "status": "register"},
-    {"item": "Glassware storage", "system": "glassware-storage", "layout": "Galley and bar", "status": "register"},
-    {"item": "Landfill management program", "system": "landfill-management", "layout": "Not applicable", "status": "register"},
-    {"item": "Waste compaction systems", "system": "waste-compaction", "layout": "Not placed", "status": "register"},
-    {"item": "Food waste processing systems", "system": "food-waste-processing", "layout": "Main / Master galley route", "status": "register"},
-    {"item": "Onboard automation", "system": "onboard-automation", "layout": "Not applicable", "status": "register"},
-    {"item": "Hospitality systems", "system": "hospitality-systems", "layout": "Public decks", "status": "register"},
-    {"item": "Guest services", "system": "guest-services", "layout": "Public decks", "status": "register"},
-    {"item": "Wifi", "system": "wifi-network", "layout": "Not placed", "status": "register"},
-    {"item": "Apps", "system": "guest-apps", "layout": "Not applicable", "status": "register"},
-    {"item": "Guest experience", "system": "guest-apps", "layout": "Public decks", "status": "register"},
-    {"item": "Dining", "system": "dining-service", "layout": "Main salon, Aft Lido, bar", "status": "register"},
-    {"item": "Booking", "system": "booking-reservations", "layout": "Not applicable", "status": "register"},
-    {"item": "Dinner for two in the bay", "system": "bay-dinner-for-two", "layout": "Bay (tender support open)", "status": "register"},
-    {"item": "Piloting controls (two-crew, redundant, manual)", "system": null, "layout": "Bridge and outdoor pilot house", "status": "layout", "app": "Piloting console tab"},
-    {"item": "Accessible route and ADA suite", "system": null, "layout": "Lifts A and B, accessible cabin on Tween", "status": "layout", "app": "Scope tab (criteria in layout/accessibility.json)"},
-    {"item": "Deck layout and elevations", "system": null, "layout": "All decks", "status": "layout", "app": "Drawings tab"}
+    {
+      "item": "Engineering components",
+      "system": "engineering-components",
+      "layout": "Tank / Technical (candidate)",
+      "status": "register"
+    },
+    {
+      "item": "Electrical systems",
+      "system": "electrical-distribution",
+      "layout": "Not placed",
+      "status": "register"
+    },
+    {
+      "item": "600 V electric propulsion",
+      "system": "propulsion-600v",
+      "layout": "Not placed (machinery)",
+      "status": "register"
+    },
+    {
+      "item": "Batteries",
+      "system": "battery-storage",
+      "layout": "Not placed",
+      "status": "register"
+    },
+    {
+      "item": "Solar",
+      "system": "solar-generation",
+      "layout": "Roof surfaces (candidate)",
+      "status": "register"
+    },
+    {
+      "item": "LED lighting",
+      "system": "led-lighting",
+      "layout": "All decks",
+      "status": "register"
+    },
+    {
+      "item": "Water makers",
+      "system": "water-makers",
+      "layout": "Tank / Technical (candidate)",
+      "status": "register"
+    },
+    {
+      "item": "Food storage",
+      "system": "food-storage",
+      "layout": "Professional galley (candidate)",
+      "status": "register"
+    },
+    {
+      "item": "HVAC",
+      "system": "hvac",
+      "layout": "Not placed",
+      "status": "register"
+    },
+    {
+      "item": "Plumbing",
+      "system": "plumbing",
+      "layout": "Tween and Tank / Technical",
+      "status": "register"
+    },
+    {
+      "item": "Kitchen accommodation",
+      "system": "kitchen-accommodation",
+      "layout": "Professional galley",
+      "status": "register"
+    },
+    {
+      "item": "Bathroom accommodation",
+      "system": "bathroom-accommodation",
+      "layout": "Guest and crew cabins",
+      "status": "register"
+    },
+    {
+      "item": "Waste processing",
+      "system": "waste-processing",
+      "layout": "Wastewater / bilges",
+      "status": "register"
+    },
+    {
+      "item": "Fuel processing",
+      "system": "fuel-processing",
+      "layout": "Fuel / water tanks",
+      "status": "register"
+    },
+    {
+      "item": "Tween deck accommodation",
+      "system": "tween-deck-accommodation",
+      "layout": "Guest cabins, crew quarters, laundry",
+      "status": "layout"
+    },
+    {
+      "item": "Systems (general)",
+      "system": null,
+      "layout": "This register",
+      "status": "register"
+    },
+    {
+      "item": "Navigation",
+      "system": "navigation-systems",
+      "layout": "Bridge, command position",
+      "status": "register"
+    },
+    {
+      "item": "Communications",
+      "system": "external-communications",
+      "layout": "Bridge (antenna positions open)",
+      "status": "register"
+    },
+    {
+      "item": "Ship com",
+      "system": "ship-communications",
+      "layout": "All decks (intercom zones open)",
+      "status": "register"
+    },
+    {
+      "item": "Command and control",
+      "system": "command-and-control",
+      "layout": "Bridge, Tank / Technical",
+      "status": "register"
+    },
+    {
+      "item": "Backup systems",
+      "system": "backup-power",
+      "layout": "Not placed",
+      "status": "register"
+    },
+    {
+      "item": "Policies and procedures",
+      "system": "policies-procedures",
+      "layout": "Not applicable",
+      "status": "register"
+    },
+    {
+      "item": "Checklist systems",
+      "system": "checklist-system",
+      "layout": "Not applicable",
+      "status": "register"
+    },
+    {
+      "item": "Premise security",
+      "system": "premise-security",
+      "layout": "Not placed",
+      "status": "register"
+    },
+    {
+      "item": "Keycards",
+      "system": "keycard-access",
+      "layout": "Not placed",
+      "status": "register"
+    },
+    {
+      "item": "A/V media systems",
+      "system": "av-media",
+      "layout": "Salons and lounges",
+      "status": "register"
+    },
+    {
+      "item": "Anchor systems",
+      "system": "anchor-system",
+      "layout": "Forward (not placed)",
+      "status": "register"
+    },
+    {
+      "item": "Sail systems",
+      "system": "sail-system",
+      "layout": "Rig (not on layout)",
+      "status": "register"
+    },
+    {
+      "item": "Curated art",
+      "system": "curated-art",
+      "layout": "Shared spaces",
+      "status": "register"
+    },
+    {
+      "item": "Glassware storage",
+      "system": "glassware-storage",
+      "layout": "Galley and bar",
+      "status": "register"
+    },
+    {
+      "item": "Landfill management program",
+      "system": "landfill-management",
+      "layout": "Not applicable",
+      "status": "register"
+    },
+    {
+      "item": "Waste compaction systems",
+      "system": "waste-compaction",
+      "layout": "Not placed",
+      "status": "register"
+    },
+    {
+      "item": "Food waste processing systems",
+      "system": "food-waste-processing",
+      "layout": "Main / Master galley route",
+      "status": "register"
+    },
+    {
+      "item": "Onboard automation",
+      "system": "onboard-automation",
+      "layout": "Not applicable",
+      "status": "register"
+    },
+    {
+      "item": "Hospitality systems",
+      "system": "hospitality-systems",
+      "layout": "Public decks",
+      "status": "register"
+    },
+    {
+      "item": "Guest services",
+      "system": "guest-services",
+      "layout": "Public decks",
+      "status": "register"
+    },
+    {
+      "item": "Wifi",
+      "system": "wifi-network",
+      "layout": "Not placed",
+      "status": "register"
+    },
+    {
+      "item": "Apps",
+      "system": "guest-apps",
+      "layout": "Not applicable",
+      "status": "register"
+    },
+    {
+      "item": "Guest experience",
+      "system": "guest-apps",
+      "layout": "Public decks",
+      "status": "register"
+    },
+    {
+      "item": "Dining",
+      "system": "dining-service",
+      "layout": "Main salon, Aft Lido, bar",
+      "status": "register"
+    },
+    {
+      "item": "Booking",
+      "system": "booking-reservations",
+      "layout": "Not applicable",
+      "status": "register"
+    },
+    {
+      "item": "Dinner for two in the bay",
+      "system": "bay-dinner-for-two",
+      "layout": "Bay (tender support open)",
+      "status": "register"
+    },
+    {
+      "item": "Piloting controls (two-crew, redundant, manual)",
+      "system": null,
+      "layout": "Bridge and outdoor pilot house",
+      "status": "layout",
+      "app": "Piloting console tab"
+    },
+    {
+      "item": "Accessible route and ADA suite",
+      "system": null,
+      "layout": "Lifts A and B, accessible cabin on Tween",
+      "status": "layout",
+      "app": "Scope tab (criteria in layout/accessibility.json)"
+    },
+    {
+      "item": "Deck layout and elevations",
+      "system": null,
+      "layout": "All decks",
+      "status": "layout",
+      "app": "Drawings tab"
+    },
+    {
+      "item": "Medical bay",
+      "system": null,
+      "layout": "Not placed (candidate: Tween, near lift B and the accessible route)",
+      "status": "open"
+    },
+    {
+      "item": "Starboard tender service (two tenders)",
+      "system": null,
+      "layout": "Not placed (candidate: starboard side at the bay, tender launch and recovery)",
+      "status": "open"
+    },
+    {
+      "item": "Internal tender storage (two tenders)",
+      "system": null,
+      "layout": "Not placed (candidate: Tank / Technical, with access from the bay)",
+      "status": "open"
+    },
+    {
+      "item": "Mag-rail tender deployment and reload (concept)",
+      "system": null,
+      "layout": "Not placed (Tank / Technical rail to a starboard transfer point; see docs/tender-mag-rail-reload.md)",
+      "status": "open"
+    },
+    {
+      "item": "Pet resort suites (four)",
+      "system": null,
+      "layout": "Not placed (candidate: Tween, see layout/envelope-budget.json)",
+      "status": "open"
+    },
+    {
+      "item": "Pet wash station",
+      "system": null,
+      "layout": "Not placed (candidate: Tank / Technical, near wastewater)",
+      "status": "open"
+    },
+    {
+      "item": "Pet-friendly lounge",
+      "system": null,
+      "layout": "Not placed (candidate: Commander / Lido)",
+      "status": "open"
+    },
+    {
+      "item": "Pet and ADA-friendly tender option",
+      "system": null,
+      "layout": "Not placed (tender fit-out; boarding route to be designed)",
+      "status": "open"
+    },
+    {
+      "item": "Third tender: dedicated medical (decided); tenders one and two carry EMS fit-out",
+      "system": null,
+      "layout": "Not placed (Tank / Technical stowage and carriage slot to confirm)",
+      "status": "open"
+    },
+    {
+      "item": "Energy management: LFP battery bank, marine BMS and EMS",
+      "system": "battery-storage",
+      "layout": "Not placed. Battery room on Tank / Technical: option B (eight spread racks, 9.6 m²) recommended, sealed with closed-loop cooling and a gas-tight exhaust (docs/energy-management-architecture.md).",
+      "status": "open"
+    },
+    {
+      "item": "Control software: supervisory platform with hardware safety layer (separate control work, not started)",
+      "system": "command-and-control",
+      "layout": "Not placed (control room and equipment locations to set)",
+      "status": "open"
+    },
+    {
+      "item": "Exterior decking and fittings (durable, corrosion-resistant)",
+      "system": null,
+      "layout": "Lido and sun deck (materials open)",
+      "status": "open"
+    },
+    {
+      "item": "Outdoor furniture and stowage (storm-stowed, quick-release tie-down)",
+      "system": null,
+      "layout": "Lido and sun deck lockers; deck store",
+      "status": "open"
+    },
+    {
+      "item": "Maintenance workshop, spares and dry stores",
+      "system": null,
+      "layout": "Tank / Technical mechanical workshop; Tween workshop, repair room and dry stores",
+      "status": "open"
+    },
+    {
+      "item": "Crew checklists and maintenance records (iOS or web, public side)",
+      "system": "checklist-system",
+      "layout": "Not applicable (software)",
+      "status": "open"
+    },
+    {
+      "item": "Preservation and maintenance programme: finishing, sealing and inspection records",
+      "system": null,
+      "layout": "Not applicable (documentation and records)",
+      "status": "open"
+    },
+    {
+      "item": "Whole-craft ventilation: 16 sources, separation by hazard class, outlets to set",
+      "system": null,
+      "layout": "Ventilation register: layout/ventilation-register.json; strategy: docs/ventilation-strategy.md",
+      "status": "open"
+    },
+    {
+      "item": "Toyota EV powerplant: energy production only, converted to the 600 V output bus",
+      "system": "electrical-distribution",
+      "layout": "Not placed (Tank / Technical generation space to set)",
+      "status": "open"
+    },
+    {
+      "item": "Provisioning: commercial frozen store (with refrigeration) and dry food store",
+      "system": "food-storage",
+      "layout": "Main / Master, next to professional galley (6 m² frozen, 8 m² dry, placeholders)",
+      "status": "open"
+    }
   ],
   "open": [
     "Owner suite: resized to about 7 m by 6.5 m. Confirm with the design team.",
@@ -58,6 +400,52 @@
     "Render 12 shows a wheel as well as touch screens.",
     "Most systems parameters: To be determined.",
     "Guest-facing app scope: not confirmed.",
-    "Security hardening: deferred to the testing phase."
+    "Security hardening: deferred to the testing phase.",
+    "Medical bay: no room, equipment list or clinical standard chosen. Not placed on any deck.",
+    "Starboard tender service: tender size, weight and launch method not set. Not placed.",
+    "Internal tender storage: tender size and count (two) known, but not the stowed dimensions or the fuel and battery arrangements. Not placed.",
+    "Mag-rail reload: the passenger lift car (1.5 m by 2.0 m) cannot carry a tender, so reload needs a Tank-level rail and a starboard transfer point. No route through the fuel tank block or to an aft hatch is on the layout.",
+    "Tender and bay use conflicts: the bay dinner-for-two depends on tender support, so the bay and the tenders must be planned together.",
+    "Pet and animal provision: no standard, species or count chosen. Pet relief area is outdoor and not counted in the hull-plan budget.",
+    "Tender EMS fit-out: AED and CPR kit on tenders one and two. Stowage, power and inspection requirements not yet set.",
+    "Energy architecture: LFP battery buffer charged by all generation, under a marine-grade EMS and BMS. Battery capacity, cell supplier, EMS product and class/flag requirements not set (docs/energy-management-architecture.md).",
+    "Battery room: module size (6 kWh needed for eight racks), 9.6 m² floor on the Tank level, gas-tight exhaust route to a safe outside point, closed-loop cooling load, and pressure-relief sizing from the fire-safety review.",
+    "Control software: separate body of work, not started. Public side only keeps the rule that the public build has no route to any vessel control system (docs/control-software-architecture.md).",
+    "Exterior: teak or synthetic decking, and the sourcing standard for teak. Stainless or titanium fittings against chrome plating. Docs/exterior-and-maintenance.md.",
+    "Spares quantities and stowage for furniture, tableware and soft goods, once service intervals and furniture counts are known.",
+    "Maintenance records and crew checklists: native iOS or web app. Public side content only; no control connection.",
+    "Materials policy (docs/materials-policy.md): no foam anywhere, teak only outdoors, no synthetic outdoor accommodation. Conflicts to decide: tender hulls, buoyancy, safety equipment, gaskets, sails, rope, medical cases, battery pads, mineral wool.",
+    "Materials: silk excluded by the owner. Leather, down, hemp, jute, sisal, cork and regenerated fibres still to decide. Render briefs in IMAGE_GENERATION.json conflict with the policy and need regenerating. Ivory as a material is excluded, including reclaimed ivory (docs/materials-policy.md).",
+    "Battery room breather: the proposed membrane vent is usually PTFE (excluded). Replace with a non-PTFE vent (e.g. sintered stainless) and check IP67 and fire review (docs/materials-policy.md).",
+    "Exotic materials banned by owner. Open: is teak exotic (affects outdoor decking), and the definition of exotic (docs/materials-policy.md).",
+    "Sustainable, non-synthetic materials direction: candidates listed in docs/materials-policy.md. Open: teak status (exotic or certified plantation), leather, outdoor fabric performance, titanium production route.",
+    "Silk, gold and silver excluded by owner (docs/materials-policy.md). Confirm this was meant as a ban; recycled precious metal is the only variant that could be reconsidered.",
+    "Stainless steel (316 or better, high recycled content) approved for interior and exterior use (docs/materials-policy.md). Chrome plating is not covered by this approval.",
+    "Owner rule: stainless steel for all rigid appointments. Conflicts with wood joinery, adds weight (register still 0% covered), and needs galvanic isolation. Decide whether joinery and hull are in scope (docs/materials-policy.md).",
+    "Wood: teak only; not structural. Confirm teak is not exotic under the ban (or grant an exception). Decide whether wood joinery is a rigid appointment under the stainless rule (docs/materials-policy.md).",
+    "Interior aesthetics deferred. Interior criteria: lightweight and durable. Conflict: the stainless rule for rigid appointments is heavy. Owner to choose which governs the interior (docs/materials-policy.md).",
+    "Structural steel for hull, Tank / Technical, Tween and deck. Decide whether synthetic coatings are allowed on structural steel, and whether galvanising is preferred (docs/materials-policy.md).",
+    "No steel exposed to the elements. Conflicts: the steel hull in seawater needs a protective system (coating, cathodic protection); teak decking sealant is usually synthetic; does the rule apply to stainless (docs/materials-policy.md).",
+    "Sealants allowed as a controlled exception to the no-synthetics rule (finishing and sealing). Approve sealant families, PFAS-free verification and a written procedure (docs/materials-policy.md).",
+    "Preservation and maintenance programme documented (docs/preservation-and-maintenance.md). Intervals are placeholders until supplier and class figures exist. Hull protection and coating scope still open.",
+    "Painting kit and paint store: store on Tank / Technical separated from fuel and battery, 6 m² placeholder. No paint products approved until the coating decision is made (docs/preservation-and-maintenance.md).",
+    "Paint store ventilation: continuous low-level extraction, explosion-proof equipment, dedicated outside exhaust separate from the battery room, and vapour detection with interlock (docs/preservation-and-maintenance.md). Standard and air-change figure to be set by fire-safety review.",
+    "Whole-craft ventilation: 13 of 16 outlets have no set position. Separation cannot be proven until the general arrangement is dimensioned (docs/ventilation-strategy.md). Tank level has limited room for separate routes.",
+    "Exhaust heat recovery: direct heat use first (battery heating, hot water, water-making); electricity recovery (ORC) is about 4% of load at 20 kW and not worth the weight yet (docs/ventilation-strategy.md).",
+    "Genset exhaust and all exhaust needs: pilot house roof outlet not accepted (occupied outdoor helm and guest roof); alternative stern or side stack to be placed. Genset safety permissives, run protections, fuel shut-off and spares documented (docs/genset-exhaust-and-systems.md).",
+    "Water supply: atmospheric units sized to drinking water only (5 to 13 units normal, 36 on event days). Reverse osmosis carries all other water. Occupancy and drinking-water figures await owner confirmation (docs/water-supply-scaling.md).",
+    "Hull envelope rework (true ketch, 68 m LOA, 62 m LWL): reference displacement of 786 m³ implies a draft of 2.3 to 3.5 m, below the 4.8 m keel-up target. Lines plan, weight register and mast positions needed (docs/hull-envelope-true-ketch.md).",
+    "Proposed size: 64.0 m LOA (minimum for all rooms), 58.4 m LWL, 12.1 m beam. Outlines not yet regenerated. Keel-up draft needs about 1,304 t displacement vs 806 t reference (docs/hull-size-selection.md).",
+    "Hull dynamics first pass (docs/hull-dynamics-first-pass.md): draft 4.82 m matches keel-up; KG must stay at or below 5.39 m for GM 1.0 m; roll period 9.7 s at GM 1.0; hull speed 18.8 kn gives 6.2 s wave. Sail area and mass register are placeholders.",
+    "Roll control: gyro stabiliser sized at 1.15e6 kg·m²/s for 231 kN·m peak (ζ 0.10). Genset mounts 27 mm deflection at 90% isolation. Technology choice (gyro or fins) depends on use profile (docs/roll-control-gyro.md).",
+    "Toyota EV powerplant is energy production only, feeding the 600 V output bus. Rating, converter efficiency, AC or DC bus choice and marine rating open (docs/hybrid-energy-production.md).",
+    "Multiple powerplants on one exhaust: separate outlet per engine preferred; shared manifold only with isolation and non-return valves, back-pressure checks for every combination, and branch drains (docs/genset-exhaust-and-systems.md).",
+    "Bus voltage: Toyota EV platform native pack is about 355 V nominal (secondary sources, to verify). Aligning the 600 V bus needs a choice between a full 355 V bus, a DC-DC step-up to a 600 V propulsion bus, or a two-voltage design. Propulsion power decides (docs/bus-voltage-alignment.md).",
+    "800 V bus basis: nominal 800 V, window 720 to 880 V, headroom H 1.25 on continuous current at minimum voltage, insulation at least 1,100 V. Propulsion power still needed to size cable (docs/bus-800v-design.md).",
+    "Embarked water: buffer only, since water is produced onboard. Outage period for the buffer and drinking-only versus full-demand coverage to decide (docs/water-supply-scaling.md; 72 h placeholder).",
+    "Provisioning: frozen store refrigeration (envelope about 0.20 kW average at placeholder U and COP, pull-down unknown) and non-foam walk-in insulation. Food rate and period to confirm (docs/provisioning-food-storage.md).",
+    "Provisioning revised: protein fresh from the sea (chill room for daily catch), produce from port held for a placeholder 14-day passage, chilled produce store 4 m². Passage lengths between ports and catch assumption to confirm (docs/provisioning-food-storage.md).",
+    "Specialty provisions: wine cellar (4 m², 12 to 14 °C, low vibration), chilled cheese zone (2 m², 2 to 6 °C), frozen butter in the frozen store. Per-person rates are placeholders; wine hold period to confirm (docs/provisioning-food-storage.md).",
+    "Dry stores: rice, grains, flour and baking sized at about 0.54 m² floor at placeholder rates (0.15 and 0.05 kg per person per day, 90 days), within the 8 m² dry store. Rates and flour shelf life to confirm (docs/provisioning-food-storage.md)."
   ]
 }

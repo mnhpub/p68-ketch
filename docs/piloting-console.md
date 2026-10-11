@@ -28,16 +28,48 @@ moment and who is allowed to change it.
 | Action | Who can do it | Gesture | Confirmation |
 |---|---|---|---|
 | Propulsion demand (port, starboard) | Holder, not in emergency stop | Drag slider, 5% steps | None; slider is continuous, so a stop is one drag away |
-| Rudder | Holder, autopilot off | Buttons, 1° or 5° steps | None |
-| Engage autopilot | Holder, not in reversion | Hold 1.5 s | Self |
+| Rudder (helm) | Holder, autopilot off | Buttons, 1 or 5 helm turns | None. Each helm turn moves the rudder 1° |
+| Engage autopilot | Holder, not in reversion or dock mode | Hold 1.5 s | Self |
 | Disengage autopilot | Holder | Hold 1 s | Self |
-| Bow and stern thrusters | Holder | Drag slider, centre detent | None |
+| Engage dock mode | Holder, autopilot off | Hold 1.5 s | Self |
+| Disengage dock mode | Holder | Hold 1 s | Self; boosters go to zero |
+| Bow and stern thrusters | Holder, dock mode off | Drag slider, centre detent | None |
 | Request control | Non-holder | Tap | Holder must accept |
 | Accept handover | Holder | Tap | Pending request required |
 | Request manual reversion | Holder | Tap | Other station must confirm |
 | Confirm manual reversion | Non-holder | Hold 2 s | Required |
 | Emergency stop | Either station | Hold 2 s | None; zeroes demand and thrusters, disengages autopilot |
 | Clear emergency stop | Holder only | Hold 2 s | Holder must have authority |
+
+## Dock mode booster assist
+
+Dock mode is hand steering with the bow and stern boosters assisting the rudder. It is the low-speed manoeuvring mode
+for berthing. Engaging it is a hold, and it cannot start under autopilot.
+
+- **Rudder:** each helm turn moves the rudder 1° (`HELM_DEGREES_PER_ROTATION`).
+- **Booster force:** each helm turn adds 5% of bow and stern thrust (`BOOSTER_PERCENT_PER_ROTATION`), so 1° of rudder is 5% of booster force.
+- **Direction:** a starboard rudder pushes the bow to port and the stern to starboard, so both swing the bow to starboard. Port is the reverse.
+- **Limits:** booster force is clamped to ±100%. At ±35° of rudder (7 turns from centre to limit) it is 100%, the maximum.
+- **Control:** the thruster sliders are locked while dock mode is on. Every helm or centre command recalculates the boosters.
+- **Emergency stop** disengages dock mode and zeroes the boosters.
+
+Values are placeholders for review. The real gain must come from the vessel's manoeuvring model and sea trials.
+
+## Sails and environment
+
+- **Sail modes:** `retracted`, `deployed`, `maintenance`. Deploy is a 2 s hold at the helm, locked in dock mode and during maintenance. Maintenance can only start from retracted and is released back to retracted.
+- **Retract** is a safe-state action. Either station can hold it, even during emergency stop.
+- **Dock mode** needs sails retracted, and sails cannot deploy while dock mode is on.
+- **Environment inputs** are sensor readings (wind speed and direction, current speed and set, wave height, heading). Any station can update them. In dock mode the boosters cancel the lateral disturbance from these inputs. Sails are not yet modelled as a wind load. The wind force acts on the hull alone.
+
+## Underway, waypoints and checklists
+
+- **Route:** loaded by the holder while not underway. The demo route is concept data. The real route comes from the navigation system, which is not connected.
+- **Underway:** holder engages it with a 1.5 s hold. It needs a route with legs left, dock mode off, and the `underway-departure` checklist complete. Disengaging is a 1 s hold.
+- **Waypoints:** the holder requests confirmation of arrival. The other station confirms with a 2 s hold, and the active leg then advances. Confirming the last leg ends underway. An emergency stop ends underway.
+- **Heading error:** the bearing to the active waypoint minus the heading. Autopilot tracking of the trajectory is not modelled. The error is shown as a readout only.
+- **Checklists:** `underway-departure` and `dock-approach` are piloting procedures, marked draft and not reviewed. They live in `src/aggregates/underway.ts`, not `checklists.json`, which holds the safety register. Each mode needs its critical steps ticked before it can engage. Ticks clear when the mode disengages, so each departure or approach is checked again.
+- **Not built yet:** satellite link, whole-ship sensor monitoring, and resource efficiency readouts.
 
 ## Layout (per station)
 

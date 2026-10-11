@@ -46,6 +46,7 @@ These are my decisions on the open items. Change any of them in `layout/decks-la
 3. **All AI renders** are concept illustrations for mood and material direction only.
 4. **Blender renders, done (10 Oct 2026):** finish-out plans and cutaways for all five levels, and the at-port exterior. See `docs/drafting-and-rendering.md`.
 5. **Blender renders, to run:** at anchor, underway and dusk exteriors, and the 13 interiors (`python3 scripts/drafting/render_exteriors.py anchor underway dusk`, `python3 scripts/drafting/render_interiors.py`). Then re-render the Bridge plan (helm chairs) and the Tween cutaway (cabin partitions), and the port scene (village houses on the terrain), which predate those fixes. Add the new files to `src/projections/drawings.ts`.
+6. **Beam revised to 13.0 m** (design-revision-p68-13m). The DXF engineering plans, the PDF set and the Blender renders were generated from the 12.1 m layout. Regenerate with `npm run build:cad` and `npm run build:renders`, then review.
 
 ## Open: scope
 

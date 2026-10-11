@@ -1,0 +1,10 @@
+{
+  "_note": "Open design release notice, shared by the app and the schematic build. Terms follow DESIGN_RELEASE_POLICY.md. Change the text here only, and both outputs follow.",
+  "release_class": "Class 1: concept and educational release",
+  "release_class_text": "Open design material for review, comment and correction. Not approved for construction. Not a fabrication package. Not a class-approved design.",
+  "licence": "To be confirmed. The design release policy requires licence ownership to be resolved before any distribution is promised.",
+  "community": "Shared with the engineering community. Reviews, corrections and critique are welcome. Engineering validation is pending.",
+  "funding": "If crowdfunding is used, funds may support design development and a privately owned yacht. Published design data is separate from private ownership. Milestone budgets, release conditions and refund terms will be published before any campaign.",
+  "date": "10 Oct 2026",
+  "policy": "DESIGN_RELEASE_POLICY.md"
+}
